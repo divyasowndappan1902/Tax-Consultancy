@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sterling & Co. Tax Intelligence - Authoritative analysis on OECD Pillar Two, cross-border treaty jurisprudence, dynastic wealth succession, and fiscal deadlines.">
+  <title>Tax Intelligence & Executive Insights | Sterling & Co. Tax Advisors</title>
+  
+  <script>
+    (function() {
+      var saved = localStorage.getItem('sterling_theme') || 'light';
+      document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!-- Grain Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" aria-hidden="true"></div>
+
+  <!-- Page Transition Curtain -->
+  <div id="page-transition" aria-hidden="true">
+    <div class="transition-emblem">
+      <img src="assets/favicon.svg" alt="" width="60" height="60">
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Sterling & Co. Home">
+        <div class="brand-mark">
+          <svg width="34" height="34" viewBox="0 0 64 64" fill="none">
+            <rect width="64" height="64" rx="14" fill="#0B1426" stroke="#C9A24B" stroke-width="2" stroke-opacity="0.8"/>
+            <path d="M22 23 C22 18, 42 16, 42 24 C42 32, 22 31, 22 41 C22 49, 42 47, 42 40" stroke="#C9A24B" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="32" cy="14" r="2" fill="#DFC07A"/>
+            <circle cx="32" cy="50" r="2" fill="#DFC07A"/>
+          </svg>
+        </div>
+        <div>
+          <div class="brand-name">Sterling & Co.</div>
+          <div class="brand-tag">Tax Advisors</div>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link active">Blog</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle (White / Dark Mode) -->
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle White or Dark Theme" title="Toggle White or Dark Theme">
+          <span class="theme-icon-sun" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </span>
+          <span class="theme-icon-moon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+        </button>
+
+        <a href="login.html" class="btn-login-outline">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          Client Vault
+        </a>
+        <button class="mobile-toggle" aria-label="Open mobile menu" aria-expanded="false">
+          <span class="hamburger-box">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- FULLSCREEN MOBILE MENU -->
+  <div class="mobile-menu" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services & Pricing</a></li>
+      <li><a href="blog.html" class="mobile-nav-link active">Tax Intelligence & Insights</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact & Consultation</a></li>
+      <li><a href="login.html" class="mobile-nav-link text-gold-gradient">Client Portal Vault</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- ======================================================================
+         1. HERO WITH SEARCH & TRENDING TOPICS
+         ====================================================================== -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="badge-luxury">Sterling Intelligence</div>
+        <h1 data-split>Executive Tax Briefings & Global Jurisprudence</h1>
+        <p class="page-hero-lead">
+          Strategic analysis on shifting international tax statutes, dynastic estate vehicles, and regulatory enforcement shifts.
+        </p>
+
+        <!-- Search Bar -->
+        <div style="max-width: 580px; margin: 0 auto;">
+          <input type="text" id="blog-search-input" class="form-control" placeholder="Search insights by topic (e.g., Pillar Two, trusts, QSBS, Dubai, audits)..." style="padding: 1.1rem 1.5rem; border-radius: 9999px;">
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. FEATURED POST SPOTLIGHT
+         ====================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="featured-post-card">
+          <div class="featured-post-thumb">
+            <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1200&q=80" alt="OECD Pillar Two Global Minimum Tax Analysis & Fiscal Audit">
+          </div>
+          <div class="featured-post-content">
+            <div class="badge-emerald" style="align-self:flex-start; margin-bottom:1rem;">Spotlight Investigation</div>
+            <h2>OECD Pillar Two: How Global Minimum Tax Reshapes Corporate Holdings in 2026</h2>
+            <div class="blog-post-meta" style="margin-bottom:1.25rem;">
+              <span>By Alistair Sterling, JD</span>
+              <span>•</span>
+              <span>10 min read</span>
+              <span>•</span>
+              <span>Oct 20, 2026</span>
+            </div>
+            <p>
+              With over 140 countries actively implementing the 15% GloBE minimum effective tax framework, international holding groups can no longer rely on traditional low-tax shell subsidiaries. This executive briefing outlines our blueprint for substance-based carve-outs and qualified domestic minimum top-up tax (QDMTT) credit utilization.
+            </p>
+            <a href="#read" class="btn btn-gold" style="align-self:flex-start;">
+              <span>Read Full Analysis</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- ======================================================================
+             3. CATEGORY FILTER TABS
+             ====================================================================== -->
+        <div class="blog-filter-tabs">
+          <button type="button" class="filter-tab-btn active" data-filter="all">All Intelligence</button>
+          <button type="button" class="filter-tab-btn" data-filter="corporate">Corporate & M&A</button>
+          <button type="button" class="filter-tab-btn" data-filter="wealth">Private Wealth & Dynasties</button>
+          <button type="button" class="filter-tab-btn" data-filter="cross-border">Cross-Border & Treaties</button>
+          <button type="button" class="filter-tab-btn" data-filter="compliance">Audit Defense & Regulatory</button>
+        </div>
+
+        <!-- ======================================================================
+             4. DYNAMIC FILTERABLE POST GRID
+             ====================================================================== -->
+        <div class="blog-preview-grid" id="blog-grid">
+          <!-- Post 1 -->
+          <article class="blog-post-card blog-filterable-card" data-category="wealth">
+            <div class="blog-post-thumb">
+              <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=700&q=80" alt="Dynasty Trusts and Estate Tax Sunset">
+              <div class="blog-post-category">Private Wealth</div>
+            </div>
+            <div class="blog-post-body">
+              <div class="blog-post-meta">
+                <span>Oct 12, 2026</span>
+                <span>•</span>
+                <span>7 min read</span>
+              </div>
+              <h3>Preparing for the Estate Tax Exemption Sunset: Dynasty Trusts & Spousal Lifetime Access (SLATs)</h3>
+              <p>Critical steps to lock in lifetime gift exemptions before statutory federal exemption limits decrease significantly.</p>
+              <a href="#read" class="blog-post-link">
+                <span>Read Full Brief</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Post 2 -->
+          <article class="blog-post-card blog-filterable-card" data-category="corporate">
+            <div class="blog-post-thumb">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80" alt="Section 1202 QSBS Stock Exclusion">
+              <div class="blog-post-category">Corporate & M&A</div>
+            </div>
+            <div class="blog-post-body">
+              <div class="blog-post-meta">
+                <span>Oct 04, 2026</span>
+                <span>•</span>
+                <span>9 min read</span>
+              </div>
+              <h3>Maximizing the $10M+ Section 1202 QSBS Exclusion in Tech Mergers</h3>
+              <p>How early-stage founders and venture backers can multiply qualified small business stock exemptions through non-grantor trusts.</p>
+              <a href="#read" class="blog-post-link">
+                <span>Read Full Brief</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Post 3 -->
+          <article class="blog-post-card blog-filterable-card" data-category="cross-border">
+            <div class="blog-post-thumb">
+              <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=700&q=80" alt="Dubai DIFC and Swiss Family Office Frameworks">
+              <div class="blog-post-category">Cross-Border</div>
+            </div>
+            <div class="blog-post-body">
+              <div class="blog-post-meta">
+                <span>Sep 28, 2026</span>
+                <span>•</span>
+                <span>6 min read</span>
+              </div>
+              <h3>The Golden Visa & DIFC Family Office Surge: Why Sovereign Capital is Moving to Dubai</h3>
+              <p>A comparative analysis of tax neutrality, privacy protection, and zero inheritance tax frameworks across Switzerland and the UAE.</p>
+              <a href="#read" class="blog-post-link">
+                <span>Read Full Brief</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Post 4 -->
+          <article class="blog-post-card blog-filterable-card" data-category="compliance">
+            <div class="blog-post-thumb">
+              <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=700&q=80" alt="IRS AI Audit Algorithms">
+              <div class="blog-post-category">Audit Defense</div>
+            </div>
+            <div class="blog-post-body">
+              <div class="blog-post-meta">
+                <span>Sep 18, 2026</span>
+                <span>•</span>
+                <span>5 min read</span>
+              </div>
+              <h3>Inside the IRS's New AI Audit Algorithms for Pass-Through Entities & Partnerships</h3>
+              <p>How the IRS Large Business & International (LB&I) division is employing automated pattern matching against high-income partnerships.</p>
+              <a href="#read" class="blog-post-link">
+                <span>Read Full Brief</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Post 5 -->
+          <article class="blog-post-card blog-filterable-card" data-category="corporate">
+            <div class="blog-post-thumb">
+              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=700&q=80" alt="R&D Tax Credit Monetization">
+              <div class="blog-post-category">Corporate & M&A</div>
+            </div>
+            <div class="blog-post-body">
+              <div class="blog-post-meta">
+                <span>Sep 05, 2026</span>
+                <span>•</span>
+                <span>8 min read</span>
+              </div>
+              <h3>Software Capitalization Under Section 174: Mitigation Strategies for SaaS Companies</h3>
+              <p>Managing the mandatory amortization of software research expenses while capturing maximum state-level tax incentives.</p>
+              <a href="#read" class="blog-post-link">
+                <span>Read Full Brief</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Post 6 -->
+          <article class="blog-post-card blog-filterable-card" data-category="wealth">
+            <div class="blog-post-thumb">
+              <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=700&q=80" alt="Private Aircraft and Yacht Tax Optimization">
+              <div class="blog-post-category">Private Wealth</div>
+            </div>
+            <div class="blog-post-body">
+              <div class="blog-post-meta">
+                <span>Aug 24, 2026</span>
+                <span>•</span>
+                <span>6 min read</span>
+              </div>
+              <h3>Structuring Private Aviation & Superyacht Acquisitions Under 100% Bonus Depreciation Rules</h3>
+              <p>FAA dry-leasing, commercial charter allocations, and sales tax exemption affidavits for luxury maritime and aviation assets.</p>
+              <a href="#read" class="blog-post-link">
+                <span>Read Full Brief</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. INTERACTIVE TAX DEADLINES CALENDAR
+         ====================================================================== -->
+    <section class="section" style="background: rgba(7, 13, 24, 0.7);">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-luxury">Compliance Clock</div>
+          <h2 data-split>2026 Global & Federal Tax Deadlines Calendar</h2>
+          <p>Filter by upcoming fiscal milestones to guarantee your filing calendar remains pristine and free from late-lodgement penalties.</p>
+        </div>
+
+        <div class="calendar-widget">
+          <div class="calendar-header">
+            <div>
+              <h3 style="margin-bottom:0.25rem;">Upcoming Statutory Deadlines</h3>
+              <span style="font-size:0.85rem; color:var(--gold-light);">Global Jurisdictions & Key Filings</span>
+            </div>
+            <div>
+              <select id="calendar-month-select" class="form-control" style="width:180px; padding:0.5rem 1rem;">
+                <option value="all">All Upcoming</option>
+                <option value="oct">October 2026</option>
+                <option value="nov">November 2026</option>
+                <option value="dec">December 2026</option>
+                <option value="jan">January 2027</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calendar-items-list">
+            <!-- Deadline 1 -->
+            <div class="calendar-deadline-card" data-month="oct">
+              <div class="deadline-date-box">
+                <div class="deadline-day">15</div>
+                <div class="deadline-month">OCT</div>
+              </div>
+              <div>
+                <h4 style="font-size:1.05rem; margin-bottom:0.25rem;">Form 1040 & 1041 Final Extended Deadline</h4>
+                <p style="font-size:0.82rem; margin:0; color:var(--slate-text);">Final date for extended individual and fiduciary returns with IRS.</p>
+              </div>
+            </div>
+
+            <!-- Deadline 2 -->
+            <div class="calendar-deadline-card" data-month="nov">
+              <div class="deadline-date-box">
+                <div class="deadline-day">15</div>
+                <div class="deadline-month">NOV</div>
+              </div>
+              <div>
+                <h4 style="font-size:1.05rem; margin-bottom:0.25rem;">Form 990 Tax-Exempt & Foundation Lodgement</h4>
+                <p style="font-size:0.82rem; margin:0; color:var(--slate-text);">Extended filing deadline for private foundations and charities.</p>
+              </div>
+            </div>
+
+            <!-- Deadline 3 -->
+            <div class="calendar-deadline-card" data-month="dec">
+              <div class="deadline-date-box">
+                <div class="deadline-day">31</div>
+                <div class="deadline-month">DEC</div>
+              </div>
+              <div>
+                <h4 style="font-size:1.05rem; margin-bottom:0.25rem;">Year-End Capital Gains & Harvesting Cutoff</h4>
+                <p style="font-size:0.82rem; margin:0; color:var(--slate-text);">Final execution date for tax-loss harvesting and donor-advised contributions.</p>
+              </div>
+            </div>
+
+            <!-- Deadline 4 -->
+            <div class="calendar-deadline-card" data-month="jan">
+              <div class="deadline-date-box">
+                <div class="deadline-day">15</div>
+                <div class="deadline-month">JAN</div>
+              </div>
+              <div>
+                <h4 style="font-size:1.05rem; margin-bottom:0.25rem;">Q4 Estimated Tax Payment Due (IRS Form 1040-ES)</h4>
+                <p style="font-size:0.82rem; margin:0; color:var(--slate-text);">Fourth quarter estimated quarterly tax liability installment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. DOWNLOADABLE EXECUTIVE GUIDES & WHITEPAPERS
+         ====================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-luxury">Authoritative Publications</div>
+          <h2 data-split>Downloadable Whitepapers & Executive Guides</h2>
+          <p>Complimentary research compendiums compiled by our senior partner advisory council.</p>
+        </div>
+
+        <div class="guides-grid stagger-grid">
+          <!-- Guide 1 -->
+          <div class="guide-card">
+            <div>
+              <div class="guide-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+              </div>
+              <h3 style="font-size:1.3rem; margin-bottom:0.75rem;">The 2026 Global Wealth & Pillar Two Executive Briefing</h3>
+              <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1.5rem;">
+                A 48-page technical dossier covering multinational minimum taxation, economic substance regulations, and treaty optimization.
+              </p>
+            </div>
+            <button type="button" class="btn btn-glass" onclick="showToast('Executive dossier dispatched to your registered vault.', 'success')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Download PDF (4.2 MB)</span>
+            </button>
+          </div>
+
+          <!-- Guide 2 -->
+          <div class="guide-card">
+            <div>
+              <div class="guide-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <h3 style="font-size:1.3rem; margin-bottom:0.75rem;">Dynastic Trusts & Asset Shielding Master Manual</h3>
+              <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1.5rem;">
+                A comprehensive legal guide to Delaware, Nevada, and South Dakota trust jurisdictions for intergenerational family office preservation.
+              </p>
+            </div>
+            <button type="button" class="btn btn-glass" onclick="showToast('Executive dossier dispatched to your registered vault.', 'success')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Download PDF (6.8 MB)</span>
+            </button>
+          </div>
+
+          <!-- Guide 3 -->
+          <div class="guide-card">
+            <div>
+              <div class="guide-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="12 6 12 12 16 14"></polygon></svg>
+              </div>
+              <h3 style="font-size:1.3rem; margin-bottom:0.75rem;">M&A Pre-Liquidity QSBS & Tax Attribute Playbook</h3>
+              <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1.5rem;">
+                Essential structural protocols for founders and private equity sponsors preparing for liquidity events within 12-24 months.
+              </p>
+            </div>
+            <button type="button" class="btn btn-glass" onclick="showToast('Executive dossier dispatched to your registered vault.', 'success')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Download PDF (3.5 MB)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. NEWSLETTER SUBSCRIPTION & 8. POPULAR POSTS
+         ====================================================================== -->
+    <section class="section" style="background: rgba(7, 13, 24, 0.6);">
+      <div class="container">
+        <div class="story-grid">
+          <!-- Newsletter Box -->
+          <div class="glass-card" style="padding: 3rem 2.5rem;">
+            <div class="badge-luxury">Private Dispatches</div>
+            <h3>Join the Sterling Private Intelligence Briefing</h3>
+            <p>
+              Distributed bi-monthly to over 6,500 family office trustees, venture general partners, and corporate chief tax officers worldwide. Strict zero-spam policy.
+            </p>
+            <form class="newsletter-form" action="#" method="POST" style="margin-top:2rem;">
+              <input type="email" class="newsletter-input" placeholder="Enter corporate or family office email..." required>
+              <button type="submit" class="newsletter-btn" aria-label="Subscribe to intelligence list">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </form>
+          </div>
+
+          <!-- Popular Posts -->
+          <div>
+            <div class="badge-luxury">Trending Among Trustees</div>
+            <h3 style="margin-bottom:1.5rem;">Most Read Editorial Briefings</h3>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:1.25rem;">
+              <li style="border-bottom:1px solid rgba(201,162,75,0.15); padding-bottom:1rem;">
+                <a href="#read" style="display:flex; justify-content:space-between; align-items:center;">
+                  <div>
+                    <h4 style="font-size:1.05rem; margin-bottom:0.2rem; color:var(--ivory);">Delaware vs. South Dakota: Which State Wins the Dynasty Trust Crown?</h4>
+                    <span style="font-size:0.78rem; color:var(--gold-light);">4,820 Reads • Private Wealth</span>
+                  </div>
+                  <span style="color:var(--gold-primary);">→</span>
+                </a>
+              </li>
+              <li style="border-bottom:1px solid rgba(201,162,75,0.15); padding-bottom:1rem;">
+                <a href="#read" style="display:flex; justify-content:space-between; align-items:center;">
+                  <div>
+                    <h4 style="font-size:1.05rem; margin-bottom:0.2rem; color:var(--ivory);">The 877A Exit Tax: What US Citizens Must Know Before Expatriating</h4>
+                    <span style="font-size:0.78rem; color:var(--gold-light);">3,940 Reads • Cross-Border</span>
+                  </div>
+                  <span style="color:var(--gold-primary);">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="#read" style="display:flex; justify-content:space-between; align-items:center;">
+                  <div>
+                    <h4 style="font-size:1.05rem; margin-bottom:0.2rem; color:var(--ivory);">Cryptocurrency & Digital Asset Basis Reporting Under Form 1099-DA</h4>
+                    <span style="font-size:0.78rem; color:var(--gold-light);">2,610 Reads • Compliance</span>
+                  </div>
+                  <span style="color:var(--gold-primary);">→</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         9. CTA BANNER
+         ====================================================================== -->
+    <section class="cta-banner-section">
+      <div class="container">
+        <div class="cta-banner-card">
+          <div class="badge-luxury">Private Consultation</div>
+          <h2 data-split>Have a Specific Cross-Border or Entity Structuring Challenge?</h2>
+          <p>Discuss your holdings confidentially with our senior research and practice partners.</p>
+          <div class="cta-banner-actions">
+            <a href="contact.html#book" class="btn btn-gold btn-lg magnetic">
+              <span>Schedule Diagnostic Call</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="services.html" class="btn btn-glass btn-lg">
+              <span>View Engagement Tiers</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- LUXURY FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-name" style="font-size:1.6rem;">Sterling & Co.</div>
+          <div class="brand-tag" style="margin-top:0.25rem;">Tax Advisors • Est. 1998</div>
+          <p>Confidential fiscal architecture, private wealth shielding, and institutional cross-border compliance.</p>
+        </div>
+        <div>
+          <div class="footer-title">Advisory Practices</div>
+          <ul class="footer-links">
+            <li><a href="services.html#individual">Private Wealth & HNWI</a></li>
+            <li><a href="services.html#business">Corporate & GST Solutions</a></li>
+            <li><a href="services.html#audit">Audit Defense & Forensics</a></li>
+            <li><a href="services.html#international">Cross-Border Treaties</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-title">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Sterling & Co.</a></li>
+            <li><a href="blog.html">Tax Intelligence</a></li>
+            <li><a href="contact.html">Global Offices</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <div class="footer-title">Executive Intelligence</div>
+          <p>Receive our quarterly confidential briefing on global tax treaties.</p>
+          <form class="newsletter-form" action="#" method="POST">
+            <input type="email" class="newsletter-input" placeholder="Enter corporate email..." required>
+            <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Sterling & Co. Tax Advisors LLP. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Protocol</a>
+          <a href="#">Regulatory Disclosures</a>
+          <a href="login.html">Client Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/components.js"></script>
+</body>
+</html>

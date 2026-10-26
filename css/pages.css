@@ -1,0 +1,805 @@
+/* ==========================================================================
+   STERLING & CO. TAX ADVISORS - SECONDARY PAGES STYLESHEET
+   Styles for About, Services, Blog, and Contact Pages
+   ========================================================================== */
+
+/* --- COMMON PAGE HERO --- */
+.page-hero {
+  padding-top: calc(var(--nav-height) + 4rem);
+  padding-bottom: clamp(3rem, 6vw, 5.5rem);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 20%, rgba(201, 162, 75, 0.08) 0%, var(--bg-deep) 80%);
+  border-bottom: 1px solid rgba(201, 162, 75, 0.15);
+}
+.page-hero h1 {
+  max-width: 850px;
+  margin: 0 auto 1.25rem;
+}
+.page-hero-lead {
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  font-size: 1.15rem;
+  color: var(--slate-light);
+  line-height: 1.7;
+}
+
+/* --- ABOUT PAGE STYLES --- */
+/* 2. Story Section */
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: center;
+}
+.story-image-wrap {
+  height: 480px;
+}
+
+/* 3. Mission & Vision */
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.mission-card {
+  padding: 3rem 2.5rem;
+  position: relative;
+  border-radius: 20px;
+}
+.mission-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  background: rgba(201, 162, 75, 0.12);
+  border: 1px solid var(--gold-border);
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.vision-icon {
+  background: rgba(31, 122, 102, 0.15);
+  border-color: rgba(31, 122, 102, 0.4);
+  color: #5eead4;
+}
+
+/* 4. Values Grid */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+.value-card {
+  padding: 2.25rem 2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: 16px;
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth);
+}
+.value-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold-primary);
+}
+.value-number {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--gold-light);
+  margin-bottom: 1rem;
+}
+
+/* 5. Team Section */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.25rem;
+}
+.team-card {
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth);
+}
+.team-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold-primary);
+}
+.team-photo-wrap {
+  height: 320px;
+  position: relative;
+  overflow: hidden;
+}
+.team-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.team-card:hover .team-photo-wrap img {
+  transform: scale(1.06);
+}
+.team-info {
+  padding: 1.75rem;
+}
+.team-info h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+.team-role {
+  color: var(--gold-light);
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+.team-credentials {
+  font-size: 0.78rem;
+  color: var(--emerald-light);
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  display: block;
+}
+.team-bio {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--slate-text);
+  margin-bottom: 1.25rem;
+}
+.team-socials {
+  display: flex;
+  gap: 0.85rem;
+}
+.team-social-link {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 162, 75, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--slate-text);
+  transition: all var(--transition-fast);
+}
+.team-social-link:hover {
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+  background: rgba(201, 162, 75, 0.1);
+}
+
+/* 6. Milestones Timeline */
+.timeline-wrap {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto;
+}
+.timeline-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, var(--gold-primary), transparent);
+  transform: translateX(-50%);
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 3.5rem;
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  padding-right: 3rem;
+}
+.timeline-item:nth-child(even) {
+  align-self: flex-end;
+  margin-left: 50%;
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: 3rem;
+}
+.timeline-dot {
+  position: absolute;
+  top: 10px;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg-deep);
+  border: 3px solid var(--gold-primary);
+  box-shadow: 0 0 10px var(--gold-primary);
+  z-index: 2;
+}
+.timeline-item:nth-child(even) .timeline-dot {
+  right: auto;
+  left: -8px;
+}
+.timeline-card {
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: 14px;
+  padding: 1.75rem;
+}
+.timeline-year {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--gold-light);
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+/* 7. Certifications & Awards */
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.75rem;
+}
+.cert-card {
+  text-align: center;
+  padding: 2.25rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: 16px;
+}
+.cert-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 1.25rem;
+  color: var(--gold-primary);
+}
+
+/* --- SERVICES PAGE STYLES --- */
+/* Detailed Service Modules */
+.service-detail-section {
+  padding: 4.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.service-detail-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+.service-detail-grid.reverse {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+.service-detail-grid.reverse .service-detail-text {
+  order: 2;
+}
+.service-detail-grid.reverse .service-detail-media {
+  order: 1;
+}
+.service-points-list {
+  list-style: none;
+  margin: 1.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+.service-point-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--slate-light);
+}
+
+/* Pricing Plans */
+.pricing-billing-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+.billing-label {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--slate-text);
+  cursor: pointer;
+}
+.billing-label.active {
+  color: var(--ivory);
+}
+.toggle-switch {
+  width: 52px;
+  height: 28px;
+  background: rgba(201, 162, 75, 0.2);
+  border-radius: 9999px;
+  padding: 3px;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid var(--gold-border);
+}
+.toggle-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--gold-primary);
+  border-radius: 50%;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.toggle-switch.annual .toggle-thumb {
+  transform: translateX(24px);
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+.pricing-card {
+  padding: 3rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.pricing-card.featured {
+  border-color: var(--gold-primary);
+  background: linear-gradient(180deg, rgba(20, 38, 72, 0.85) 0%, rgba(11, 20, 38, 0.95) 100%);
+  transform: scale(1.04);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6), var(--gold-glow);
+}
+.featured-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold-gradient);
+  color: var(--bg-deep);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+}
+.pricing-plan-name {
+  font-size: 1.45rem;
+  margin-bottom: 0.5rem;
+}
+.pricing-price-wrap {
+  margin: 1.5rem 0 2rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+.pricing-currency {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--gold-light);
+}
+.pricing-amount {
+  font-family: var(--font-serif);
+  font-size: 3.25rem;
+  font-weight: 700;
+  color: var(--ivory);
+  line-height: 1;
+}
+.pricing-period {
+  font-size: 0.85rem;
+  color: var(--slate-text);
+}
+.pricing-features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-bottom: 2.5rem;
+  flex-grow: 1;
+}
+.pricing-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.92rem;
+  color: var(--slate-light);
+}
+
+/* --- BLOG / INSIGHTS PAGE STYLES --- */
+/* Featured Post */
+.featured-post-card {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 4rem;
+  box-shadow: var(--glass-shadow);
+}
+.featured-post-thumb {
+  height: 100%;
+  min-height: 380px;
+}
+.featured-post-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.featured-post-content {
+  padding: clamp(2rem, 4vw, 3.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Category Filter Tabs */
+.blog-filter-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 3.5rem;
+}
+.filter-tab-btn {
+  background: rgba(16, 28, 54, 0.6);
+  border: 1px solid var(--gold-border);
+  color: var(--slate-light);
+  padding: 0.6rem 1.4rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.filter-tab-btn.active,
+.filter-tab-btn:hover {
+  background: var(--gold-primary);
+  color: var(--bg-deep);
+  border-color: var(--gold-primary);
+}
+
+/* Tax Deadlines Calendar */
+.calendar-widget {
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: 20px;
+  padding: 2.5rem;
+}
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(201, 162, 75, 0.2);
+}
+.calendar-items-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.calendar-deadline-card {
+  padding: 1.5rem;
+  background: rgba(7, 13, 24, 0.7);
+  border: 1px solid rgba(201, 162, 75, 0.2);
+  border-radius: 12px;
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+.deadline-date-box {
+  background: rgba(201, 162, 75, 0.15);
+  border: 1px solid var(--gold-border);
+  border-radius: 10px;
+  padding: 0.65rem 0.95rem;
+  text-align: center;
+  min-width: 65px;
+}
+.deadline-day {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  line-height: 1;
+}
+.deadline-month {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--slate-text);
+  margin-top: 0.2rem;
+}
+
+/* Downloadable Guides */
+.guides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+.guide-card {
+  padding: 2.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.guide-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(31, 122, 102, 0.15);
+  border: 1px solid rgba(31, 122, 102, 0.4);
+  color: #5eead4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+/* --- CONTACT PAGE STYLES --- */
+.contact-layout-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: flex-start;
+}
+.contact-form-card {
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: 24px;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  box-shadow: var(--glass-shadow);
+}
+
+/* Office Locations Cards */
+.offices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.75rem;
+}
+.office-card {
+  padding: 2rem 1.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: 16px;
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth);
+}
+.office-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold-primary);
+}
+.office-city {
+  font-size: 1.35rem;
+  margin-bottom: 0.35rem;
+}
+.office-meta {
+  font-size: 0.82rem;
+  color: var(--gold-light);
+  margin-bottom: 1rem;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* World Clocks */
+.clocks-bar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  background: rgba(7, 13, 24, 0.7);
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid var(--gold-border);
+  text-align: center;
+}
+.clock-item-city {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--slate-text);
+  margin-bottom: 0.35rem;
+}
+.clock-item-time {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--gold-light);
+}
+
+/* Interactive Map Representation */
+.map-container {
+  height: 420px;
+  border-radius: 20px;
+  border: 1px solid var(--gold-border);
+  overflow: hidden;
+  position: relative;
+  background: #070d18;
+}
+.map-svg-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* Consultation Scheduler */
+.scheduler-card {
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: 24px;
+  padding: clamp(2rem, 4vw, 3.5rem);
+}
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+.slot-btn {
+  padding: 0.65rem 0.5rem;
+  background: rgba(16, 28, 54, 0.8);
+  border: 1px solid rgba(201, 162, 75, 0.25);
+  border-radius: 8px;
+  color: var(--slate-light);
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-align: center;
+  transition: all var(--transition-fast);
+}
+.slot-btn.active,
+.slot-btn:hover {
+  background: var(--gold-primary);
+  color: var(--bg-deep);
+  border-color: var(--gold-primary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .story-grid,
+  .mission-vision-grid,
+  .service-detail-grid,
+  .service-detail-grid.reverse,
+  .contact-layout-grid {
+    grid-template-columns: 1fr;
+  }
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  .pricing-card.featured {
+    transform: none;
+  }
+  .clocks-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .featured-post-card {
+    grid-template-columns: 1fr;
+  }
+  .timeline-wrap::before {
+    left: 20px;
+  }
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 3rem;
+    padding-right: 0;
+    justify-content: flex-start;
+  }
+  .timeline-dot,
+  .timeline-item:nth-child(even) .timeline-dot {
+    left: 12px;
+    right: auto;
+  }
+}
+
+/* ==========================================================================
+   WHITE MODE / LIGHT THEME SECONDARY PAGES OVERRIDES
+   ========================================================================== */
+[data-theme="light"] .page-hero {
+  background: radial-gradient(circle at 50% 20%, rgba(179, 137, 56, 0.08) 0%, #F4EFE6 80%);
+  border-bottom: 1px solid rgba(179, 137, 56, 0.16);
+}
+[data-theme="light"] .mission-card {
+  background: rgba(255, 255, 255, 0.92);
+}
+[data-theme="light"] .value-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(179, 137, 56, 0.25);
+}
+[data-theme="light"] .team-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(179, 137, 56, 0.25);
+}
+[data-theme="light"] .timeline-card {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(179, 137, 56, 0.25);
+}
+[data-theme="light"] .timeline-dot {
+  background: #FDFBF7;
+}
+[data-theme="light"] .cert-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(179, 137, 56, 0.25);
+}
+[data-theme="light"] .service-detail-section {
+  border-bottom-color: rgba(11, 20, 38, 0.06);
+}
+[data-theme="light"] .pricing-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(179, 137, 56, 0.25);
+}
+[data-theme="light"] .pricing-card.featured {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FBF7EE 100%);
+  border-color: var(--gold-primary);
+  box-shadow: 0 25px 60px rgba(11, 20, 38, 0.08), 0 0 20px rgba(179, 137, 56, 0.15);
+}
+[data-theme="light"] .pricing-amount {
+  color: var(--heading-color);
+}
+[data-theme="light"] .featured-post-card {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(179, 137, 56, 0.25);
+}
+[data-theme="light"] .filter-tab-btn {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(179, 137, 56, 0.28);
+  color: #334155;
+}
+[data-theme="light"] .filter-tab-btn.active,
+[data-theme="light"] .filter-tab-btn:hover {
+  background: var(--gold-primary);
+  color: #FFFFFF;
+}
+[data-theme="light"] .calendar-widget {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(179, 137, 56, 0.25);
+}
+[data-theme="light"] .calendar-deadline-card {
+  background: #F8F5EE;
+  border-color: rgba(179, 137, 56, 0.22);
+}
+[data-theme="light"] .deadline-date-box {
+  background: #FFFFFF;
+  border-color: rgba(179, 137, 56, 0.3);
+}
+[data-theme="light"] .guide-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(179, 137, 56, 0.25);
+}
+[data-theme="light"] .contact-form-card {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(179, 137, 56, 0.25);
+}
+[data-theme="light"] .office-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(179, 137, 56, 0.25);
+}
+[data-theme="light"] .clocks-bar {
+  background: #FFFFFF;
+  border-color: rgba(179, 137, 56, 0.25);
+  box-shadow: 0 10px 30px rgba(11, 20, 38, 0.05);
+}
+[data-theme="light"] .clock-item-time {
+  color: var(--heading-color);
+}
+[data-theme="light"] .map-container {
+  background: #EFE9DE;
+  border-color: rgba(179, 137, 56, 0.28);
+}
+[data-theme="light"] .map-svg-canvas rect {
+  fill: #EFE9DE;
+}
+[data-theme="light"] .map-svg-canvas line {
+  stroke: rgba(11, 20, 38, 0.07);
+}
+[data-theme="light"] .map-svg-canvas text {
+  fill: #0B1426 !important;
+  font-weight: 600;
+}
+[data-theme="light"] .scheduler-card {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(179, 137, 56, 0.25);
+}
+[data-theme="light"] .slot-btn {
+  background: #F8F5EE;
+  border-color: rgba(179, 137, 56, 0.25);
+  color: #1E293B;
+}
+[data-theme="light"] .slot-btn.active,
+[data-theme="light"] .slot-btn:hover {
+  background: var(--gold-primary);
+  color: #FFFFFF;
+}

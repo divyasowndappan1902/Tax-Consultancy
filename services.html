@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sterling & Co. Tax Services - Private wealth filing, corporate restructuring, audit defense, international double-tax treaties, and transparent retainer plans.">
+  <title>Practices & Pricing Plans | Sterling & Co. Tax Advisors</title>
+  
+  <script>
+    (function() {
+      var saved = localStorage.getItem('sterling_theme') || 'light';
+      document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!-- Grain Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" aria-hidden="true"></div>
+
+  <!-- Page Transition Curtain -->
+  <div id="page-transition" aria-hidden="true">
+    <div class="transition-emblem">
+      <img src="assets/favicon.svg" alt="" width="60" height="60">
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Sterling & Co. Home">
+        <div class="brand-mark">
+          <svg width="34" height="34" viewBox="0 0 64 64" fill="none">
+            <rect width="64" height="64" rx="14" fill="#0B1426" stroke="#C9A24B" stroke-width="2" stroke-opacity="0.8"/>
+            <path d="M22 23 C22 18, 42 16, 42 24 C42 32, 22 31, 22 41 C22 49, 42 47, 42 40" stroke="#C9A24B" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="32" cy="14" r="2" fill="#DFC07A"/>
+            <circle cx="32" cy="50" r="2" fill="#DFC07A"/>
+          </svg>
+        </div>
+        <div>
+          <div class="brand-name">Sterling & Co.</div>
+          <div class="brand-tag">Tax Advisors</div>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle (White / Dark Mode) -->
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle White or Dark Theme" title="Toggle White or Dark Theme">
+          <span class="theme-icon-sun" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </span>
+          <span class="theme-icon-moon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+        </button>
+
+        <a href="login.html" class="btn-login-outline">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          Client Vault
+        </a>
+        <button class="mobile-toggle" aria-label="Open mobile menu" aria-expanded="false">
+          <span class="hamburger-box">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- FULLSCREEN MOBILE MENU -->
+  <div class="mobile-menu" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="services.html" class="mobile-nav-link active">Services & Pricing</a></li>
+      <li><a href="blog.html" class="mobile-nav-link">Tax Intelligence & Insights</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact & Consultation</a></li>
+      <li><a href="login.html" class="mobile-nav-link text-gold-gradient">Client Portal Vault</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- ======================================================================
+         1. HERO SECTION
+         ====================================================================== -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="badge-luxury">Institutional Practices</div>
+        <h1 data-split>Precision Tax Advisory for Multilateral Complexity</h1>
+        <p class="page-hero-lead">
+          From sovereign estate planning to multi-jurisdictional corporate restructurings, our six core practices deliver strategic defense and measurable capital preservation.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. ADVISORY OVERVIEW
+         ====================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-luxury">Our Fiduciary Philosophy</div>
+          <h2 data-split>The Convergence of Technical Precision & Legal Defensibility</h2>
+          <p>
+            Tax laws are not obstacles; they are the architectural parameters within which sophisticated wealth flourishes. We leverage statutory codes to legally eliminate inefficiencies while safeguarding client reputations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. INDIVIDUAL TAX FILING & PRIVATE WEALTH
+         ====================================================================== -->
+    <section class="service-detail-section" id="individual">
+      <div class="container">
+        <div class="service-detail-grid">
+          <div class="service-detail-text">
+            <div class="badge-luxury">Practice 01</div>
+            <h2 data-split>Private Wealth Filing & Dynastic Estate Preservation</h2>
+            <p class="lead">
+              Designed specifically for high-net-worth individuals, tech founders post-exit, and legacy families navigating multi-asset classes.
+            </p>
+            <p>
+              We integrate your domestic and international assets into coherent filing structures that mitigate alternative minimum tax (AMT), optimize multi-state nexus allocations, and implement dynasty trust frameworks to bypass generational transfer penalties.
+            </p>
+            <ul class="service-points-list">
+              <li class="service-point-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Grantor Retained Annuity Trusts (GRATs) & FLP structuring</span>
+              </li>
+              <li class="service-point-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Private foundation and donor-advised fund endowment strategies</span>
+              </li>
+              <li class="service-point-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Section 1031 like-kind exchanges and Qualified Opportunity Funds</span>
+              </li>
+            </ul>
+            <a href="contact.html?service=wealth#book" class="btn btn-gold">
+              <span>Retain Private Client Desk</span>
+            </a>
+          </div>
+
+          <div class="service-detail-media">
+            <div class="image-reveal-wrapper" style="height:420px;">
+              <div class="image-reveal-curtain"></div>
+              <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Private Wealth Consultation">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. BUSINESS & GST / CORPORATE TAX
+         ====================================================================== -->
+    <section class="service-detail-section" id="business">
+      <div class="container">
+        <div class="service-detail-grid reverse">
+          <div class="service-detail-text">
+            <div class="badge-luxury">Practice 02</div>
+            <h2 data-split>Corporate Restructuring, GST & Global VAT Optimization</h2>
+            <p class="lead">
+              Scalable corporate tax architecture for mid-market innovators, private equity portfolio companies, and international holding groups.
+            </p>
+            <p>
+              We engineer tax-efficient corporate holding entities, monetize research & development (R&D) credits, and resolve high-volume multi-state sales tax and cross-border European VAT liabilities. Fully updated for OECD Pillar Two minimum tax reporting.
+            </p>
+            <ul class="service-points-list">
+              <li class="service-point-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Federal, state, and cross-border corporate income tax return lodgement</span>
+              </li>
+              <li class="service-point-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Automated multi-jurisdictional GST/VAT reconciliation and recovery</span>
+              </li>
+              <li class="service-point-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Section 41 R&D tax credit technical studies and substantiation</span>
+              </li>
+            </ul>
+            <a href="contact.html?service=corporate#book" class="btn btn-gold">
+              <span>Retain Corporate Advisory Desk</span>
+            </a>
+          </div>
+
+          <div class="service-detail-media">
+            <div class="image-reveal-wrapper" style="height:420px;">
+              <div class="image-reveal-curtain"></div>
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Corporate Financial Modeling">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. AUDIT DEFENSE & COMPLIANCE
+         ====================================================================== -->
+    <section class="service-detail-section" id="audit">
+      <div class="container">
+        <div class="service-detail-grid">
+          <div class="service-detail-text">
+            <div class="badge-luxury">Practice 03</div>
+            <h2 data-split>Forensic Audit Defense & Tax Tribunal Litigation</h2>
+            <p class="lead">
+              Uncompromising legal shielding when audits threaten your financial standing and public reputation.
+            </p>
+            <p>
+              Staffed by former IRS supervisory agents and Big-4 controversy specialists, our defense unit manages all correspondence, information document requests (IDRs), and appeals conferences. We insulate executives from direct examination while negotiating optimal penalty abatements.
+            </p>
+            <ul class="service-points-list">
+              <li class="service-point-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Immediate intervention with IRS Revenue Agents and state auditors</span>
+              </li>
+              <li class="service-point-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Forensic reconstruction of historical records and basis documentation</span>
+              </li>
+              <li class="service-point-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>99.8% record of successful penalty waivers and zero-adjustment closures</span>
+              </li>
+            </ul>
+            <a href="contact.html?service=audit#book" class="btn btn-gold">
+              <span>Engage Emergency Audit Defense</span>
+            </a>
+          </div>
+
+          <div class="service-detail-media">
+            <div class="image-reveal-wrapper" style="height:420px;">
+              <div class="image-reveal-curtain"></div>
+              <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80" alt="Legal Gavel and Document Defense">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. STRATEGIC TAX PLANNING & ENTITY STRUCTURING
+         ====================================================================== -->
+    <section class="service-detail-section" id="planning">
+      <div class="container">
+        <div class="service-detail-grid reverse">
+          <div class="service-detail-text">
+            <div class="badge-luxury">Practice 04</div>
+            <h2 data-split>M&A Tax Structuring, Due Diligence & Section 1202 QSBS</h2>
+            <p class="lead">
+              Pre-transaction architecture that turns exits into long-term capital compounding engines.
+            </p>
+            <p>
+              Whether preparing for a private equity majority buyout or acquiring a foreign competitor, our transaction architects quantify tax exposures, evaluate historical tax attributes (Section 382 limitations), and structure tax-free reorganizations under Section 368.
+            </p>
+            <ul class="service-points-list">
+              <li class="service-point-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Qualified Small Business Stock (QSBS) $10M+ capital gain exclusion optimization</span>
+              </li>
+              <li class="service-point-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Stock vs. Asset purchase step-up in basis modeling (Section 338(h)(10))</span>
+              </li>
+              <li class="service-point-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Comprehensive buy-side tax diligence identifying successor liabilities</span>
+              </li>
+            </ul>
+            <a href="contact.html?service=planning#book" class="btn btn-gold">
+              <span>Initiate M&A Diligence Review</span>
+            </a>
+          </div>
+
+          <div class="service-detail-media">
+            <div class="image-reveal-wrapper" style="height:420px;">
+              <div class="image-reveal-curtain"></div>
+              <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80" alt="Executive M&A Contract Review">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. INTERNATIONAL TAXATION & EXPATRIATE SOLUTIONS
+         ====================================================================== -->
+    <section class="service-detail-section" id="international">
+      <div class="container">
+        <div class="service-detail-grid">
+          <div class="service-detail-text">
+            <div class="badge-luxury">Practice 05</div>
+            <h2 data-split>Cross-Border Double Taxation & Expatriate Mobility</h2>
+            <p class="lead">
+              Navigating 68 reciprocal tax treaties to eradicate double taxation for global citizens.
+            </p>
+            <p>
+              We provide comprehensive advice for founders moving between the US, UK, Switzerland, Singapore, and the UAE. From calculating Section 877A expatriation exit taxes to establishing UK non-domicile replacement structures and Swiss forfait arrangements.
+            </p>
+            <ul class="service-points-list">
+              <li class="service-point-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Controlled Foreign Corporation (CFC), GILTI & Subpart F restructuring</span>
+              </li>
+              <li class="service-point-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Foreign Bank Account Reporting (FBAR) and FATCA voluntary disclosures</span>
+              </li>
+              <li class="service-point-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Cross-border transfer pricing documentation and Master File compliance</span>
+              </li>
+            </ul>
+            <a href="contact.html?service=international#book" class="btn btn-gold">
+              <span>Consult International Counsel</span>
+            </a>
+          </div>
+
+          <div class="service-detail-media">
+            <div class="image-reveal-wrapper" style="height:420px;">
+              <div class="image-reveal-curtain"></div>
+              <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=800&q=80" alt="Global Currency and Treaty Architecture">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. TRANSPARENT PRICING & TIERED RETAINERS
+         ====================================================================== -->
+    <section class="section" id="pricing" style="background: rgba(7, 13, 24, 0.7);">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-luxury">Transparent Engagement</div>
+          <h2 data-split>Predictable Retainer Architecture</h2>
+          <p>No unexpected billable hour surprises. Our retained tiers provide comprehensive, partner-led stewardship with guaranteed response SLAs.</p>
+        </div>
+
+        <div class="pricing-billing-toggle">
+          <span class="billing-label active">Monthly Billing</span>
+          <div class="toggle-switch" aria-label="Toggle annual pricing with 20% discount">
+            <div class="toggle-thumb"></div>
+          </div>
+          <span class="billing-label">Annual Architecture <span class="badge-emerald" style="padding:0.2rem 0.6rem; font-size:0.7rem; margin-left:0.4rem;">Save 20%</span></span>
+        </div>
+
+        <div class="pricing-grid stagger-grid">
+          <!-- Plan 1 -->
+          <div class="glass-card pricing-card">
+            <div class="pricing-plan-name">Private Client Tier</div>
+            <p>For high-net-worth individuals, family trustees, and venture founders with domestic multi-state assets.</p>
+            <div class="pricing-price-wrap">
+              <span class="pricing-currency">$</span>
+              <span class="pricing-amount" data-monthly="3500" data-annual="2800">3,500</span>
+              <span class="pricing-period">/ per month</span>
+            </div>
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">✓ Form 1040 + all state returns included</li>
+              <li class="pricing-feature-item">✓ Up to 3 grantor trust tax returns (Form 1041)</li>
+              <li class="pricing-feature-item">✓ Quarterly tax projection & estimated payments</li>
+              <li class="pricing-feature-item">✓ 24-hour business day partner response SLA</li>
+              <li class="pricing-feature-item">✓ Dedicated 256-bit encrypted client portal</li>
+            </ul>
+            <a href="contact.html?plan=private#book" class="btn btn-glass" style="width:100%;">Retain Private Client Desk</a>
+          </div>
+
+          <!-- Plan 2 (Featured) -->
+          <div class="glass-card pricing-card featured">
+            <div class="featured-badge">Most Chosen by Founders</div>
+            <div class="pricing-plan-name">Growth Corporate Tier</div>
+            <p>For mid-market operating companies, tech scale-ups, and holding companies operating across multiple regions.</p>
+            <div class="pricing-price-wrap">
+              <span class="pricing-currency">$</span>
+              <span class="pricing-amount" data-monthly="7500" data-annual="6000">7,500</span>
+              <span class="pricing-period">/ per month</span>
+            </div>
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">✓ Form 1120 / 1120-S / 1065 + multi-state filings</li>
+              <li class="pricing-feature-item">✓ Quarterly multi-jurisdiction GST / VAT reconciliation</li>
+              <li class="pricing-feature-item">✓ Annual R&D tax credit calculation & documentation</li>
+              <li class="pricing-feature-item">✓ Complete audit defense representation guarantee</li>
+              <li class="pricing-feature-item">✓ 4-hour partner response SLA + executive hotline</li>
+              <li class="pricing-feature-item">✓ Monthly strategy check-in with Senior Partner</li>
+            </ul>
+            <a href="contact.html?plan=growth#book" class="btn btn-gold" style="width:100%;">Retain Corporate Desk</a>
+          </div>
+
+          <!-- Plan 3 -->
+          <div class="glass-card pricing-card">
+            <div class="pricing-plan-name">Sovereign Enterprise Tier</div>
+            <p>For global conglomerates, multi-family offices, and multinational funds with deep cross-border treaty exposures.</p>
+            <div class="pricing-price-wrap">
+              <span class="pricing-currency">$</span>
+              <span class="pricing-amount" data-monthly="15000" data-annual="12000">15,000</span>
+              <span class="pricing-period">/ per month</span>
+            </div>
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">✓ Multi-jurisdiction consolidated corporate filings</li>
+              <li class="pricing-feature-item">✓ Full OECD Pillar Two global minimum tax modeling</li>
+              <li class="pricing-feature-item">✓ Transfer pricing benchmarking and local file defense</li>
+              <li class="pricing-feature-item">✓ Unlimited M&A transaction tax review & advisory</li>
+              <li class="pricing-feature-item">✓ Direct WhatsApp concierge with Senior Managing Partner</li>
+              <li class="pricing-feature-item">✓ 2-hour worldwide response SLA (24/7/365)</li>
+            </ul>
+            <a href="contact.html?plan=enterprise#book" class="btn btn-glass" style="width:100%;">Retain Sovereign Desk</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         9. FAQ ACCORDION WITH LIVE SEARCH
+         ====================================================================== -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-luxury">Client Inquiry Clarity</div>
+          <h2 data-split>Frequently Addressed Strategic Questions</h2>
+          <p>Find immediate clarity on our onboarding protocol, retainer structure, and audit indemnification.</p>
+          <div style="max-width:480px; margin: 1.5rem auto 0;">
+            <input type="text" id="faq-search-input" class="form-control" placeholder="Search specific topic (e.g., audit, OECD, retainer, trusts)...">
+          </div>
+        </div>
+
+        <div style="max-width: 850px; margin: 0 auto;">
+          <div class="accordion-item active">
+            <div class="accordion-header">
+              <h4>How does Sterling & Co. differ from the Big-4 accounting firms?</h4>
+              <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content" style="max-height: 200px;">
+              <p>
+                Unlike Big-4 conglomerates where high-net-worth clients and mid-market firms are relegated to junior staff with billable-hour incentives, Sterling & Co. operates as a true boutique advisory studio. Every mandate is directly architected and signed off by a former Big-4 practice leader or tax attorney, ensuring nimble execution, personal access, and total discretion without corporate bureaucracy.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h4>What is your protocol if our entity receives an audit notification from the IRS or HMRC?</h4>
+              <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+              <p>
+                For all clients on our Growth Corporate and Sovereign tiers, audit representation is included at zero additional charge. Our controversy unit immediately issues a Power of Attorney (Form 2848), takes over all communication with the tax authorities, handles every document request, and represents you in conferences. You will never have to speak directly with an auditor.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h4>How do you handle cross-border residency shifts (e.g., relocating to Dubai or Switzerland)?</h4>
+              <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+              <p>
+                Relocating capital across borders requires an integrated approach. We coordinate the domestic exit tax requirements (such as IRS Section 877A or UK statutory residence test compliance) simultaneously with local establishment in Zurich, Dubai, or Singapore. We ensure double taxation treaties are invoked seamlessly so that income is never taxed twice during the transitional tax year.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h4>What is required to initiate onboarding with Sterling & Co.?</h4>
+              <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+              <p>
+                Onboarding begins with a confidential 45-minute discovery consultation under mutual Non-Disclosure Agreement (NDA). Following this briefing, our partners deliver a Preliminary Diagnostic Memo identifying immediate savings opportunities and exposure points, alongside a fixed-fee engagement proposal.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h4>Can we engage Sterling & Co. for one-time transactional M&A or exit planning?</h4>
+              <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+              <p>
+                Yes. While the majority of our clients maintain annual advisory retainers, we frequently represent founders and funds on dedicated special project mandates, including Section 1202 QSBS qualification, pre-liquidity trust funding, and sell-side transaction structuring.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         10. CTA SECTION
+         ====================================================================== -->
+    <section class="cta-banner-section">
+      <div class="container">
+        <div class="cta-banner-card">
+          <div class="badge-luxury">Strategic Action</div>
+          <h2 data-split>Bring Sovereign Rigor to Your Fiscal Architecture</h2>
+          <p>Schedule an executive strategy session with our senior practice directors today.</p>
+          <div class="cta-banner-actions">
+            <a href="contact.html#book" class="btn btn-gold btn-lg magnetic">
+              <span>Book Strategic Session</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="index.html#calculator" class="btn btn-glass btn-lg">
+              <span>Run Savings Calculator</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- LUXURY FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-name" style="font-size:1.6rem;">Sterling & Co.</div>
+          <div class="brand-tag" style="margin-top:0.25rem;">Tax Advisors • Est. 1998</div>
+          <p>Confidential fiscal architecture, private wealth shielding, and institutional cross-border compliance.</p>
+        </div>
+        <div>
+          <div class="footer-title">Advisory Practices</div>
+          <ul class="footer-links">
+            <li><a href="services.html#individual">Private Wealth & HNWI</a></li>
+            <li><a href="services.html#business">Corporate & GST Solutions</a></li>
+            <li><a href="services.html#audit">Audit Defense & Forensics</a></li>
+            <li><a href="services.html#international">Cross-Border Treaties</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-title">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Sterling & Co.</a></li>
+            <li><a href="blog.html">Tax Intelligence</a></li>
+            <li><a href="contact.html">Global Offices</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <div class="footer-title">Executive Intelligence</div>
+          <p>Receive our quarterly confidential briefing on global tax treaties.</p>
+          <form class="newsletter-form" action="#" method="POST">
+            <input type="email" class="newsletter-input" placeholder="Enter corporate email..." required>
+            <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Sterling & Co. Tax Advisors LLP. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Protocol</a>
+          <a href="#">Regulatory Disclosures</a>
+          <a href="login.html">Client Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/components.js"></script>
+</body>
+</html>
