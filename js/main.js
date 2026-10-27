@@ -12,23 +12,34 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Initialize Lenis Smooth Scroll
   initSmoothScroll();
 
-  // 2. Preloader Animation
+  // 2. GSAP Scroll Animations & Reveals (Split headings first so elements are ready)
+  initScrollAnimations();
+
+  // 3. Preloader Animation
   initPreloader();
 
-  // 3. Custom Cursor & Magnetic Elements
+  // 4. Custom Cursor & Magnetic Elements
   initCustomCursor();
 
-  // 4. Navbar Scroll & Mobile Menu
+  // 5. Navbar Scroll & Mobile Menu
   initNavbar();
 
-  // 5. Page Transitions
+  // 6. Page Transitions
   initPageTransitions();
-
-  // 6. GSAP Scroll Animations & Reveals
-  initScrollAnimations();
 
   // 7. General Micro-interactions & Toasts
   initGlobalEvents();
+
+  // 8. Hero Slideshow Carousel (Stackly Reference Style)
+  initHeroCarousel();
+
+  // 9. Safety hero reveal trigger if preloader was dismissed
+  setTimeout(() => {
+    const headline = document.querySelector('.hero-headline');
+    if (headline && !headline.classList.contains('is-revealed')) {
+      triggerHeroReveal();
+    }
+  }, 1200);
 });
 
 /* --------------------------------------------------------------------------
@@ -305,8 +316,19 @@ function initScrollAnimations() {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  // Split-text utility for headings with data-split while preserving child markup
-  document.querySelectorAll('[data-split]').forEach((heading) => {
+  // Heading selector for all section titles across every page
+  const sectionHeadings = document.querySelectorAll(
+    '[data-split], .section-header h2, .section-header h3, .section-title, .story-text h2, .featured-post-content h2, .cta-banner-card h2'
+  );
+
+  sectionHeadings.forEach((heading) => {
+    // If element already has split spans or is pre-split, mark and skip re-splitting
+    if (heading.classList.contains('is-split') || heading.querySelector('.split-word')) {
+      heading.classList.add('is-split');
+      return;
+    }
+    heading.classList.add('is-split');
+
     // If element doesn't have complex nested markup, split by word
     // Helper to wrap text nodes in animated spans
     function splitTextNodes(node) {
@@ -342,22 +364,27 @@ function initScrollAnimations() {
 
     splitTextNodes(heading);
 
-    // If it's a section heading (not in hero), animate with ScrollTrigger
-    if (!heading.closest('.hero-home')) {
+    // If it's a section heading (not in hero-home or page-hero), animate with ScrollTrigger
+    if (!heading.closest('.hero-home') && !heading.closest('.page-hero')) {
       const inners = heading.querySelectorAll('.split-inner');
       if (inners.length > 0) {
         gsap.fromTo(
           inners,
-          { y: '100%', opacity: 0 },
+          {
+            y: '110%',
+            rotate: 2,
+            opacity: 0
+          },
           {
             y: '0%',
+            rotate: 0,
             opacity: 1,
-            duration: 0.8,
-            stagger: 0.03,
-            ease: 'power3.out',
+            duration: 0.85,
+            stagger: 0.035,
+            ease: 'power4.out',
             scrollTrigger: {
               trigger: heading,
-              start: 'top 85%',
+              start: 'top 88%',
               toggleActions: 'play none none none'
             }
           }
@@ -369,18 +396,23 @@ function initScrollAnimations() {
   // Staggered card entrances
   document.querySelectorAll('.stagger-grid').forEach((grid) => {
     const cards = grid.children;
-    gsap.from(cards, {
-      scrollTrigger: {
-        trigger: grid,
-        start: 'top 85%',
-        toggleActions: 'play none none none'
-      },
-      y: 40,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.12,
-      ease: 'power3.out'
-    });
+    gsap.fromTo(
+      cards,
+      { y: 30, opacity: 0 },
+      {
+        scrollTrigger: {
+          trigger: grid,
+          start: 'top 85%',
+          toggleActions: 'play none none none'
+        },
+        y: 0,
+        opacity: 1,
+        duration: 0.6,
+        stagger: 0.08,
+        ease: 'power3.out',
+        clearProps: 'all'
+      }
+    );
   });
 
   // Image Reveals (Clip-path Wipe)
@@ -411,28 +443,156 @@ function initScrollAnimations() {
 
 // Trigger hero split-text and badges once preloader finishes
 function triggerHeroReveal() {
-  if (typeof gsap === 'undefined') return;
-
+  const headline = document.querySelector('.hero-headline');
   const heroHeadlineInners = document.querySelectorAll('.hero-headline .split-inner');
-  if (heroHeadlineInners.length > 0) {
-    gsap.fromTo(
-      heroHeadlineInners,
-      { y: '100%', opacity: 0 },
-      { y: '0%', opacity: 1, duration: 0.9, stagger: 0.05, ease: 'power4.out' }
-    );
+  const pageHeroInners = document.querySelectorAll('.page-hero h1 .split-inner');
+
+  if (typeof gsap !== 'undefined') {
+    // 1. Home Page Hero Animation
+    if (heroHeadlineInners.length > 0) {
+      const tl = gsap.timeline({
+        defaults: { ease: 'power4.out' },
+        onComplete: () => {
+          if (headline) headline.classList.add('is-revealed');
+        }
+      });
+
+      // Luxury Badge subtle entrance
+      tl.fromTo(
+        '.hero-badge',
+        { y: 16, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.65 },
+        0.05
+      );
+
+      // Headline Words Staggered Reveal Upward Through Mask
+      tl.fromTo(
+        heroHeadlineInners,
+        { y: '115%', rotate: 2.5, opacity: 0 },
+        {
+          y: '0%',
+          rotate: 0,
+          opacity: 1,
+          duration: 1.05,
+          stagger: 0.055
+        },
+        0.1
+      );
+
+      // Lead description & CTAs & Stats
+      tl.fromTo(
+        ['.hero-lead', '.hero-ctas', '.hero-stats-row', '.hero-rail'],
+        { y: 24, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.85, stagger: 0.1, ease: 'power3.out' },
+        0.45
+      );
+
+      // Hero carousel / image card
+      tl.fromTo(
+        ['.hero-image-card', '.hero-media', '.hero-carousel-container'],
+        { scale: 0.94, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 1.05, ease: 'power3.out' },
+        0.25
+      );
+    }
+
+    // 2. Secondary Pages Hero Animation (about.html, services.html, blog.html, contact.html)
+    if (pageHeroInners.length > 0) {
+      const pageTl = gsap.timeline({ defaults: { ease: 'power4.out' } });
+      pageTl.fromTo(
+        ['.page-hero .badge-luxury', '.page-hero .badge-emerald'],
+        { y: 15, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.6 },
+        0.05
+      );
+      pageTl.fromTo(
+        pageHeroInners,
+        { y: '110%', rotate: 2, opacity: 0 },
+        { y: '0%', rotate: 0, opacity: 1, duration: 0.95, stagger: 0.035 },
+        0.12
+      );
+      pageTl.fromTo(
+        '.page-hero-lead',
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8 },
+        0.35
+      );
+    }
+
+    // 3. Refresh ScrollTrigger so all section headings calibrate accurately after preloader dissolves
+    if (typeof ScrollTrigger !== 'undefined') {
+      ScrollTrigger.refresh();
+    }
+  } else {
+    // Pure CSS fallback
+    if (headline) headline.classList.add('is-revealed');
+    document.querySelectorAll('.hero-badge, .hero-lead, .hero-ctas, .hero-stats-row, .hero-rail, .hero-image-card, .page-hero .badge-luxury, .page-hero h1, .page-hero-lead').forEach((el) => {
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+    });
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6.5 HERO CAROUSEL ROTATION (Stackly Reference Style)
+   -------------------------------------------------------------------------- */
+function initHeroCarousel() {
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.hero-dot');
+  const counter = document.getElementById('heroCounter');
+  if (!slides.length) return;
+
+  let currentIndex = 0;
+  let timer = null;
+  const ROTATE_INTERVAL = 3500;
+
+  function pad(n) {
+    return n < 10 ? '0' + n : '' + n;
   }
 
-  gsap.fromTo(
-    ['.hero-badge', '.hero-lead', '.hero-ctas', '.hero-stats-row'],
-    { y: 25, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.8, stagger: 0.12, ease: 'power3.out', delay: 0.2 }
-  );
+  function setSlide(index) {
+    currentIndex = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('is-active', i === currentIndex);
+    });
+    dots.forEach((dot, i) => {
+      const active = i === currentIndex;
+      dot.classList.toggle('is-active', active);
+      dot.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+    if (counter) {
+      counter.textContent = `${pad(currentIndex + 1)} / ${pad(slides.length)}`;
+    }
+  }
 
-  gsap.fromTo(
-    '.hero-image-card',
-    { scale: 0.92, opacity: 0 },
-    { scale: 1, opacity: 1, duration: 1.1, ease: 'power3.out', delay: 0.3 }
-  );
+  function startRotation() {
+    stopRotation();
+    timer = setInterval(() => {
+      setSlide(currentIndex + 1);
+    }, ROTATE_INTERVAL);
+  }
+
+  function stopRotation() {
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+  }
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      setSlide(i);
+      startRotation();
+    });
+  });
+
+  const mediaEl = document.getElementById('heroMedia');
+  if (mediaEl) {
+    mediaEl.addEventListener('mouseenter', stopRotation);
+    mediaEl.addEventListener('mouseleave', startRotation);
+  }
+
+  startRotation();
 }
 
 /* --------------------------------------------------------------------------
@@ -475,8 +635,8 @@ function showToast(message, type = 'info') {
   toast.className = `toast toast-${type}`;
   
   const iconSvg = type === 'success' 
-    ? `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#289E84" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>`
-    : `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>`;
+    ? `<i class="fa-solid fa-circle-check" style="color:#289E84; font-size:1.25rem;"></i>`
+    : `<i class="fa-solid fa-circle-exclamation" style="color:#C9A24B; font-size:1.25rem;"></i>`;
 
   toast.innerHTML = `
     ${iconSvg}

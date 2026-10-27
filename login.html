@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Sterling & Co. Client Portal - 256-bit AES encrypted vault access for high-net-worth clients, family offices, and corporate tax directors.">
-  <title>Client Vault Portal | Sterling & Co. Tax Advisors</title>
+  <title>Login | Sterling & Co. Tax Advisors</title>
   
   <script>
     (function() {
@@ -16,8 +16,9 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/login.css">
 </head>
@@ -30,39 +31,30 @@
   <div class="custom-cursor-dot" aria-hidden="true"></div>
   <div class="custom-cursor-ring" aria-hidden="true"></div>
 
+  <!-- Preloader with Animated Monogram -->
+  <div id="preloader" role="status" aria-label="Loading STACKLY">
+    <div class="preloader-brand">
+      <img src="logo_0027.webp" alt="STACKLY Logo" class="preloader-logo-img">
+    </div>
+    <div class="preloader-bar-wrap">
+      <div class="preloader-bar"></div>
+    </div>
+    <div class="preloader-percent">0%</div>
+  </div>
+
   <!-- Page Transition Curtain -->
   <div id="page-transition" aria-hidden="true">
     <div class="transition-emblem">
-      <img src="assets/favicon.svg" alt="" width="60" height="60">
+      <img src="logo_0027.webp" alt="STACKLY Logo" class="brand-logo-img" style="height:48px; width:auto;">
     </div>
   </div>
 
-  <!-- Floating Back to Home & Theme Toggle -->
-  <div style="position:fixed; top:1.75rem; left:1.75rem; z-index:50; display:flex; align-items:center; gap:0.75rem;">
+  <!-- Floating Back to Home -->
+  <div style="position:fixed; top:1.75rem; left:1.75rem; z-index:50;">
     <a href="index.html" class="btn-back-home" style="position:static;" aria-label="Return to Sterling & Co. Homepage">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      <i class="fa-solid fa-arrow-left"></i>
       <span>Return to Main Site</span>
     </a>
-    <button type="button" class="theme-toggle-btn" aria-label="Toggle White or Dark Theme" title="Toggle White or Dark Theme">
-      <span class="theme-icon-sun" aria-hidden="true">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-      </span>
-      <span class="theme-icon-moon" aria-hidden="true">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-      </span>
-    </button>
   </div>
 
   <!-- SPLIT SCREEN PORTAL LAYOUT -->
@@ -75,16 +67,7 @@
 
       <!-- Top Branding -->
       <a href="index.html" class="portal-brand-link">
-        <svg width="38" height="38" viewBox="0 0 64 64" fill="none">
-          <rect width="64" height="64" rx="14" fill="#0B1426" stroke="#C9A24B" stroke-width="2" stroke-opacity="0.8"/>
-          <path d="M22 23 C22 18, 42 16, 42 24 C42 32, 22 31, 22 41 C22 49, 42 47, 42 40" stroke="#C9A24B" stroke-width="3.5" stroke-linecap="round"/>
-          <circle cx="32" cy="14" r="2" fill="#DFC07A"/>
-          <circle cx="32" cy="50" r="2" fill="#DFC07A"/>
-        </svg>
-        <div>
-          <div class="brand-name" style="font-size:1.4rem;">Sterling & Co.</div>
-          <div class="brand-tag">Client Vault Portal</div>
-        </div>
+        <img src="logo_0027.webp" alt="STACKLY Logo" class="brand-logo-img" style="height:38px; width:auto;">
       </a>
 
       <!-- Mid Content -->
@@ -98,7 +81,7 @@
         <!-- Dedicated Tax Consultancy Image Showcase Card -->
         <div class="portal-tax-image-card">
           <div class="portal-tax-image-wrap">
-            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=900&q=80" alt="Sterling & Co. Tax Consultancy & Portfolio Audit" class="portal-tax-img">
+            <img src="assets/images/login-vault-showcase.webp" alt="Sterling & Co. Tax Consultancy & Portfolio Audit" class="portal-tax-img">
             <div class="portal-img-tag-bottom">
               <div class="portal-tag-pulse"></div>
               <span>Active Tax Audit Defense & Ledger Shield</span>
@@ -107,15 +90,15 @@
           <!-- Status Badges docked inside the card container (Never overlapping text) -->
           <div class="portal-features-badges-row">
             <div class="fintech-pill-docked">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#289E84" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              <i class="fa-solid fa-lock" style="color:#289E84; font-size:0.95rem;"></i>
               <span>256-Bit Vault Enclave</span>
             </div>
             <div class="fintech-pill-docked">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+              <i class="fa-solid fa-chart-line" style="color:#C9A24B; font-size:0.95rem;"></i>
               <span>Real-Time Tax Model</span>
             </div>
             <div class="fintech-pill-docked">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#DFC07A" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <i class="fa-solid fa-shield-halved" style="color:#DFC07A; font-size:0.95rem;"></i>
               <span>IRS & HMRC Shield</span>
             </div>
           </div>
@@ -131,11 +114,11 @@
       <!-- Footer Security Seals -->
       <div class="portal-showcase-footer">
         <div class="security-badge">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          <i class="fa-solid fa-shield-halved" style="color:var(--gold-primary); font-size:1rem;"></i>
           <span>SOC 2 Type II Audited</span>
         </div>
         <div class="security-badge">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <i class="fa-solid fa-lock" style="color:var(--emerald-primary); font-size:1rem;"></i>
           <span>End-to-End Vault Encryption</span>
         </div>
       </div>
@@ -149,34 +132,40 @@
           <!-- FRONT FACE: SIGN IN -->
           <div class="portal-card-face portal-card-front">
             <div class="portal-card-header">
-              <h2>Client Sign In</h2>
+              <h2>Client Login</h2>
               <p>Enter your credentials to unlock your private vault</p>
             </div>
 
             <!-- SSO Buttons -->
             <div class="sso-buttons-group">
               <button type="button" class="sso-btn" id="sso-google">
-                <svg viewBox="0 0 24 24">
-                  <path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.4 1 3.5 3.6 1.6 7.4l3.7 2.9C6.2 7.3 8.9 5 12 5z"/>
-                  <path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.7-.2-2.3H12v4.6h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.9z"/>
-                  <path fill="#FBBC05" d="M5.3 14.7c-.2-.7-.4-1.5-.4-2.7s.1-2 .4-2.7L1.6 6.4C.6 8.3 0 10.1 0 12s.6 3.7 1.6 5.6l3.7-2.9z"/>
-                  <path fill="#34A853" d="M12 23c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3.1 0-5.8-2.3-6.7-5.3L1.6 15.9C3.5 19.7 7.4 23 12 23z"/>
-                </svg>
+                <i class="fa-brands fa-google" style="color:#EA4335;"></i>
                 <span>Google Workspace</span>
               </button>
 
               <button type="button" class="sso-btn" id="sso-microsoft">
-                <svg viewBox="0 0 24 24">
-                  <rect x="1" y="1" width="10" height="10" fill="#F25022"/>
-                  <rect x="13" y="1" width="10" height="10" fill="#7FBA00"/>
-                  <rect x="1" y="13" width="10" height="10" fill="#00A4EF"/>
-                  <rect x="13" y="13" width="10" height="10" fill="#FFB900"/>
-                </svg>
+                <i class="fa-brands fa-microsoft" style="color:#00A4EF;"></i>
                 <span>Microsoft SSO</span>
               </button>
             </div>
 
             <div class="divider-text">Or sign in with vault email</div>
+
+            <!-- Quick Demo Access Banner -->
+            <div style="margin-bottom:1.25rem; padding:0.85rem; background:rgba(201, 162, 75, 0.08); border:1px solid var(--gold-border); border-radius:10px; font-size:0.78rem;">
+              <div style="font-weight:600; color:var(--gold-light); margin-bottom:0.5rem; display:flex; align-items:center; gap:0.4rem;">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>Direct Access (Live Portals):</span>
+              </div>
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                <a href="user.html" class="btn btn-outline btn-sm" style="flex:1; text-align:center; padding:0.45rem 0.5rem; font-size:0.75rem; justify-content:center; text-decoration:none;">
+                  Customer Dashboard
+                </a>
+                <a href="admin.html" class="btn btn-gold btn-sm" style="flex:1; text-align:center; padding:0.45rem 0.5rem; font-size:0.75rem; justify-content:center; text-decoration:none;">
+                  Admin Dashboard
+                </a>
+              </div>
+            </div>
 
             <!-- Login Form -->
             <form id="portal-login-form">
@@ -188,9 +177,9 @@
               <div class="form-group">
                 <label class="form-label" for="login-password">Master Security Key / Password</label>
                 <div class="password-input-wrap">
-                  <input type="password" id="login-password" class="form-control" placeholder="••••••••••••••••" required>
+                  <input type="password" id="login-password" class="form-control" placeholder="••••••••••••••••" minlength="6" required>
                   <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    <i class="fa-solid fa-eye"></i>
                   </button>
                 </div>
               </div>
@@ -205,7 +194,7 @@
 
               <button type="submit" class="btn btn-gold btn-lg magnetic" style="width:100%;">
                 <span>Sign In to Vault</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                <i class="fa-solid fa-arrow-right"></i>
               </button>
             </form>
 
@@ -223,12 +212,6 @@
             </div>
 
             <form id="portal-register-form">
-              <label class="form-label">Client Classification</label>
-              <div class="account-type-grid">
-                <div class="account-type-option active" data-type="individual">Individual HNWI</div>
-                <div class="account-type-option" data-type="corporate">Corporate / Trust Entity</div>
-              </div>
-
               <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.85rem;">
                 <div class="form-group">
                   <label class="form-label" for="reg-first-name">First Name</label>
@@ -243,21 +226,33 @@
               <div class="form-group">
                 <label class="form-label" for="reg-email">Executive Email Address</label>
                 <input type="email" id="reg-email" class="form-control" placeholder="director@conglomerate.com" required>
+                <span id="email-format-status" class="strength-text" style="display:none; font-size:0.75rem; margin-top:0.35rem; font-weight:500;"></span>
               </div>
 
               <div class="form-group">
                 <label class="form-label" for="reg-password">Create Vault Password</label>
                 <div class="password-input-wrap">
-                  <input type="password" id="reg-password" class="form-control" placeholder="••••••••••••••••" required>
+                  <input type="password" id="reg-password" class="form-control" placeholder="••••••••••••••••" minlength="6" required>
                   <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    <i class="fa-solid fa-eye"></i>
                   </button>
                 </div>
                 <!-- Password Strength Indicator -->
                 <div class="password-strength-bar">
                   <div class="strength-fill"></div>
                 </div>
-                <span class="strength-text">Minimum 8 characters with numbers & symbols</span>
+                <span class="strength-text">Minimum 6 characters required</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="reg-confirm-password">Confirm Vault Password</label>
+                <div class="password-input-wrap">
+                  <input type="password" id="reg-confirm-password" class="form-control" placeholder="••••••••••••••••" minlength="6" required>
+                  <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
+                    <i class="fa-solid fa-eye"></i>
+                  </button>
+                </div>
+                <span id="password-match-status" class="strength-text" style="display:none; font-size:0.75rem; margin-top:0.35rem; font-weight:500;"></span>
               </div>
 
               <div class="form-group">
@@ -269,7 +264,7 @@
 
               <button type="submit" class="btn btn-gold btn-lg magnetic" style="width:100%;">
                 <span>Request Vault Credentials</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                <i class="fa-solid fa-arrow-right"></i>
               </button>
             </form>
 

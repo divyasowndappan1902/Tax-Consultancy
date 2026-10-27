@@ -13,6 +13,178 @@
   background: radial-gradient(circle at 50% 20%, rgba(201, 162, 75, 0.08) 0%, var(--bg-deep) 80%);
   border-bottom: 1px solid rgba(201, 162, 75, 0.15);
 }
+.page-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   TAX CONSULTANCY BACKGROUND SVG ANIMATION
+   ========================================================================== */
+.tax-hero-svg-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0.88;
+}
+
+.tax-hero-svg-bg svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Dynamic SVG Path Flow Animations */
+.tax-flow-1 {
+  animation: taxDash1 30s linear infinite;
+}
+.tax-flow-2 {
+  animation: taxDash2 38s linear infinite;
+}
+@keyframes taxDash1 {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -360; }
+}
+@keyframes taxDash2 {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: 360; }
+}
+
+/* Floating Tax & Fiduciary Elements */
+.tax-floating-element,
+.tax-float-inner {
+  animation: taxFloat 8s ease-in-out infinite;
+}
+.tax-elem-shield {
+  animation-duration: 9.5s;
+  animation-delay: 0s;
+}
+.tax-elem-scale {
+  animation-duration: 10.5s;
+  animation-delay: 1.5s;
+}
+.tax-elem-chart {
+  animation-duration: 8.5s;
+  animation-delay: 0.7s;
+}
+.tax-elem-percent {
+  animation-duration: 11s;
+  animation-delay: 2.2s;
+}
+
+@keyframes taxFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.tax-spin-ring {
+  transform-origin: 60px 60px;
+  animation: taxSpin 42s linear infinite;
+}
+.tax-elem-percent .tax-spin-ring {
+  transform-origin: 45px 45px;
+  animation: taxSpin 32s linear infinite;
+}
+.tax-spin-reverse {
+  transform-origin: 60px 60px;
+  animation: taxSpinReverse 36s linear infinite;
+}
+
+@keyframes taxSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes taxSpinReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.tax-beacon-pulse {
+  animation: taxBeacon 3.5s ease-in-out infinite;
+}
+@keyframes taxBeacon {
+  0%, 100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 8px #DFC07A);
+  }
+}
+
+/* Regulatory Document Scanner Beam (Blog) */
+.tax-scan-beam {
+  animation: taxScanBeam 4s ease-in-out infinite alternate;
+}
+@keyframes taxScanBeam {
+  0% {
+    transform: translateY(0px);
+    opacity: 0.25;
+  }
+  100% {
+    transform: translateY(58px);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 6px #C9A24B);
+  }
+}
+
+/* World Financial Hub Chrono Dials (Contact) */
+.tax-clock-fast {
+  animation: taxSpin 14s linear infinite;
+}
+.tax-clock-slow {
+  animation: taxSpin 48s linear infinite;
+}
+
+/* Forensic Waveform Pulse (Blog) */
+.tax-wave-line {
+  animation: taxWavePulse 3s ease-in-out infinite alternate;
+}
+@keyframes taxWavePulse {
+  0% {
+    stroke-dashoffset: 0;
+    opacity: 0.7;
+  }
+  100% {
+    stroke-dashoffset: -90;
+    opacity: 1;
+    filter: drop-shadow(0 0 5px #289E84);
+  }
+}
+
+/* Pillar Two & Treaty Pulse (Services) */
+.tax-pillar-pulse {
+  animation: taxPillarGlow 2.5s ease-in-out infinite alternate;
+}
+@keyframes taxPillarGlow {
+  from { opacity: 0.6; }
+  to { opacity: 1; filter: drop-shadow(0 0 6px #C9A24B); }
+}
+
+/* Light Theme Precision */
+[data-theme="light"] .tax-hero-svg-bg {
+  opacity: 0.78;
+}
+[data-theme="light"] .tax-hero-svg-bg text {
+  fill: #8A671C !important;
+}
+[data-theme="light"] .tax-elem-chart rect,
+[data-theme="light"] .tax-elem-card rect {
+  fill: rgba(255, 255, 255, 0.8) !important;
+  stroke: rgba(179, 137, 56, 0.35) !important;
+}
+[data-theme="light"] .tax-elem-shield path:first-of-type,
+[data-theme="light"] .tax-elem-vault path:first-of-type {
+  fill: rgba(255, 255, 255, 0.8) !important;
+}
 .page-hero h1 {
   max-width: 850px;
   margin: 0 auto 1.25rem;
@@ -59,6 +231,10 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
+}
+.mission-icon i,
+.vision-icon i {
+  font-size: 1.55rem;
 }
 .vision-icon {
   background: rgba(31, 122, 102, 0.15);
@@ -108,18 +284,20 @@
   border-color: var(--gold-primary);
 }
 .team-photo-wrap {
-  height: 320px;
+  height: 380px;
   position: relative;
   overflow: hidden;
+  background: #0B1426;
 }
 .team-photo-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  object-position: top center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .team-card:hover .team-photo-wrap img {
-  transform: scale(1.06);
+  transform: scale(1.04);
 }
 .team-info {
   padding: 1.75rem;
@@ -248,6 +426,12 @@
   height: 50px;
   margin: 0 auto 1.25rem;
   color: var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cert-icon i {
+  font-size: 2.2rem;
 }
 
 /* --- SERVICES PAGE STYLES --- */
@@ -529,6 +713,9 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
+}
+.guide-icon i {
+  font-size: 1.4rem;
 }
 
 /* --- CONTACT PAGE STYLES --- */

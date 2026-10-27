@@ -16,7 +16,8 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/pages.css">
@@ -30,29 +31,29 @@
   <div class="custom-cursor-dot" aria-hidden="true"></div>
   <div class="custom-cursor-ring" aria-hidden="true"></div>
 
+  <!-- Preloader with Animated Monogram -->
+  <div id="preloader" role="status" aria-label="Loading STACKLY">
+    <div class="preloader-brand">
+      <img src="logo_0027.webp" alt="STACKLY Logo" class="preloader-logo-img">
+    </div>
+    <div class="preloader-bar-wrap">
+      <div class="preloader-bar"></div>
+    </div>
+    <div class="preloader-percent">0%</div>
+  </div>
+
   <!-- Page Transition Curtain -->
   <div id="page-transition" aria-hidden="true">
     <div class="transition-emblem">
-      <img src="assets/favicon.svg" alt="" width="60" height="60">
+      <img src="logo_0027.webp" alt="STACKLY Logo" class="brand-logo-img" style="height:48px; width:auto;">
     </div>
   </div>
 
   <!-- NAVIGATION -->
   <header class="navbar" id="navbar">
     <div class="container nav-container">
-      <a href="index.html" class="nav-brand" aria-label="Sterling & Co. Home">
-        <div class="brand-mark">
-          <svg width="34" height="34" viewBox="0 0 64 64" fill="none">
-            <rect width="64" height="64" rx="14" fill="#0B1426" stroke="#C9A24B" stroke-width="2" stroke-opacity="0.8"/>
-            <path d="M22 23 C22 18, 42 16, 42 24 C42 32, 22 31, 22 41 C22 49, 42 47, 42 40" stroke="#C9A24B" stroke-width="3.5" stroke-linecap="round"/>
-            <circle cx="32" cy="14" r="2" fill="#DFC07A"/>
-            <circle cx="32" cy="50" r="2" fill="#DFC07A"/>
-          </svg>
-        </div>
-        <div>
-          <div class="brand-name">Sterling & Co.</div>
-          <div class="brand-tag">Tax Advisors</div>
-        </div>
+      <a href="index.html" class="nav-brand" aria-label="STACKLY Home">
+        <img src="logo_0027.webp" alt="STACKLY Logo" class="brand-logo-img">
       </a>
 
       <nav aria-label="Main Navigation">
@@ -66,34 +67,9 @@
       </nav>
 
       <div class="nav-actions">
-        <!-- Theme Toggle (White / Dark Mode) -->
-        <button type="button" class="theme-toggle-btn" aria-label="Toggle White or Dark Theme" title="Toggle White or Dark Theme">
-          <span class="theme-icon-sun" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="5"></circle>
-              <line x1="12" y1="1" x2="12" y2="3"></line>
-              <line x1="12" y1="21" x2="12" y2="23"></line>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-              <line x1="1" y1="12" x2="3" y2="12"></line>
-              <line x1="21" y1="12" x2="23" y2="12"></line>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-          </span>
-          <span class="theme-icon-moon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-          </span>
-        </button>
-
         <a href="login.html" class="btn-login-outline">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-          </svg>
-          Client Vault
+          <i class="fa-solid fa-lock"></i>
+          Login
         </a>
         <button class="mobile-toggle" aria-label="Open mobile menu" aria-expanded="false">
           <span class="hamburger-box">
@@ -108,13 +84,16 @@
 
   <!-- FULLSCREEN MOBILE MENU -->
   <div class="mobile-menu" aria-label="Mobile Navigation">
+    <div style="padding: 1.5rem 2rem 0.5rem;">
+      <img src="logo_0027.webp" alt="STACKLY Logo" class="brand-logo-img" style="height:32px;">
+    </div>
     <ul class="mobile-nav-links">
       <li><a href="index.html" class="mobile-nav-link">Home</a></li>
       <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
       <li><a href="services.html" class="mobile-nav-link active">Services & Pricing</a></li>
       <li><a href="blog.html" class="mobile-nav-link">Tax Intelligence & Insights</a></li>
       <li><a href="contact.html" class="mobile-nav-link">Contact & Consultation</a></li>
-      <li><a href="login.html" class="mobile-nav-link text-gold-gradient">Client Portal Vault</a></li>
+      <li><a href="login.html" class="mobile-nav-link text-gold-gradient">Login</a></li>
     </ul>
   </div>
 
@@ -123,6 +102,150 @@
          1. HERO SECTION
          ====================================================================== -->
     <section class="page-hero">
+      <!-- TAX CONSULTANCY BACKGROUND SVG ANIMATION: MULTILATERAL TAX FLOWS & PILLAR TWO -->
+      <div class="tax-hero-svg-bg tax-svg-services" aria-hidden="true">
+        <svg viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="servicesGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#C9A24B" stop-opacity="0.7"/>
+              <stop offset="50%" stop-color="#DFC07A" stop-opacity="0.4"/>
+              <stop offset="100%" stop-color="#96752C" stop-opacity="0.1"/>
+            </linearGradient>
+            <linearGradient id="servicesEmeraldGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#289E84" stop-opacity="0.6"/>
+              <stop offset="50%" stop-color="#207361" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#C9A24B" stop-opacity="0.15"/>
+            </linearGradient>
+            <filter id="servicesGlow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+
+          <!-- 1. Global Financial Longitude / Latitude Coordinate Grid -->
+          <g opacity="0.35">
+            <ellipse cx="720" cy="280" rx="660" ry="240" fill="none" stroke="rgba(201,162,75,0.12)" stroke-dasharray="4 8"/>
+            <line x1="60" y1="280" x2="1380" y2="280" stroke="rgba(201,162,75,0.14)" stroke-width="1" stroke-dasharray="4 8"/>
+            <path d="M 320 60 C 520 200, 520 360, 320 500" fill="none" stroke="rgba(201,162,75,0.08)" stroke-dasharray="3 6"/>
+            <path d="M 1120 60 C 920 200, 920 360, 1120 500" fill="none" stroke="rgba(201,162,75,0.08)" stroke-dasharray="3 6"/>
+          </g>
+
+          <!-- 2. Multilateral Treaty Dynamic Capital Streams -->
+          <path class="tax-flow-line tax-flow-1" d="M -80 380 C 240 380, 520 180, 880 200 S 1220 120, 1540 60" fill="none" stroke="url(#servicesGoldGrad)" stroke-width="2.4" stroke-dasharray="12 8"/>
+          <path class="tax-flow-line tax-flow-2" d="M -80 260 C 340 260, 680 460, 1020 280 S 1340 180, 1540 140" fill="none" stroke="url(#servicesEmeraldGrad)" stroke-width="2" stroke-dasharray="9 7"/>
+
+          <!-- 3. Left Feature: Pillar Two 15% Global Minimum Tax Compliance Monitor -->
+          <g transform="translate(100, 90)">
+            <g class="tax-float-inner tax-elem-shield">
+              <!-- Institutional Glass Monitor Card -->
+              <rect x="0" y="0" width="168" height="195" rx="10" fill="rgba(11,20,38,0.78)" stroke="rgba(201,162,75,0.38)" stroke-width="1" filter="url(#servicesGlow)"/>
+              <!-- Title Bar -->
+              <text x="14" y="24" font-family="'DM Mono', monospace" font-size="8.5" fill="#DFC07A" font-weight="700" letter-spacing="1.5">PILLAR TWO (15%)</text>
+              <line x1="14" y1="32" x2="154" y2="32" stroke="rgba(201,162,75,0.2)" stroke-width="1"/>
+              
+              <!-- Scale & Benchmark Line -->
+              <line x1="28" y1="46" x2="28" y2="154" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <text x="24" y="52" text-anchor="end" font-family="'DM Mono', monospace" font-size="7" fill="rgba(255,255,255,0.4)">25%</text>
+              <text x="24" y="98" text-anchor="end" font-family="'DM Mono', monospace" font-size="7" fill="#C9A24B">15%</text>
+              <text x="24" y="152" text-anchor="end" font-family="'DM Mono', monospace" font-size="7" fill="rgba(255,255,255,0.4)">0%</text>
+              
+              <!-- 15% Benchmark Glowing Threshold Line -->
+              <line x1="28" y1="94" x2="154" y2="94" stroke="#C9A24B" stroke-width="1.8" stroke-dasharray="4 4" class="tax-pillar-pulse"/>
+              
+              <!-- 4 Jurisdictional ETR Bar Indicators -->
+              <!-- US -->
+              <rect x="42" y="70" width="16" height="84" rx="2" fill="rgba(201,162,75,0.35)" stroke="#C9A24B" stroke-width="1"/>
+              <text x="50" y="166" text-anchor="middle" font-family="'DM Mono', monospace" font-size="7" fill="#DFC07A">US</text>
+              <!-- UK -->
+              <rect x="68" y="76" width="16" height="78" rx="2" fill="rgba(40,158,132,0.4)" stroke="#289E84" stroke-width="1"/>
+              <text x="76" y="166" text-anchor="middle" font-family="'DM Mono', monospace" font-size="7" fill="#289E84">UK</text>
+              <!-- CH -->
+              <rect x="94" y="94" width="16" height="60" rx="2" fill="rgba(201,162,75,0.5)" stroke="#DFC07A" stroke-width="1"/>
+              <text x="102" y="166" text-anchor="middle" font-family="'DM Mono', monospace" font-size="7" fill="#DFC07A">CH</text>
+              <!-- SG -->
+              <rect x="120" y="94" width="16" height="60" rx="2" fill="rgba(40,158,132,0.5)" stroke="#289E84" stroke-width="1"/>
+              <text x="128" y="166" text-anchor="middle" font-family="'DM Mono', monospace" font-size="7" fill="#289E84">SG</text>
+
+              <circle cx="150" cy="22" r="3" fill="#289E84" class="tax-beacon-pulse"/>
+              <text x="84" y="184" text-anchor="middle" font-family="'DM Mono', monospace" font-size="7.5" fill="#289E84" font-weight="600" letter-spacing="1">OECD BEPS COMPLIANT</text>
+            </g>
+          </g>
+
+          <!-- 4. Upper Right Feature: Multilateral Treaty Network & Hub Nodes -->
+          <g transform="translate(1160, 65)">
+            <g class="tax-float-inner tax-elem-scale">
+              <circle cx="65" cy="65" r="58" fill="none" stroke="rgba(201,162,75,0.24)" stroke-dasharray="5 7">
+                <animateTransform attributeName="transform" type="rotate" from="0 65 65" to="360 65 65" dur="40s" repeatCount="indefinite"/>
+              </circle>
+              <!-- Global Nodes (London, NY, Zurich, Singapore) -->
+              <circle cx="65" cy="20" r="4.5" fill="#DFC07A" class="tax-beacon-pulse"/>
+              <text x="65" y="12" text-anchor="middle" font-family="'DM Mono', monospace" font-size="7.5" fill="#DFC07A">LON 0°</text>
+              
+              <circle cx="110" cy="65" r="4.5" fill="#289E84" class="tax-beacon-pulse"/>
+              <text x="134" y="68" font-family="'DM Mono', monospace" font-size="7.5" fill="#289E84">SIN</text>
+              
+              <circle cx="65" cy="110" r="4.5" fill="#DFC07A" class="tax-beacon-pulse"/>
+              <text x="65" y="125" text-anchor="middle" font-family="'DM Mono', monospace" font-size="7.5" fill="#DFC07A">ZUR</text>
+              
+              <circle cx="20" cy="65" r="4.5" fill="#289E84" class="tax-beacon-pulse"/>
+              <text x="-4" y="68" font-family="'DM Mono', monospace" font-size="7.5" fill="#289E84">NYC</text>
+              
+              <!-- Cross Treaty Interconnect Lines -->
+              <line x1="20" y1="65" x2="65" y2="20" stroke="rgba(201,162,75,0.4)" stroke-width="1.2" stroke-dasharray="3 3"/>
+              <line x1="65" y1="20" x2="65" y2="110" stroke="rgba(201,162,75,0.3)" stroke-width="1.2" stroke-dasharray="3 3"/>
+              <line x1="65" y1="110" x2="110" y2="65" stroke="rgba(201,162,75,0.4)" stroke-width="1.2" stroke-dasharray="3 3"/>
+              <line x1="110" y1="65" x2="20" y2="65" stroke="rgba(40,158,132,0.4)" stroke-width="1.2" stroke-dasharray="3 3"/>
+              
+              <circle cx="65" cy="65" r="14" fill="rgba(11,20,38,0.7)" stroke="#C9A24B" stroke-width="1.5"/>
+              <text x="65" y="69" text-anchor="middle" font-family="'DM Mono', monospace" font-size="9" fill="#DFC07A" font-weight="700">DTA</text>
+              <text x="65" y="142" text-anchor="middle" font-family="'DM Mono', monospace" font-size="9" fill="#DFC07A" font-weight="600" letter-spacing="2">TREATY NETWORK</text>
+            </g>
+          </g>
+
+          <!-- 5. Lower Right Feature: Transfer Pricing Arm's Length Balance Scales -->
+          <g transform="translate(1190, 275)">
+            <g class="tax-float-inner tax-elem-chart">
+              <circle cx="60" cy="55" r="48" fill="none" stroke="rgba(201,162,75,0.2)" stroke-dasharray="4 6">
+                <animateTransform attributeName="transform" type="rotate" from="360 60 55" to="0 60 55" dur="34s" repeatCount="indefinite"/>
+              </circle>
+              <!-- Balance Pillar & Beam -->
+              <line x1="60" y1="28" x2="60" y2="78" stroke="#C9A24B" stroke-width="2"/>
+              <line x1="32" y1="38" x2="88" y2="38" stroke="#C9A24B" stroke-width="2"/>
+              <circle cx="60" cy="28" r="3.5" fill="#DFC07A"/>
+              <!-- Left Pan (Benchmark) -->
+              <line x1="32" y1="38" x2="22" y2="58" stroke="rgba(201,162,75,0.6)" stroke-width="1.2"/>
+              <line x1="32" y1="38" x2="42" y2="58" stroke="rgba(201,162,75,0.6)" stroke-width="1.2"/>
+              <path d="M 18 58 Q 32 68 46 58 Z" fill="rgba(201,162,75,0.3)" stroke="#C9A24B" stroke-width="1.5"/>
+              <!-- Right Pan (Statutory APA) -->
+              <line x1="88" y1="38" x2="78" y2="58" stroke="rgba(201,162,75,0.6)" stroke-width="1.2"/>
+              <line x1="88" y1="38" x2="98" y2="58" stroke="rgba(201,162,75,0.6)" stroke-width="1.2"/>
+              <path d="M 74 58 Q 88 68 102 58 Z" fill="rgba(40,158,132,0.35)" stroke="#289E84" stroke-width="1.5"/>
+              <text x="60" y="96" text-anchor="middle" font-family="'DM Mono', monospace" font-size="8.5" fill="#DFC07A" font-weight="600" letter-spacing="1.5">TRANSFER PRICING</text>
+              <text x="60" y="108" text-anchor="middle" font-family="'DM Mono', monospace" font-size="7" fill="#289E84" letter-spacing="1">ARM'S LENGTH</text>
+            </g>
+          </g>
+
+          <!-- 6. Lower Left Feature: SPV Holding Entity Hierarchy -->
+          <g transform="translate(290, 360)">
+            <g class="tax-float-inner tax-elem-percent">
+              <circle cx="45" cy="45" r="38" fill="none" stroke="rgba(201,162,75,0.25)" stroke-width="1.2" stroke-dasharray="5 5">
+                <animateTransform attributeName="transform" type="rotate" from="0 45 45" to="360 45 45" dur="32s" repeatCount="indefinite"/>
+              </circle>
+              <!-- Holding Entity Boxes -->
+              <rect x="22" y="24" width="46" height="15" rx="3" fill="rgba(11,20,38,0.7)" stroke="#C9A24B" stroke-width="1.2"/>
+              <text x="45" y="34" text-anchor="middle" font-family="'DM Mono', monospace" font-size="7" fill="#DFC07A" font-weight="700">HOLDCO</text>
+              <line x1="45" y1="39" x2="45" y2="48" stroke="#DFC07A" stroke-width="1.5"/>
+              <rect x="18" y="48" width="54" height="15" rx="3" fill="rgba(11,20,38,0.7)" stroke="#289E84" stroke-width="1.2"/>
+              <text x="45" y="58" text-anchor="middle" font-family="'DM Mono', monospace" font-size="7" fill="#289E84" font-weight="700">0% WHT DTA</text>
+              <text x="45" y="78" text-anchor="middle" font-family="'DM Mono', monospace" font-size="8.5" fill="#DFC07A" font-weight="600" letter-spacing="1.5">SPV MESH</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+
       <div class="container">
         <div class="badge-luxury">Institutional Practices</div>
         <h1 data-split>Precision Tax Advisory for Multilateral Complexity</h1>
@@ -164,15 +287,15 @@
             </p>
             <ul class="service-points-list">
               <li class="service-point-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <i class="fa-solid fa-check" style="color:#C9A24B; font-size:16px;"></i>
                 <span>Grantor Retained Annuity Trusts (GRATs) & FLP structuring</span>
               </li>
               <li class="service-point-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <i class="fa-solid fa-check" style="color:#C9A24B; font-size:16px;"></i>
                 <span>Private foundation and donor-advised fund endowment strategies</span>
               </li>
               <li class="service-point-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <i class="fa-solid fa-check" style="color:#C9A24B; font-size:16px;"></i>
                 <span>Section 1031 like-kind exchanges and Qualified Opportunity Funds</span>
               </li>
             </ul>
@@ -184,7 +307,7 @@
           <div class="service-detail-media">
             <div class="image-reveal-wrapper" style="height:420px;">
               <div class="image-reveal-curtain"></div>
-              <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Private Wealth Consultation">
+              <img src="assets/images/service-international-tax.webp" alt="Private Wealth Consultation">
             </div>
           </div>
         </div>
@@ -208,15 +331,15 @@
             </p>
             <ul class="service-points-list">
               <li class="service-point-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <i class="fa-solid fa-check" style="color:#C9A24B; font-size:16px;"></i>
                 <span>Federal, state, and cross-border corporate income tax return lodgement</span>
               </li>
               <li class="service-point-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <i class="fa-solid fa-check" style="color:#C9A24B; font-size:16px;"></i>
                 <span>Automated multi-jurisdictional GST/VAT reconciliation and recovery</span>
               </li>
               <li class="service-point-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <i class="fa-solid fa-check" style="color:#C9A24B; font-size:16px;"></i>
                 <span>Section 41 R&D tax credit technical studies and substantiation</span>
               </li>
             </ul>
@@ -228,7 +351,7 @@
           <div class="service-detail-media">
             <div class="image-reveal-wrapper" style="height:420px;">
               <div class="image-reveal-curtain"></div>
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Corporate Financial Modeling">
+              <img src="assets/images/service-private-wealth.webp" alt="Corporate Financial Modeling">
             </div>
           </div>
         </div>
@@ -252,15 +375,15 @@
             </p>
             <ul class="service-points-list">
               <li class="service-point-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <i class="fa-solid fa-check" style="color:#C9A24B; font-size:16px;"></i>
                 <span>Immediate intervention with IRS Revenue Agents and state auditors</span>
               </li>
               <li class="service-point-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <i class="fa-solid fa-check" style="color:#C9A24B; font-size:16px;"></i>
                 <span>Forensic reconstruction of historical records and basis documentation</span>
               </li>
               <li class="service-point-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <i class="fa-solid fa-check" style="color:#C9A24B; font-size:16px;"></i>
                 <span>99.8% record of successful penalty waivers and zero-adjustment closures</span>
               </li>
             </ul>
@@ -272,7 +395,7 @@
           <div class="service-detail-media">
             <div class="image-reveal-wrapper" style="height:420px;">
               <div class="image-reveal-curtain"></div>
-              <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80" alt="Legal Gavel and Document Defense">
+              <img src="assets/images/service-corporate-restructuring.webp" alt="Legal Gavel and Document Defense">
             </div>
           </div>
         </div>
@@ -296,15 +419,15 @@
             </p>
             <ul class="service-points-list">
               <li class="service-point-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <i class="fa-solid fa-check" style="color:#C9A24B; font-size:16px;"></i>
                 <span>Qualified Small Business Stock (QSBS) $10M+ capital gain exclusion optimization</span>
               </li>
               <li class="service-point-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <i class="fa-solid fa-check" style="color:#C9A24B; font-size:16px;"></i>
                 <span>Stock vs. Asset purchase step-up in basis modeling (Section 338(h)(10))</span>
               </li>
               <li class="service-point-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <i class="fa-solid fa-check" style="color:#C9A24B; font-size:16px;"></i>
                 <span>Comprehensive buy-side tax diligence identifying successor liabilities</span>
               </li>
             </ul>
@@ -316,7 +439,7 @@
           <div class="service-detail-media">
             <div class="image-reveal-wrapper" style="height:420px;">
               <div class="image-reveal-curtain"></div>
-              <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80" alt="Executive M&A Contract Review">
+              <img src="assets/images/service-tax-controversy.webp" alt="Executive M&A Contract Review">
             </div>
           </div>
         </div>
@@ -340,15 +463,15 @@
             </p>
             <ul class="service-points-list">
               <li class="service-point-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <i class="fa-solid fa-check" style="color:#C9A24B; font-size:16px;"></i>
                 <span>Controlled Foreign Corporation (CFC), GILTI & Subpart F restructuring</span>
               </li>
               <li class="service-point-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <i class="fa-solid fa-check" style="color:#C9A24B; font-size:16px;"></i>
                 <span>Foreign Bank Account Reporting (FBAR) and FATCA voluntary disclosures</span>
               </li>
               <li class="service-point-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <i class="fa-solid fa-check" style="color:#C9A24B; font-size:16px;"></i>
                 <span>Cross-border transfer pricing documentation and Master File compliance</span>
               </li>
             </ul>
@@ -360,7 +483,7 @@
           <div class="service-detail-media">
             <div class="image-reveal-wrapper" style="height:420px;">
               <div class="image-reveal-curtain"></div>
-              <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=800&q=80" alt="Global Currency and Treaty Architecture">
+              <img src="assets/images/service-transfer-pricing.webp" alt="Global Currency and Treaty Architecture">
             </div>
           </div>
         </div>
@@ -540,7 +663,7 @@
           <div class="cta-banner-actions">
             <a href="contact.html#book" class="btn btn-gold btn-lg magnetic">
               <span>Book Strategic Session</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <i class="fa-solid fa-arrow-right"></i>
             </a>
             <a href="index.html#calculator" class="btn btn-glass btn-lg">
               <span>Run Savings Calculator</span>
@@ -551,50 +674,101 @@
     </section>
   </main>
 
-  <!-- LUXURY FOOTER -->
+  <!-- LUXURY FOOTER (STACKLY TAX ADVISORY) -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="brand-name" style="font-size:1.6rem;">Sterling & Co.</div>
-          <div class="brand-tag" style="margin-top:0.25rem;">Tax Advisors • Est. 1998</div>
-          <p>Confidential fiscal architecture, private wealth shielding, and institutional cross-border compliance.</p>
+      <div class="footer-grid">
+        <!-- 1. Brand & Socials -->
+        <div class="footer-col footer-col-brand">
+          <a href="index.html" class="footer-brand-logo" aria-label="STACKLY Home">
+            <img src="logo_0027.webp" alt="STACKLY Logo" class="brand-logo-img" style="height:32px;">
+          </a>
+          <p class="footer-brand-desc">
+            A tax advisory and financial compliance practice working on direct tax, indirect tax, audit, structuring and regulatory filings.
+          </p>
+          <div class="footer-social-row">
+            <a href="#" class="footer-social-btn" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="Twitter / X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
         </div>
-        <div>
-          <div class="footer-title">Advisory Practices</div>
-          <ul class="footer-links">
-            <li><a href="services.html#individual">Private Wealth & HNWI</a></li>
-            <li><a href="services.html#business">Corporate & GST Solutions</a></li>
-            <li><a href="services.html#audit">Audit Defense & Forensics</a></li>
-            <li><a href="services.html#international">Cross-Border Treaties</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="footer-title">Navigation</div>
-          <ul class="footer-links">
+
+        <!-- 2. Explore -->
+        <div class="footer-col">
+          <div class="footer-header-label">EXPLORE</div>
+          <ul class="footer-nav-list">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Sterling & Co.</a></li>
-            <li><a href="blog.html">Tax Intelligence</a></li>
-            <li><a href="contact.html">Global Offices</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
           </ul>
         </div>
-        <div class="footer-newsletter">
-          <div class="footer-title">Executive Intelligence</div>
-          <p>Receive our quarterly confidential briefing on global tax treaties.</p>
-          <form class="newsletter-form" action="#" method="POST">
-            <input type="email" class="newsletter-input" placeholder="Enter corporate email..." required>
-            <button type="submit" class="newsletter-btn" aria-label="Subscribe">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </button>
-          </form>
+
+        <!-- 3. Practice Areas -->
+        <div class="footer-col">
+          <div class="footer-header-label">PRACTICE AREAS</div>
+          <ul class="footer-nav-list">
+            <li><a href="services.html#individual">Direct Tax</a></li>
+            <li><a href="services.html#business">GST & Indirect Tax</a></li>
+            <li><a href="services.html#audit">Audit & Assurance</a></li>
+            <li><a href="services.html#international">Planning & Structuring</a></li>
+            <li><a href="services.html#pricing">Regulatory & Compliance</a></li>
+          </ul>
+        </div>
+
+        <!-- 4. Resources -->
+        <div class="footer-col">
+          <div class="footer-header-label">RESOURCES</div>
+          <ul class="footer-nav-list">
+            <li><a href="blog.html">Filing Calendar</a></li>
+            <li><a href="services.html">Document Checklists</a></li>
+            <li><a href="contact.html">Engagement Terms</a></li>
+            <li><a href="services.html#pricing">Fee Structure</a></li>
+            <li><a href="about.html">Editorial Standards</a></li>
+          </ul>
+        </div>
+
+        <!-- 5. Contact -->
+        <div class="footer-col footer-col-contact">
+          <div class="footer-header-label">CONTACT</div>
+          <div class="footer-contact-list">
+            <div class="footer-contact-row">
+              <span class="footer-contact-icon">
+                <i class="fa-solid fa-phone"></i>
+              </span>
+              <a href="tel:+919876543210" class="footer-contact-text">+91 98765 43210</a>
+            </div>
+            <div class="footer-contact-row">
+              <span class="footer-contact-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </span>
+              <a href="mailto:stackly@desk.com" class="footer-contact-text">stackly@desk.com</a>
+            </div>
+            <div class="footer-contact-row">
+              <span class="footer-contact-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </span>
+              <span class="footer-contact-text">Stackly, Salem,<br>Tamil Nadu, India</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <div>© 2026 Sterling & Co. Tax Advisors LLP. All rights reserved.</div>
-        <div class="footer-bottom-links">
-          <a href="#">Privacy Protocol</a>
-          <a href="#">Regulatory Disclosures</a>
-          <a href="login.html">Client Portal</a>
+
+      <!-- Footer Bottom Copyright -->
+      <div class="footer-bottom-bar">
+        <div class="footer-copyright-text">
+          © 2026 STACKLY TAX ADVISORY
         </div>
       </div>
     </div>

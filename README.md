@@ -8,8 +8,9 @@ A luxury fintech web platform built for **Sterling & Co. Tax Advisors**, a priva
 - **Warm Ivory** (`#F7F3EA`): High-clarity typography and contrast.
 - **Emerald Accent** (`#1F7A66`, `#289E84`): Compliance clearance and verified tax savings metrics.
 - **Typography**:
-  - Headings: *Playfair Display* (Editorial luxury serif)
+  - Headings: *Playfair Display* (Editorial luxury serif with tight tracking and italic accent words)
   - Body Text: *Inter* (Legibility and modern fintech clarity)
+  - Monospace & Eyebrows: *DM Mono* (Technical precision, uppercase tracking, and financial receipts)
 - **Visual Texture**: Custom SVG procedural grain overlay, glassmorphic cards (`backdrop-filter: blur(16px)`), thin gold borders (`rgba(201, 162, 75, 0.28)`), and glowing ambient radial meshes.
 - **Theme Modes (White Mode & Midnight Dark Mode)**:
   - **White Mode (Default)**: Pristine warm ivory/alabaster surfaces (`#FDFBF7`), frosted white cards (`rgba(255, 255, 255, 0.92)`), deep royal imperial violet headings (`#4C1D95`), rich antique gold accents (`#B38938`), and dark slate body text (`#475569`).
@@ -83,9 +84,29 @@ A luxury fintech web platform built for **Sterling & Co. Tax Advisors**, a priva
   - Show / Hide password toggle with SVG icon.
   - Real-time password entropy & strength meter.
   - Client classification selector (Individual vs. Corporate).
+  - Direct demo shortcuts to **Customer Dashboard** and **Admin Command Center**.
+  - Intelligent role redirect upon login based on credential email.
   - Google Workspace & Microsoft Enterprise SSO buttons.
-  - Forgot password modal trigger.
-  - Return to Main Site navigation link.
+
+### 7. `user.html` / `customer-dashboard.html` — USER / CUSTOMER DASHBOARD
+- **Theme Color Palette**: Deep Wine (`#601D49`), Soft Rose (`#BD5579`), Blush (`#EA9D9D`), Cream Butter (`#FFEBB8`), Paper Linen (`#F4EFE7`), and Ink (`#241D25`).
+- **Sidebar & Shell**: Gradient Wine background, user chip indicator, logo branding, and responsive mobile toggle.
+- **Interactive Views**:
+  1. **Overview**: Financial snapshot, statutory tax liability vs deductions, upcoming tax deadlines countdown, progress meter.
+  2. **Tax Centre**: Personal & corporate tax returns, status pills, filing receipts, and compliance tracking.
+  3. **Documents**: Secure document repository, category tabs, and file downloads.
+  4. **Activity**: Real-time log of filings, IRS updates, and account movements.
+  5. **Profile**: User settings, security parameters, and communication preferences.
+
+### 8. `admin.html` / `admin-dashboard.html` — ADMINISTRATIVE CONTROL CENTRE
+- **Theme Color Palette**: Deep Wine (`#601D49`), Primary Dark (`#421331`), Accent Rose (`#BD5579`), Soft Rose (`#EA9D9D`), Cream (`#FFEBB8`), Surface Paper (`#F7F2EB`), and Ink (`#251C22`).
+- **Sidebar & Shell**: Clean linen & surface styling, admin badge chip, system live indicator, and dynamic user avatar initials.
+- **Interactive Management Views**:
+  1. **Overview**: Practice KPI metrics (managed tax liabilities, active files, filings completed, retainer revenue), recent filings table, and audit controversy alerts.
+  2. **Clients**: Comprehensive filterable client database (184 clients), search, category filters, and detailed client drawers.
+  3. **Tax Operations**: 4-stage operations workflow pipeline and tax filings queue.
+  4. **Reports**: Revenue breakdown, billable hours, and tax savings realization charts.
+  5. **Team & System**: Staff workload distribution, partner authorizations, and audit security logs.
 
 ---
 

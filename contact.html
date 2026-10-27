@@ -16,7 +16,8 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/pages.css">
@@ -30,29 +31,29 @@
   <div class="custom-cursor-dot" aria-hidden="true"></div>
   <div class="custom-cursor-ring" aria-hidden="true"></div>
 
+  <!-- Preloader with Animated Monogram -->
+  <div id="preloader" role="status" aria-label="Loading STACKLY">
+    <div class="preloader-brand">
+      <img src="logo_0027.webp" alt="STACKLY Logo" class="preloader-logo-img">
+    </div>
+    <div class="preloader-bar-wrap">
+      <div class="preloader-bar"></div>
+    </div>
+    <div class="preloader-percent">0%</div>
+  </div>
+
   <!-- Page Transition Curtain -->
   <div id="page-transition" aria-hidden="true">
     <div class="transition-emblem">
-      <img src="assets/favicon.svg" alt="" width="60" height="60">
+      <img src="logo_0027.webp" alt="STACKLY Logo" class="brand-logo-img" style="height:48px; width:auto;">
     </div>
   </div>
 
   <!-- NAVIGATION -->
   <header class="navbar" id="navbar">
     <div class="container nav-container">
-      <a href="index.html" class="nav-brand" aria-label="Sterling & Co. Home">
-        <div class="brand-mark">
-          <svg width="34" height="34" viewBox="0 0 64 64" fill="none">
-            <rect width="64" height="64" rx="14" fill="#0B1426" stroke="#C9A24B" stroke-width="2" stroke-opacity="0.8"/>
-            <path d="M22 23 C22 18, 42 16, 42 24 C42 32, 22 31, 22 41 C22 49, 42 47, 42 40" stroke="#C9A24B" stroke-width="3.5" stroke-linecap="round"/>
-            <circle cx="32" cy="14" r="2" fill="#DFC07A"/>
-            <circle cx="32" cy="50" r="2" fill="#DFC07A"/>
-          </svg>
-        </div>
-        <div>
-          <div class="brand-name">Sterling & Co.</div>
-          <div class="brand-tag">Tax Advisors</div>
-        </div>
+      <a href="index.html" class="nav-brand" aria-label="STACKLY Home">
+        <img src="logo_0027.webp" alt="STACKLY Logo" class="brand-logo-img">
       </a>
 
       <nav aria-label="Main Navigation">
@@ -66,34 +67,9 @@
       </nav>
 
       <div class="nav-actions">
-        <!-- Theme Toggle (White / Dark Mode) -->
-        <button type="button" class="theme-toggle-btn" aria-label="Toggle White or Dark Theme" title="Toggle White or Dark Theme">
-          <span class="theme-icon-sun" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="5"></circle>
-              <line x1="12" y1="1" x2="12" y2="3"></line>
-              <line x1="12" y1="21" x2="12" y2="23"></line>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-              <line x1="1" y1="12" x2="3" y2="12"></line>
-              <line x1="21" y1="12" x2="23" y2="12"></line>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-          </span>
-          <span class="theme-icon-moon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-          </span>
-        </button>
-
         <a href="login.html" class="btn-login-outline">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-          </svg>
-          Client Vault
+          <i class="fa-solid fa-lock"></i>
+          Login
         </a>
         <button class="mobile-toggle" aria-label="Open mobile menu" aria-expanded="false">
           <span class="hamburger-box">
@@ -108,13 +84,16 @@
 
   <!-- FULLSCREEN MOBILE MENU -->
   <div class="mobile-menu" aria-label="Mobile Navigation">
+    <div style="padding: 1.5rem 2rem 0.5rem;">
+      <img src="logo_0027.webp" alt="STACKLY Logo" class="brand-logo-img" style="height:32px;">
+    </div>
     <ul class="mobile-nav-links">
       <li><a href="index.html" class="mobile-nav-link">Home</a></li>
       <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
       <li><a href="services.html" class="mobile-nav-link">Services & Pricing</a></li>
       <li><a href="blog.html" class="mobile-nav-link">Tax Intelligence & Insights</a></li>
       <li><a href="contact.html" class="mobile-nav-link active">Contact & Consultation</a></li>
-      <li><a href="login.html" class="mobile-nav-link text-gold-gradient">Client Portal Vault</a></li>
+      <li><a href="login.html" class="mobile-nav-link text-gold-gradient">Login</a></li>
     </ul>
   </div>
 
@@ -123,6 +102,152 @@
          1. HERO SECTION WITH CONCIERGE RESPONSE PLEDGE
          ====================================================================== -->
     <section class="page-hero">
+      <!-- TAX CONSULTANCY BACKGROUND SVG ANIMATION: CONFIDENTIAL INTAKE & WORLD DESKS -->
+      <div class="tax-hero-svg-bg tax-svg-contact" aria-hidden="true">
+        <svg viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="contactGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#C9A24B" stop-opacity="0.7"/>
+              <stop offset="50%" stop-color="#DFC07A" stop-opacity="0.4"/>
+              <stop offset="100%" stop-color="#96752C" stop-opacity="0.1"/>
+            </linearGradient>
+            <linearGradient id="contactEmeraldGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#289E84" stop-opacity="0.6"/>
+              <stop offset="50%" stop-color="#1B6353" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#C9A24B" stop-opacity="0.15"/>
+            </linearGradient>
+            <filter id="contactGlow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+
+          <!-- 1. Cryptographic Security Grid & Bilateral Signal Conduits -->
+          <g opacity="0.35">
+            <line x1="80" y1="130" x2="1360" y2="130" stroke="rgba(201,162,75,0.12)" stroke-width="1" stroke-dasharray="4 8"/>
+            <line x1="80" y1="280" x2="1360" y2="280" stroke="rgba(201,162,75,0.08)" stroke-width="1" stroke-dasharray="4 8"/>
+            <line x1="80" y1="430" x2="1360" y2="430" stroke="rgba(201,162,75,0.12)" stroke-width="1" stroke-dasharray="4 8"/>
+            <!-- Cryptographic Markers -->
+            <text x="85" y="125" font-family="'DM Mono', monospace" font-size="7.5" fill="rgba(201,162,75,0.4)">AES-256 GCM</text>
+            <text x="85" y="275" font-family="'DM Mono', monospace" font-size="7.5" fill="rgba(201,162,75,0.4)">BILATERAL NDA</text>
+            <text x="85" y="425" font-family="'DM Mono', monospace" font-size="7.5" fill="rgba(201,162,75,0.4)">PRIVILEGE HASH</text>
+          </g>
+
+          <!-- 2. Dynamic Encrypted Transmission Wave Lines -->
+          <path class="tax-flow-line tax-flow-1" d="M -80 430 C 260 430, 480 180, 860 210 S 1220 130, 1540 70" fill="none" stroke="url(#contactGoldGrad)" stroke-width="2.2" stroke-dasharray="10 8"/>
+          <path class="tax-flow-line tax-flow-2" d="M -80 300 C 320 300, 640 470, 1000 290 S 1320 210, 1540 160" fill="none" stroke="url(#contactEmeraldGrad)" stroke-width="1.8" stroke-dasharray="8 6"/>
+
+          <!-- 3. Left Feature: Bilateral 256-Bit Cryptographic Vault & Privilege Shield -->
+          <g transform="translate(95, 95)">
+            <g class="tax-float-inner tax-elem-shield">
+              <!-- Double Hex Calibration Ring -->
+              <circle cx="65" cy="65" r="58" fill="none" stroke="rgba(201,162,75,0.25)" stroke-dasharray="5 7">
+                <animateTransform attributeName="transform" type="rotate" from="0 65 65" to="360 65 65" dur="42s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="65" cy="65" r="46" fill="none" stroke="rgba(40,158,132,0.3)" stroke-dasharray="4 6">
+                <animateTransform attributeName="transform" type="rotate" from="360 65 65" to="0 65 65" dur="34s" repeatCount="indefinite"/>
+              </circle>
+              <!-- Fiduciary Vault Padlock / Armor Shield -->
+              <path d="M 65 30 L 96 44 C 96 76 65 96 65 96 C 65 96 34 76 34 44 Z" fill="rgba(11,20,38,0.78)" stroke="#C9A24B" stroke-width="2" filter="url(#contactGlow)"/>
+              <!-- Padlock Shackle & Keyhole -->
+              <path d="M 54 52 A 11 11 0 0 1 76 52 L 76 60 L 54 60 Z" fill="none" stroke="#DFC07A" stroke-width="2"/>
+              <circle cx="65" cy="68" r="4" fill="#DFC07A"/>
+              <line x1="65" y1="72" x2="65" y2="78" stroke="#DFC07A" stroke-width="2.2" stroke-linecap="round"/>
+              <circle cx="65" cy="40" r="2.5" fill="#289E84" class="tax-beacon-pulse"/>
+              
+              <text x="65" y="118" text-anchor="middle" font-family="'DM Mono', monospace" font-size="9" fill="#DFC07A" font-weight="700" letter-spacing="2">ATTORNEY PRIVILEGE</text>
+              <text x="65" y="130" text-anchor="middle" font-family="'DM Mono', monospace" font-size="7.5" fill="#289E84" font-weight="600" letter-spacing="1">BILATERAL NDA ACTIVE</text>
+            </g>
+          </g>
+
+          <!-- 4. Upper Right Feature: World Financial Hubs Chrono Dials (London, NY, Singapore) -->
+          <g transform="translate(1130, 65)">
+            <g class="tax-float-inner tax-elem-scale">
+              <!-- World Clocks Master Frame -->
+              <rect x="0" y="0" width="185" height="195" rx="10" fill="rgba(11,20,38,0.8)" stroke="rgba(201,162,75,0.4)" stroke-width="1.2" filter="url(#contactGlow)"/>
+              <text x="14" y="24" font-family="'DM Mono', monospace" font-size="8.5" fill="#DFC07A" font-weight="700" letter-spacing="1.5">GLOBAL HUBS (UTC)</text>
+              <line x1="14" y1="32" x2="171" y2="32" stroke="rgba(201,162,75,0.22)" stroke-width="1"/>
+              
+              <!-- Hub Dial 1: LONDON (UTC+0) -->
+              <g transform="translate(34, 72)">
+                <circle cx="20" cy="20" r="18" fill="rgba(11,20,38,0.7)" stroke="#C9A24B" stroke-width="1.2"/>
+                <line x1="20" y1="6" x2="20" y2="10" stroke="#DFC07A" stroke-width="1"/>
+                <line x1="20" y1="30" x2="20" y2="34" stroke="#DFC07A" stroke-width="1"/>
+                <!-- Clock hands -->
+                <line x1="20" y1="20" x2="20" y2="11" stroke="#DFC07A" stroke-width="1.8" stroke-linecap="round">
+                  <animateTransform attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="24s" repeatCount="indefinite"/>
+                </line>
+                <line x1="20" y1="20" x2="27" y2="20" stroke="#289E84" stroke-width="1.4" stroke-linecap="round">
+                  <animateTransform attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="140s" repeatCount="indefinite"/>
+                </line>
+                <circle cx="20" cy="20" r="2" fill="#DFC07A"/>
+                <text x="20" y="49" text-anchor="middle" font-family="'DM Mono', monospace" font-size="7.5" fill="#DFC07A" font-weight="600">LON</text>
+              </g>
+
+              <!-- Hub Dial 2: NEW YORK (UTC-5) -->
+              <g transform="translate(94, 72)">
+                <circle cx="20" cy="20" r="18" fill="rgba(11,20,38,0.7)" stroke="#C9A24B" stroke-width="1.2"/>
+                <line x1="20" y1="6" x2="20" y2="10" stroke="#DFC07A" stroke-width="1"/>
+                <line x1="20" y1="30" x2="20" y2="34" stroke="#DFC07A" stroke-width="1"/>
+                <!-- Clock hands -->
+                <line x1="20" y1="20" x2="20" y2="11" stroke="#DFC07A" stroke-width="1.8" stroke-linecap="round">
+                  <animateTransform attributeName="transform" type="rotate" from="150 20 20" to="510 20 20" dur="24s" repeatCount="indefinite"/>
+                </line>
+                <line x1="20" y1="20" x2="27" y2="20" stroke="#289E84" stroke-width="1.4" stroke-linecap="round">
+                  <animateTransform attributeName="transform" type="rotate" from="90 20 20" to="450 20 20" dur="140s" repeatCount="indefinite"/>
+                </line>
+                <circle cx="20" cy="20" r="2" fill="#DFC07A"/>
+                <text x="20" y="49" text-anchor="middle" font-family="'DM Mono', monospace" font-size="7.5" fill="#DFC07A" font-weight="600">NYC</text>
+              </g>
+
+              <!-- Hub Dial 3: SINGAPORE (UTC+8) -->
+              <g transform="translate(64, 130)">
+                <circle cx="20" cy="20" r="16" fill="rgba(11,20,38,0.7)" stroke="#289E84" stroke-width="1.2"/>
+                <!-- Clock hands -->
+                <line x1="20" y1="20" x2="20" y2="11" stroke="#DFC07A" stroke-width="1.8" stroke-linecap="round">
+                  <animateTransform attributeName="transform" type="rotate" from="240 20 20" to="600 20 20" dur="24s" repeatCount="indefinite"/>
+                </line>
+                <line x1="20" y1="20" x2="27" y2="20" stroke="#289E84" stroke-width="1.4" stroke-linecap="round">
+                  <animateTransform attributeName="transform" type="rotate" from="180 20 20" to="540 20 20" dur="140s" repeatCount="indefinite"/>
+                </line>
+                <circle cx="20" cy="20" r="2" fill="#289E84"/>
+                <text x="20" y="47" text-anchor="middle" font-family="'DM Mono', monospace" font-size="7.5" fill="#289E84" font-weight="600">SIN</text>
+              </g>
+
+              <circle cx="165" cy="22" r="3" fill="#289E84" class="tax-beacon-pulse"/>
+            </g>
+          </g>
+
+          <!-- 5. Lower Right Feature: Concierge 2-Hour Partner Response Timer Badge -->
+          <g transform="translate(1190, 280)">
+            <g class="tax-float-inner tax-elem-chart">
+              <rect x="0" y="0" width="156" height="88" rx="8" fill="rgba(11,20,38,0.76)" stroke="rgba(201,162,75,0.35)" stroke-width="1" filter="url(#contactGlow)"/>
+              <circle cx="24" cy="30" r="5" fill="#289E84" class="tax-beacon-pulse"/>
+              <text x="36" y="34" font-family="'DM Mono', monospace" font-size="7.5" fill="#289E84" font-weight="700">DESK ACTIVE</text>
+              <text x="18" y="58" font-family="'Cinzel', serif" font-size="16" fill="#DFC07A" font-weight="700">&lt; 2.0 HOURS</text>
+              <text x="18" y="74" font-family="'DM Mono', monospace" font-size="7" fill="rgba(255,255,255,0.5)">GUARANTEED RESPONSE</text>
+            </g>
+          </g>
+
+          <!-- 6. Lower Left Feature: Secure Bilateral Handshake Node -->
+          <g transform="translate(280, 350)">
+            <g class="tax-float-inner tax-elem-percent">
+              <circle cx="45" cy="45" r="38" fill="none" stroke="rgba(201,162,75,0.25)" stroke-width="1.2" stroke-dasharray="5 5">
+                <animateTransform attributeName="transform" type="rotate" from="0 45 45" to="360 45 45" dur="32s" repeatCount="indefinite"/>
+              </circle>
+              <!-- Dual Handshake Intersect Rings -->
+              <circle cx="38" cy="45" r="14" fill="none" stroke="#C9A24B" stroke-width="1.5"/>
+              <circle cx="52" cy="45" r="14" fill="none" stroke="#289E84" stroke-width="1.5"/>
+              <circle cx="45" cy="45" r="3" fill="#DFC07A" class="tax-beacon-pulse"/>
+              <text x="45" y="78" text-anchor="middle" font-family="'DM Mono', monospace" font-size="8" fill="#DFC07A" font-weight="600" letter-spacing="1">STRICT PROTOCOL</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+
       <div class="container">
         <div class="badge-luxury">Private Fiduciary Intake</div>
         <h1 data-split>Initiate a Confidential Strategic Engagement</h1>
@@ -165,7 +290,7 @@
     <!-- ======================================================================
          2. COMPREHENSIVE CONTACT FORM & OFFICE DETAILS
          ====================================================================== -->
-    <section class="section">
+    <section class="section" id="book">
       <div class="container">
         <div class="contact-layout-grid">
           <!-- Left: Multi-Step Intake Form -->
@@ -227,19 +352,9 @@
                 <textarea id="cf-message" class="form-control" placeholder="Provide a confidential overview of current entities, jurisdictions involved, or immediate tax notice deadlines..." required></textarea>
               </div>
 
-              <!-- Document Upload Mockup -->
-              <div class="form-group">
-                <label class="form-label">Confidential Encrypted Document Upload (Optional)</label>
-                <div style="border: 1px dashed var(--gold-border); padding: 1.5rem; text-align:center; border-radius:10px; background: rgba(7,13,24,0.4); cursor:pointer;" onclick="showToast('Secure 256-bit vault file selector engaged.', 'info')">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2" style="margin-bottom:0.5rem;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
-                  <div style="font-size:0.85rem; color:var(--slate-light);">Drag & drop IRS notices, organizational charts, or historical returns</div>
-                  <div style="font-size:0.75rem; color:var(--slate-text); margin-top:0.25rem;">Encrypted via AES-256 standard (Max 25 MB)</div>
-                </div>
-              </div>
-
               <button type="submit" class="btn btn-gold btn-lg magnetic" style="width:100%;">
                 <span>Submit Confidential Inquiry</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                <i class="fa-solid fa-arrow-right"></i>
               </button>
             </form>
           </div>
@@ -266,21 +381,21 @@
               <h4 style="margin-bottom:1rem; font-size:1.2rem;">Direct Practice Inquiries</h4>
               <ul style="list-style:none; display:flex; flex-direction:column; gap:1.25rem;">
                 <li style="display:flex; align-items:flex-start; gap:0.85rem;">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2" style="margin-top:2px;"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                  <i class="fa-solid fa-envelope" style="color:#C9A24B; font-size:18px; margin-top:2px;"></i>
                   <div>
                     <strong style="color:var(--ivory); display:block; font-size:0.92rem;">General Executive Inquiries:</strong>
                     <a href="mailto:concierge@sterlingtax.com" style="color:var(--gold-light); font-size:0.88rem;">concierge@sterlingtax.com</a>
                   </div>
                 </li>
                 <li style="display:flex; align-items:flex-start; gap:0.85rem;">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2" style="margin-top:2px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  <i class="fa-solid fa-shield-halved" style="color:#C9A24B; font-size:18px; margin-top:2px;"></i>
                   <div>
                     <strong style="color:var(--ivory); display:block; font-size:0.92rem;">PGP Key / Encrypted Vault Desk:</strong>
                     <span style="font-size:0.85rem; color:var(--slate-text);">Fingerprint: 4E91 B288 903C 521F C9A2</span>
                   </div>
                 </li>
                 <li style="display:flex; align-items:flex-start; gap:0.85rem;">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2" style="margin-top:2px;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                  <i class="fa-solid fa-clock" style="color:#C9A24B; font-size:18px; margin-top:2px;"></i>
                   <div>
                     <strong style="color:var(--ivory); display:block; font-size:0.92rem;">Office Hours:</strong>
                     <span style="font-size:0.85rem; color:var(--slate-text);">Mon – Fri: 08:00 – 19:00 (All Local Zones)</span>
@@ -289,67 +404,6 @@
               </ul>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================================================================
-         6. BOOK-A-CONSULTATION APPOINTMENT SCHEDULER
-         ====================================================================== -->
-    <section class="section" id="book" style="background: rgba(7, 13, 24, 0.7);">
-      <div class="container">
-        <div class="section-header">
-          <div class="badge-luxury">Direct Appointment</div>
-          <h2 data-split>Schedule an Executive Strategic Consultation</h2>
-          <p>Select your preferred partner, date, and time slot. Our executive secretary will coordinate calendar invitations immediately.</p>
-        </div>
-
-        <div class="scheduler-card" id="booking-scheduler" style="max-width:850px; margin:0 auto;">
-          <form id="booking-form">
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1.5rem;">
-              <div class="form-group">
-                <label class="form-label" for="booking-name">Your Full Legal Name *</label>
-                <input type="text" id="booking-name" class="form-control" placeholder="E.g., Julian Hawthorne" required>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="booking-email">Primary Executive Email *</label>
-                <input type="email" id="booking-email" class="form-control" placeholder="E.g., j.hawthorne@familyoffice.com" required>
-              </div>
-            </div>
-
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1.5rem;">
-              <div class="form-group">
-                <label class="form-label" for="booking-advisor">Select Senior Advisor</label>
-                <select id="booking-advisor" class="form-control">
-                  <option value="Alistair Sterling (Senior Managing Partner)">Alistair Sterling, JD (Cross-Border & M&A)</option>
-                  <option value="Claire Beauchamp (Private Wealth Head)">Claire Beauchamp, CPA (Private Wealth & Trusts)</option>
-                  <option value="David Thorne (Corporate Head)">David Thorne, CTA (Corporate Structuring & OECD)</option>
-                  <option value="Mei-Ling Zhou (APAC Head)">Mei-Ling Zhou, LLM (APAC & Singapore VCC)</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="booking-date">Select Desired Consultation Date *</label>
-                <input type="date" id="booking-date" class="form-control" required>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label">Available Confidential Time Slots (Virtual or In-Office)</label>
-              <div class="slots-grid">
-                <button type="button" class="slot-btn active">09:00 AM</button>
-                <button type="button" class="slot-btn">10:30 AM</button>
-                <button type="button" class="slot-btn">01:00 PM</button>
-                <button type="button" class="slot-btn">02:30 PM</button>
-                <button type="button" class="slot-btn">04:00 PM</button>
-                <button type="button" class="slot-btn">05:30 PM</button>
-              </div>
-            </div>
-
-            <button type="submit" class="btn btn-gold btn-lg magnetic" style="width:100%; margin-top:1.5rem;">
-              <span>Confirm Strategic Appointment Request</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </button>
-          </form>
         </div>
       </div>
     </section>
@@ -482,9 +536,9 @@
     </section>
 
     <!-- ======================================================================
-         7. CONTACT FAQ & ENGAGEMENT POLICIES
+         5. CONTACT FAQ & ENGAGEMENT POLICIES
          ====================================================================== -->
-    <section class="section" style="background: rgba(7, 13, 24, 0.6);">
+    <section class="section">
       <div class="container">
         <div class="section-header">
           <div class="badge-luxury">Intake Clarity</div>
@@ -533,7 +587,7 @@
     </section>
 
     <!-- ======================================================================
-         8. SOCIAL LINKS & DIRECT CONCIERGE HOTLINE
+         6. SOCIAL LINKS & EXECUTIVE NETWORKS
          ====================================================================== -->
     <section class="section" style="padding-top:2rem;">
       <div class="container text-center">
@@ -543,11 +597,11 @@
         
         <div style="display:flex; justify-content:center; gap:1.25rem;">
           <a href="#" class="btn btn-glass" aria-label="LinkedIn Firm Page">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            <i class="fa-brands fa-linkedin-in"></i>
             <span>LinkedIn Institutional</span>
           </a>
           <a href="#" class="btn btn-glass" aria-label="Bloomberg Terminal">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <i class="fa-solid fa-globe"></i>
             <span>Bloomberg Terminal / STRL &lt;GO&gt;</span>
           </a>
         </div>
@@ -555,7 +609,7 @@
     </section>
 
     <!-- ======================================================================
-         9. FINAL CTA BANNER
+         7. FINAL CTA BANNER
          ====================================================================== -->
     <section class="cta-banner-section">
       <div class="container">
@@ -566,10 +620,7 @@
           <div class="cta-banner-actions">
             <a href="#book" class="btn btn-gold btn-lg magnetic">
               <span>Book Priority Consultation</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-            <a href="tel:+12128479200" class="btn btn-glass btn-lg">
-              <span>Direct Concierge: +1 (212) 847-9200</span>
+              <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
         </div>
@@ -577,50 +628,101 @@
     </section>
   </main>
 
-  <!-- LUXURY FOOTER -->
+  <!-- LUXURY FOOTER (STACKLY TAX ADVISORY) -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="brand-name" style="font-size:1.6rem;">Sterling & Co.</div>
-          <div class="brand-tag" style="margin-top:0.25rem;">Tax Advisors • Est. 1998</div>
-          <p>Confidential fiscal architecture, private wealth shielding, and institutional cross-border compliance.</p>
+      <div class="footer-grid">
+        <!-- 1. Brand & Socials -->
+        <div class="footer-col footer-col-brand">
+          <a href="index.html" class="footer-brand-logo" aria-label="STACKLY Home">
+            <img src="logo_0027.webp" alt="STACKLY Logo" class="brand-logo-img" style="height:32px;">
+          </a>
+          <p class="footer-brand-desc">
+            A tax advisory and financial compliance practice working on direct tax, indirect tax, audit, structuring and regulatory filings.
+          </p>
+          <div class="footer-social-row">
+            <a href="#" class="footer-social-btn" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="Twitter / X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
         </div>
-        <div>
-          <div class="footer-title">Advisory Practices</div>
-          <ul class="footer-links">
-            <li><a href="services.html#individual">Private Wealth & HNWI</a></li>
-            <li><a href="services.html#business">Corporate & GST Solutions</a></li>
-            <li><a href="services.html#audit">Audit Defense & Forensics</a></li>
-            <li><a href="services.html#international">Cross-Border Treaties</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="footer-title">Navigation</div>
-          <ul class="footer-links">
+
+        <!-- 2. Explore -->
+        <div class="footer-col">
+          <div class="footer-header-label">EXPLORE</div>
+          <ul class="footer-nav-list">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Sterling & Co.</a></li>
-            <li><a href="blog.html">Tax Intelligence</a></li>
-            <li><a href="contact.html">Global Offices</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
           </ul>
         </div>
-        <div class="footer-newsletter">
-          <div class="footer-title">Executive Intelligence</div>
-          <p>Receive our quarterly confidential briefing on global tax treaties.</p>
-          <form class="newsletter-form" action="#" method="POST">
-            <input type="email" class="newsletter-input" placeholder="Enter corporate email..." required>
-            <button type="submit" class="newsletter-btn" aria-label="Subscribe">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </button>
-          </form>
+
+        <!-- 3. Practice Areas -->
+        <div class="footer-col">
+          <div class="footer-header-label">PRACTICE AREAS</div>
+          <ul class="footer-nav-list">
+            <li><a href="services.html#individual">Direct Tax</a></li>
+            <li><a href="services.html#business">GST & Indirect Tax</a></li>
+            <li><a href="services.html#audit">Audit & Assurance</a></li>
+            <li><a href="services.html#international">Planning & Structuring</a></li>
+            <li><a href="services.html#pricing">Regulatory & Compliance</a></li>
+          </ul>
+        </div>
+
+        <!-- 4. Resources -->
+        <div class="footer-col">
+          <div class="footer-header-label">RESOURCES</div>
+          <ul class="footer-nav-list">
+            <li><a href="blog.html">Filing Calendar</a></li>
+            <li><a href="services.html">Document Checklists</a></li>
+            <li><a href="contact.html">Engagement Terms</a></li>
+            <li><a href="services.html#pricing">Fee Structure</a></li>
+            <li><a href="about.html">Editorial Standards</a></li>
+          </ul>
+        </div>
+
+        <!-- 5. Contact -->
+        <div class="footer-col footer-col-contact">
+          <div class="footer-header-label">CONTACT</div>
+          <div class="footer-contact-list">
+            <div class="footer-contact-row">
+              <span class="footer-contact-icon">
+                <i class="fa-solid fa-phone"></i>
+              </span>
+              <a href="tel:+919876543210" class="footer-contact-text">+91 98765 43210</a>
+            </div>
+            <div class="footer-contact-row">
+              <span class="footer-contact-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </span>
+              <a href="mailto:stackly@desk.com" class="footer-contact-text">stackly@desk.com</a>
+            </div>
+            <div class="footer-contact-row">
+              <span class="footer-contact-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </span>
+              <span class="footer-contact-text">Stackly, Salem,<br>Tamil Nadu, India</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <div>© 2026 Sterling & Co. Tax Advisors LLP. All rights reserved.</div>
-        <div class="footer-bottom-links">
-          <a href="#">Privacy Protocol</a>
-          <a href="#">Regulatory Disclosures</a>
-          <a href="login.html">Client Portal</a>
+
+      <!-- Footer Bottom Copyright -->
+      <div class="footer-bottom-bar">
+        <div class="footer-copyright-text">
+          © 2026 STACKLY TAX ADVISORY
         </div>
       </div>
     </div>

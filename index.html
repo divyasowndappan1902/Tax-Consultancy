@@ -21,7 +21,8 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/home.css">
@@ -36,23 +37,9 @@
   <div class="custom-cursor-ring" aria-hidden="true"></div>
 
   <!-- Preloader with Animated Monogram -->
-  <div id="preloader" role="status" aria-label="Loading Sterling & Co.">
+  <div id="preloader" role="status" aria-label="Loading STACKLY">
     <div class="preloader-brand">
-      <svg class="preloader-logo-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="64" height="64" rx="14" fill="#0B1426" stroke="#C9A24B" stroke-width="1.5" stroke-opacity="0.6"/>
-        <path d="M22 23 C22 18, 42 16, 42 24 C42 32, 22 31, 22 41 C22 49, 42 47, 42 40" stroke="url(#preloaderGold)" stroke-width="3.5" stroke-linecap="round"/>
-        <circle cx="32" cy="14" r="2.5" fill="#DFC07A"/>
-        <circle cx="32" cy="50" r="2.5" fill="#DFC07A"/>
-        <defs>
-          <linearGradient id="preloaderGold" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#DFC07A"/>
-            <stop offset="50%" stop-color="#C9A24B"/>
-            <stop offset="100%" stop-color="#96752C"/>
-          </linearGradient>
-        </defs>
-      </svg>
-      <div class="preloader-title">Sterling & Co.</div>
-      <div class="preloader-subtitle">Private Wealth & Tax Advisory</div>
+      <img src="logo_0027.webp" alt="STACKLY Logo" class="preloader-logo-img">
     </div>
     <div class="preloader-bar-wrap">
       <div class="preloader-bar"></div>
@@ -63,26 +50,15 @@
   <!-- Page Transition Curtain -->
   <div id="page-transition" aria-hidden="true">
     <div class="transition-emblem">
-      <img src="assets/favicon.svg" alt="" width="60" height="60">
+      <img src="logo_0027.webp" alt="STACKLY Logo" class="brand-logo-img" style="height:48px; width:auto;">
     </div>
   </div>
 
   <!-- NAVIGATION -->
   <header class="navbar" id="navbar">
     <div class="container nav-container">
-      <a href="index.html" class="nav-brand" aria-label="Sterling & Co. Home">
-        <div class="brand-mark">
-          <svg width="34" height="34" viewBox="0 0 64 64" fill="none">
-            <rect width="64" height="64" rx="14" fill="#0B1426" stroke="#C9A24B" stroke-width="2" stroke-opacity="0.8"/>
-            <path d="M22 23 C22 18, 42 16, 42 24 C42 32, 22 31, 22 41 C22 49, 42 47, 42 40" stroke="#C9A24B" stroke-width="3.5" stroke-linecap="round"/>
-            <circle cx="32" cy="14" r="2" fill="#DFC07A"/>
-            <circle cx="32" cy="50" r="2" fill="#DFC07A"/>
-          </svg>
-        </div>
-        <div>
-          <div class="brand-name">Sterling & Co.</div>
-          <div class="brand-tag">Tax Advisors</div>
-        </div>
+      <a href="index.html" class="nav-brand" aria-label="STACKLY Home">
+        <img src="logo_0027.webp" alt="STACKLY Logo" class="brand-logo-img">
       </a>
 
       <nav aria-label="Main Navigation">
@@ -96,34 +72,9 @@
       </nav>
 
       <div class="nav-actions">
-        <!-- Theme Toggle (White / Dark Mode) -->
-        <button type="button" class="theme-toggle-btn" aria-label="Toggle White or Dark Theme" title="Toggle White or Dark Theme">
-          <span class="theme-icon-sun" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="5"></circle>
-              <line x1="12" y1="1" x2="12" y2="3"></line>
-              <line x1="12" y1="21" x2="12" y2="23"></line>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-              <line x1="1" y1="12" x2="3" y2="12"></line>
-              <line x1="21" y1="12" x2="23" y2="12"></line>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-          </span>
-          <span class="theme-icon-moon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-          </span>
-        </button>
-
         <a href="login.html" class="btn-login-outline">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-          </svg>
-          Client Vault
+          <i class="fa-solid fa-lock"></i>
+          Login
         </a>
         <button class="mobile-toggle" aria-label="Open mobile menu" aria-expanded="false">
           <span class="hamburger-box">
@@ -138,44 +89,24 @@
 
   <!-- FULLSCREEN MOBILE MENU -->
   <div class="mobile-menu" aria-label="Mobile Navigation">
+    <div style="padding: 1.5rem 2rem 0.5rem;">
+      <img src="logo_0027.webp" alt="STACKLY Logo" class="brand-logo-img" style="height:32px;">
+    </div>
     <ul class="mobile-nav-links">
       <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
       <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
       <li><a href="services.html" class="mobile-nav-link">Services & Pricing</a></li>
       <li><a href="blog.html" class="mobile-nav-link">Tax Intelligence & Insights</a></li>
       <li><a href="contact.html" class="mobile-nav-link">Contact & Consultation</a></li>
-      <li><a href="login.html" class="mobile-nav-link text-gold-gradient">Client Portal Vault</a></li>
+      <li><a href="login.html" class="mobile-nav-link text-gold-gradient">Login</a></li>
     </ul>
     <div class="mobile-menu-footer">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
-        <span style="font-size:0.9rem; color:var(--ivory);">Interface Theme</span>
-        <button type="button" class="theme-toggle-btn" aria-label="Toggle White or Dark Theme" title="Toggle Theme">
-          <span class="theme-icon-sun" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="5"></circle>
-              <line x1="12" y1="1" x2="12" y2="3"></line>
-              <line x1="12" y1="21" x2="12" y2="23"></line>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-              <line x1="1" y1="12" x2="3" y2="12"></line>
-              <line x1="21" y1="12" x2="23" y2="12"></line>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-          </span>
-          <span class="theme-icon-moon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-          </span>
-        </button>
-      </div>
       <div class="mobile-contact-item">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        <i class="fa-solid fa-phone" style="color:#C9A24B; width:18px;"></i>
         <span>+1 (212) 847-9200 (Private Desk)</span>
       </div>
       <div class="mobile-contact-item">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+        <i class="fa-solid fa-envelope" style="color:#C9A24B; width:18px;"></i>
         <span>concierge@sterlingtax.com</span>
       </div>
     </div>
@@ -183,18 +114,31 @@
 
   <main>
     <!-- ======================================================================
-         1. CINEMATIC HERO SECTION
+         1. CINEMATIC HERO SECTION (Stackly Tax Advisory Reference Style)
          ====================================================================== -->
     <section class="hero-home" id="hero">
       <div class="bg-mesh-glow glow-gold hero-glow-1" aria-hidden="true"></div>
       <div class="bg-mesh-glow glow-emerald hero-glow-2" aria-hidden="true"></div>
 
-      <div class="container">
+      <div class="container hero-container">
         <div class="hero-grid">
-          <div class="hero-content">
+          <!-- Left Column: Copy & Actions -->
+          <div class="hero-content hero-copy">
             <div class="badge-luxury hero-badge">Institutional Tax Architecture</div>
-            <h1 class="hero-headline" data-split>
-              Preserving Wealth Across Generations with <span class="text-gold-gradient serif-italic">Sovereign Precision</span>
+            <h1 class="hero-headline is-split" data-split aria-label="Preserving Wealth Across Generations with Sovereign Precision">
+              <span class="hero-line" aria-hidden="true">
+                <span class="split-word"><span class="split-inner">Preserving</span></span>
+                <span class="split-word"><span class="split-inner">Wealth</span></span>
+                <span class="split-word"><span class="split-inner">Across</span></span>
+                <span class="split-word"><span class="split-inner">Generations</span></span>
+              </span>
+              <span class="hero-line" aria-hidden="true">
+                <span class="split-word"><span class="split-inner">with</span></span>
+                <span class="text-gold-gradient serif-italic hero-gold-gradient-inline">
+                  <span class="split-word"><span class="split-inner">Sovereign</span></span>
+                  <span class="split-word"><span class="split-inner">Precision</span></span>
+                </span>
+              </span>
             </h1>
             <p class="hero-lead">
               For ultra-high-net-worth families, international founders, and enterprise conglomerates. We engineer proactive tax structures, forensic audit shielding, and cross-border regulatory optimization.
@@ -202,39 +146,65 @@
             <div class="hero-ctas">
               <a href="contact.html#book" class="btn btn-gold btn-lg magnetic">
                 <span>Request Strategic Consultation</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                <i class="fa-solid fa-arrow-right"></i>
               </a>
               <a href="#calculator" class="btn btn-glass btn-lg">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg>
+                <i class="fa-solid fa-calculator" style="color:#C9A24B;"></i>
                 <span>Tax Savings Calculator</span>
               </a>
             </div>
             
-            <div class="hero-stats-row">
-              <div class="hero-stat-item">
-                <div class="hero-stat-val text-gold-gradient">$480M+</div>
-                <div class="hero-stat-label">Verified Tax Savings</div>
+            <!-- Reference Style Hero Rail (Stats & Institutional Metadata) -->
+            <dl class="hero-rail hero-stats-row">
+              <div class="hero-rail-item hero-stat-item">
+                <dt class="hero-stat-label">Verified Tax Savings</dt>
+                <dd class="hero-stat-val text-gold-gradient">$480M+</dd>
               </div>
-              <div class="hero-stat-item">
-                <div class="hero-stat-val">99.8%</div>
-                <div class="hero-stat-label">Audit Clearance Rate</div>
+              <div class="hero-rail-item hero-stat-item">
+                <dt class="hero-stat-label">Audit Clearance Rate</dt>
+                <dd class="hero-stat-val">99.8%</dd>
               </div>
-              <div class="hero-stat-item">
-                <div class="hero-stat-val text-emerald">28+ Yrs</div>
-                <div class="hero-stat-label">Institutional Heritage</div>
+              <div class="hero-rail-item hero-stat-item">
+                <dt class="hero-stat-label">Institutional Heritage</dt>
+                <dd class="hero-stat-val text-emerald">28+ Yrs</dd>
               </div>
-            </div>
+            </dl>
           </div>
 
-          <div class="hero-visual">
-            <div class="hero-image-card">
-              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1000&q=80" alt="Sterling & Co. Strategic Tax Consultancy & Financial Audit Analysis">
+          <!-- Right Column: Framed Multi-Slide Media Card with Dots & Counter -->
+          <div class="hero-media-wrapper hero-visual">
+            <div class="hero-media hero-image-card" id="heroMedia">
+              <div class="hero-slides" id="heroSlides">
+                <figure class="hero-slide is-active">
+                  <img src="assets/images/hero_slide_1.webp" alt="Sterling & Co. Strategic Tax Planning and Financial Advisory" width="600" height="700">
+                </figure>
+                <figure class="hero-slide">
+                  <img src="assets/images/hero_slide_2.webp" alt="Global Financial District Headquarters and Fiduciary Architecture" width="600" height="700">
+                </figure>
+                <figure class="hero-slide">
+                  <img src="assets/images/hero_slide_3.webp" alt="Forensic Tax Audit Analysis, Ledgers, and Calculation Review" width="600" height="700">
+                </figure>
+                <figure class="hero-slide">
+                  <img src="assets/images/hero_slide_4.webp" alt="Private Client Wealth Advisory Firm and Executive Practice Floor" width="600" height="700">
+                </figure>
+              </div>
+
+              <!-- Media Footer: Dots & Monospace Slide Counter -->
+              <div class="hero-media-foot">
+                <div class="hero-dots" id="heroDots" role="tablist" aria-label="Hero slides">
+                  <button class="hero-dot is-active" role="tab" aria-selected="true" aria-label="Show image one"></button>
+                  <button class="hero-dot" role="tab" aria-selected="false" aria-label="Show image two"></button>
+                  <button class="hero-dot" role="tab" aria-selected="false" aria-label="Show image three"></button>
+                  <button class="hero-dot" role="tab" aria-selected="false" aria-label="Show image four"></button>
+                </div>
+                <span class="hero-counter mono" id="heroCounter">01 / 04</span>
+              </div>
             </div>
 
-            <!-- Floating Micro Badges -->
+            <!-- Floating Micro Badges (Exact text preserved) -->
             <div class="hero-floating-badge badge-top">
               <div class="floating-badge-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <i class="fa-solid fa-shield-halved"></i>
               </div>
               <div class="floating-badge-text">
                 <strong>IRS & HMRC Shield</strong>
@@ -244,7 +214,7 @@
 
             <div class="hero-floating-badge badge-bottom">
               <div class="floating-badge-icon emerald">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                <i class="fa-solid fa-arrow-trend-up"></i>
               </div>
               <div class="floating-badge-text">
                 <strong>Pillar Two Prepared</strong>
@@ -266,40 +236,40 @@
       <div class="marquee-track">
         <div class="marquee-content">
           <div class="marquee-item">
-            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <i class="fa-solid fa-landmark"></i>
             <span>VANDERBILT & HAWTHORNE CAPITAL</span>
           </div>
           <div class="marquee-item">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <i class="fa-solid fa-clock"></i>
             <span>GENEVA PRIVATE ASSET MANAGEMENT</span>
           </div>
           <div class="marquee-item">
-            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <i class="fa-solid fa-star"></i>
             <span>CHEYENNE VENTURE PARTNERS</span>
           </div>
           <div class="marquee-item">
-            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            <i class="fa-solid fa-building-columns"></i>
             <span>ROTHSCHILD REALTY TRUST</span>
           </div>
           <div class="marquee-item">
-            <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            <i class="fa-solid fa-chart-line"></i>
             <span>NEXUS BIOTECH HOLDINGS</span>
           </div>
           <div class="marquee-item">
-            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <i class="fa-solid fa-shield"></i>
             <span>AETHELWULF FAMILY OFFICE</span>
           </div>
           <!-- Repeat for infinite marquee illusion -->
           <div class="marquee-item">
-            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <i class="fa-solid fa-landmark"></i>
             <span>VANDERBILT & HAWTHORNE CAPITAL</span>
           </div>
           <div class="marquee-item">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <i class="fa-solid fa-clock"></i>
             <span>GENEVA PRIVATE ASSET MANAGEMENT</span>
           </div>
           <div class="marquee-item">
-            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <i class="fa-solid fa-star"></i>
             <span>CHEYENNE VENTURE PARTNERS</span>
           </div>
         </div>
@@ -315,7 +285,7 @@
           <div class="about-img-box">
             <div class="image-reveal-wrapper">
               <div class="image-reveal-curtain"></div>
-              <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80" alt="Senior Managing Partner advising client">
+              <img src="assets/images/partner.webp" alt="Alistair Sterling, Senior Managing Partner" loading="lazy" width="720" height="960">
             </div>
             <div class="about-quote-box">
               <p>"Tax mitigation is not merely compliance; it is an architectural discipline designed to safeguard dynastic legacy."</p>
@@ -348,7 +318,7 @@
             </ul>
             <a href="about.html" class="btn btn-glass">
               <span>Read Our Full Story</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
         </div>
@@ -366,101 +336,143 @@
           <p>Every solution is rigorously engineered to minimize fiscal exposure while upholding unconditional compliance standards.</p>
         </div>
 
-        <div class="services-grid stagger-grid">
+        <div class="services-grid">
           <!-- Card 1 -->
           <div class="glass-card service-card gold-accent-top tilt-card">
-            <div>
+            <div class="service-card-body">
               <div class="service-icon-box">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                <i class="fa-solid fa-user-tie"></i>
               </div>
               <h3>Private Wealth & HNWI Filing</h3>
               <p>Sophisticated multi-tier personal filings, grantor trusts, family limited partnerships (FLPs), and private foundation tax returns.</p>
-              <div class="service-metrics-badge">Average 34% liability reduction</div>
             </div>
-            <a href="services.html#individual" class="service-link">
-              <span>Explore Wealth Advisory</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+            <div class="service-card-footer">
+              <div class="service-metrics-badge">
+                <span class="badge-content">
+                  <span class="badge-pulse-indicator" aria-hidden="true"></span>
+                  Average 34% liability reduction
+                </span>
+              </div>
+              <a href="services.html#individual" class="service-link">
+                <span>Explore Wealth Advisory</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
           </div>
 
           <!-- Card 2 -->
           <div class="glass-card service-card gold-accent-top tilt-card">
-            <div>
+            <div class="service-card-body">
               <div class="service-icon-box">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                <i class="fa-solid fa-briefcase"></i>
               </div>
               <h3>Corporate Structuring & GST</h3>
               <p>Corporate entity restructuring, value-added tax/GST reconciliation, R&D tax credit monetization, and capital gain optimization.</p>
-              <div class="service-metrics-badge">OECD Pillar Two compliant</div>
             </div>
-            <a href="services.html#business" class="service-link">
-              <span>Explore Corporate Solutions</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+            <div class="service-card-footer">
+              <div class="service-metrics-badge">
+                <span class="badge-content">
+                  <span class="badge-pulse-indicator" aria-hidden="true"></span>
+                  OECD Pillar Two compliant
+                </span>
+              </div>
+              <a href="services.html#business" class="service-link">
+                <span>Explore Corporate Solutions</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
           </div>
 
           <!-- Card 3 -->
           <div class="glass-card service-card gold-accent-top tilt-card">
-            <div>
+            <div class="service-card-body">
               <div class="service-icon-box">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <i class="fa-solid fa-shield-halved"></i>
               </div>
               <h3>Audit Defense & Forensic Shield</h3>
               <p>Complete representation before the IRS, HMRC, and global tax tribunals. Specialized in high-stakes transfer pricing investigations.</p>
-              <div class="service-metrics-badge">99.8% resolution success</div>
             </div>
-            <a href="services.html#audit" class="service-link">
-              <span>Explore Audit Defense</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+            <div class="service-card-footer">
+              <div class="service-metrics-badge">
+                <span class="badge-content">
+                  <span class="badge-pulse-indicator" aria-hidden="true"></span>
+                  99.8% resolution success
+                </span>
+              </div>
+              <a href="services.html#audit" class="service-link">
+                <span>Explore Audit Defense</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
           </div>
 
           <!-- Card 4 -->
           <div class="glass-card service-card gold-accent-top tilt-card">
-            <div>
+            <div class="service-card-body">
               <div class="service-icon-box">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                <i class="fa-solid fa-globe"></i>
               </div>
               <h3>Cross-Border & Expatriate Tax</h3>
               <p>Double tax treaty leverage, non-domicile wealth structuring, FATCA/CRS compliance, and pre-immigration asset ringfencing.</p>
-              <div class="service-metrics-badge">Covers 68 treaty territories</div>
             </div>
-            <a href="services.html#international" class="service-link">
-              <span>Explore International Tax</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+            <div class="service-card-footer">
+              <div class="service-metrics-badge">
+                <span class="badge-content">
+                  <span class="badge-pulse-indicator" aria-hidden="true"></span>
+                  Covers 68 treaty territories
+                </span>
+              </div>
+              <a href="services.html#international" class="service-link">
+                <span>Explore International Tax</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
           </div>
 
           <!-- Card 5 -->
           <div class="glass-card service-card gold-accent-top tilt-card">
-            <div>
+            <div class="service-card-body">
               <div class="service-icon-box">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                <i class="fa-solid fa-layer-group"></i>
               </div>
               <h3>M&A Tax Structuring & Due Diligence</h3>
               <p>Buy-side and sell-side transaction architecture, tax attribute preservation (NOLs), step-up in basis planning, and section 1202 QSBS optimization.</p>
-              <div class="service-metrics-badge">Advising transactions &gt; $50M</div>
             </div>
-            <a href="services.html#planning" class="service-link">
-              <span>Explore Transaction Tax</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+            <div class="service-card-footer">
+              <div class="service-metrics-badge">
+                <span class="badge-content">
+                  <span class="badge-pulse-indicator" aria-hidden="true"></span>
+                  Advising transactions &gt; $50M
+                </span>
+              </div>
+              <a href="services.html#planning" class="service-link">
+                <span>Explore Transaction Tax</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
           </div>
 
           <!-- Card 6 -->
           <div class="glass-card service-card gold-accent-top tilt-card">
-            <div>
+            <div class="service-card-body">
               <div class="service-icon-box">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <i class="fa-solid fa-file-invoice-dollar"></i>
               </div>
               <h3>Year-Round Strategic Advisory</h3>
               <p>Continuous quarterly modeling, legislative impact simulations, private wealth board representation, and executive compensation architecture.</p>
-              <div class="service-metrics-badge">Retainer concierge access</div>
             </div>
-            <a href="services.html#pricing" class="service-link">
-              <span>Explore Retainer Tiers</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+            <div class="service-card-footer">
+              <div class="service-metrics-badge">
+                <span class="badge-content">
+                  <span class="badge-pulse-indicator" aria-hidden="true"></span>
+                  Retainer concierge access
+                </span>
+              </div>
+              <a href="services.html#pricing" class="service-link">
+                <span>Explore Retainer Tiers</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -657,7 +669,7 @@
 
               <a href="contact.html#book" class="btn btn-gold btn-lg" id="btn-book-with-savings" style="width:100%;">
                 <span>Unlock This Savings Architecture</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </div>
@@ -679,7 +691,7 @@
         <div class="industries-grid stagger-grid">
           <div class="industry-card">
             <div class="industry-card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v4M12 14v4M16 14v4"/></svg>
+              <i class="fa-solid fa-building-columns"></i>
             </div>
             <h3>Family Offices & Dynastic Estates</h3>
             <p>Intergenerational wealth transmission, generation-skipping trusts, art asset portfolios, and philanthropic private foundations.</p>
@@ -688,7 +700,7 @@
 
           <div class="industry-card">
             <div class="industry-card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              <i class="fa-solid fa-bolt"></i>
             </div>
             <h3>Tech Founders & Unicorns</h3>
             <p>Section 1202 QSBS qualification, cross-border intellectual property holding structures, secondary sale liquidity planning.</p>
@@ -697,7 +709,7 @@
 
           <div class="industry-card">
             <div class="industry-card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+              <i class="fa-solid fa-city"></i>
             </div>
             <h3>Commercial Real Estate Conglomerates</h3>
             <p>1031 like-kind exchanges, Opportunity Zone syndications, cost segregation acceleration, and cross-border REIT allocations.</p>
@@ -706,7 +718,7 @@
 
           <div class="industry-card">
             <div class="industry-card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              <i class="fa-solid fa-dollar-sign"></i>
             </div>
             <h3>Private Equity & Hedge Funds</h3>
             <p>Carried interest structuring, management company deductions, cross-border treaty pass-throughs, and blocker entity optimization.</p>
@@ -715,7 +727,7 @@
 
           <div class="industry-card">
             <div class="industry-card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+              <i class="fa-solid fa-globe"></i>
             </div>
             <h3>Global Expatriates & Non-Doms</h3>
             <p>Remittance basis planning in the UK, Swiss lump-sum taxation regimes, and pre-departure US expatriation expatriation tax clearance.</p>
@@ -724,7 +736,7 @@
 
           <div class="industry-card">
             <div class="industry-card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              <i class="fa-solid fa-heart-pulse"></i>
             </div>
             <h3>Healthcare & Medical Groups</h3>
             <p>Physician partnership allocations, equipment leasing write-offs, captive insurance structuring, and practice buyout capital gains management.</p>
@@ -753,7 +765,7 @@
               "When our multinational software enterprise completed our \$180M Series D across four jurisdictions, Sterling & Co. saved us in excess of \$14M in transaction taxes while ensuring 100% compliance across both the US and Europe."
             </div>
             <div class="testimonial-client-meta">
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Elena Vance" class="testimonial-avatar">
+              <img src="assets/images/avatar-marcus.webp" alt="Elena Vance" class="testimonial-avatar">
               <div class="testimonial-client-info">
                 <h4>Elena Vance</h4>
                 <span>Chief Executive Officer, CloudMatrix Holdings (London & NYC)</span>
@@ -768,7 +780,7 @@
               "Managing a third-generation single-family office requires unwavering precision. Sterling & Co. restructured our estate trusts, insulating our assets through the most turbulent tax reform cycles in recent memory."
             </div>
             <div class="testimonial-client-meta">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Julian Hawthorne" class="testimonial-avatar">
+              <img src="assets/images/avatar-elena.webp" alt="Julian Hawthorne" class="testimonial-avatar">
               <div class="testimonial-client-info">
                 <h4>Julian Hawthorne</h4>
                 <span>Managing Trustee, Hawthorne Dynastic Trust (Zurich)</span>
@@ -783,7 +795,7 @@
               "During an aggressive multi-year IRS transfer pricing examination, the forensic tax litigation team at Sterling & Co. had the audit resolved within four months with zero penalties levied. Truly exceptional counsel."
             </div>
             <div class="testimonial-client-meta">
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Marcus Chen" class="testimonial-avatar">
+              <img src="assets/images/avatar-julian.webp" alt="Marcus Chen" class="testimonial-avatar">
               <div class="testimonial-client-info">
                 <h4>Marcus Chen</h4>
                 <span>Managing Director, Pacific Rim Logistics Group (Singapore)</span>
@@ -794,7 +806,7 @@
           <!-- Controls -->
           <div class="slider-controls">
             <button class="slider-arrow-btn slider-prev" aria-label="Previous testimonial">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              <i class="fa-solid fa-chevron-left"></i>
             </button>
             <div class="slider-dots">
               <span class="slider-dot active"></span>
@@ -802,7 +814,7 @@
               <span class="slider-dot"></span>
             </div>
             <button class="slider-arrow-btn slider-next" aria-label="Next testimonial">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <i class="fa-solid fa-chevron-right"></i>
             </button>
           </div>
         </div>
@@ -824,7 +836,7 @@
           <!-- Post 1 -->
           <article class="blog-post-card">
             <div class="blog-post-thumb">
-              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=700&q=80" alt="OECD Pillar Two Global Tax Briefing">
+              <img src="assets/images/blog-carried-interest.webp" alt="OECD Pillar Two Global Tax Briefing">
               <div class="blog-post-category">Corporate Tax</div>
             </div>
             <div class="blog-post-body">
@@ -837,7 +849,7 @@
               <p>An in-depth manual on managing GloBE jurisdictional top-up taxes and preserving international tax efficiency.</p>
               <a href="blog.html" class="blog-post-link">
                 <span>Read Full Brief</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </article>
@@ -845,7 +857,7 @@
           <!-- Post 2 -->
           <article class="blog-post-card">
             <div class="blog-post-thumb">
-              <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=700&q=80" alt="Dynastic Wealth Succession Architecture">
+              <img src="assets/images/blog-ip-licensing.webp" alt="Dynastic Wealth Succession Architecture">
               <div class="blog-post-category">Private Wealth</div>
             </div>
             <div class="blog-post-body">
@@ -858,7 +870,7 @@
               <p>Comparing asset protection vehicles under changing estate tax exemption sunsets and state-level nexus rulings.</p>
               <a href="blog.html" class="blog-post-link">
                 <span>Read Full Brief</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </article>
@@ -866,7 +878,7 @@
           <!-- Post 3 -->
           <article class="blog-post-card">
             <div class="blog-post-thumb">
-              <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=700&q=80" alt="Expatriate Relocation Tax Analysis">
+              <img src="assets/images/blog-family-office.webp" alt="Expatriate Relocation Tax Analysis">
               <div class="blog-post-category">Cross-Border</div>
             </div>
             <div class="blog-post-body">
@@ -879,7 +891,7 @@
               <p>Key pitfalls in exit tax calculations, foreign account reporting (FBAR/FATCA), and residency dispute mitigation.</p>
               <a href="blog.html" class="blog-post-link">
                 <span>Read Full Brief</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </article>
@@ -901,10 +913,10 @@
           <div class="cta-banner-actions">
             <a href="contact.html#book" class="btn btn-gold btn-lg magnetic">
               <span>Book Priority Consultation</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <i class="fa-solid fa-arrow-right"></i>
             </a>
             <a href="tel:+12128479200" class="btn btn-glass btn-lg">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <i class="fa-solid fa-phone" style="color:#C9A24B;"></i>
               <span>+1 (212) 847-9200</span>
             </a>
           </div>
@@ -913,61 +925,101 @@
     </section>
   </main>
 
-  <!-- LUXURY FOOTER -->
+  <!-- LUXURY FOOTER (STACKLY TAX ADVISORY) -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="brand-name" style="font-size:1.6rem;">Sterling & Co.</div>
-          <div class="brand-tag" style="margin-top:0.25rem;">Tax Advisors • Est. 1998</div>
-          <p>
-            Confidential fiscal architecture, private wealth shielding, and institutional cross-border compliance for generational continuity.
+      <div class="footer-grid">
+        <!-- 1. Brand & Socials -->
+        <div class="footer-col footer-col-brand">
+          <a href="index.html" class="footer-brand-logo" aria-label="STACKLY Home">
+            <img src="logo_0027.webp" alt="STACKLY Logo" class="brand-logo-img" style="height:32px;">
+          </a>
+          <p class="footer-brand-desc">
+            A tax advisory and financial compliance practice working on direct tax, indirect tax, audit, structuring and regulatory filings.
           </p>
+          <div class="footer-social-row">
+            <a href="#" class="footer-social-btn" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="Twitter / X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
         </div>
 
-        <div>
-          <div class="footer-title">Advisory Practices</div>
-          <ul class="footer-links">
-            <li><a href="services.html#individual">Private Wealth & HNWI</a></li>
-            <li><a href="services.html#business">Corporate & GST Solutions</a></li>
-            <li><a href="services.html#audit">Audit Defense & Forensics</a></li>
-            <li><a href="services.html#international">Cross-Border Treaties</a></li>
-            <li><a href="services.html#pricing">Retainer Pricing Plans</a></li>
+        <!-- 2. Explore -->
+        <div class="footer-col">
+          <div class="footer-header-label">EXPLORE</div>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
           </ul>
         </div>
 
-        <div>
-          <div class="footer-title">Firm Heritage</div>
-          <ul class="footer-links">
-            <li><a href="about.html">About Sterling & Co.</a></li>
-            <li><a href="about.html#team">Partners & Advisors</a></li>
-            <li><a href="about.html#milestones">Historical Milestones</a></li>
-            <li><a href="about.html#certifications">Certifications & Awards</a></li>
-            <li><a href="contact.html">Global Offices</a></li>
+        <!-- 3. Practice Areas -->
+        <div class="footer-col">
+          <div class="footer-header-label">PRACTICE AREAS</div>
+          <ul class="footer-nav-list">
+            <li><a href="services.html#individual">Direct Tax</a></li>
+            <li><a href="services.html#business">GST & Indirect Tax</a></li>
+            <li><a href="services.html#audit">Audit & Assurance</a></li>
+            <li><a href="services.html#international">Planning & Structuring</a></li>
+            <li><a href="services.html#pricing">Regulatory & Compliance</a></li>
           </ul>
         </div>
 
-        <div class="footer-newsletter">
-          <div class="footer-title">Executive Intelligence</div>
-          <p>Receive our quarterly confidential briefing on global tax treaties and fiscal jurisprudence.</p>
-          <form class="newsletter-form" action="#" method="POST">
-            <input type="email" class="newsletter-input" placeholder="Enter corporate email..." required>
-            <button type="submit" class="newsletter-btn" aria-label="Subscribe to newsletter">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </button>
-          </form>
+        <!-- 4. Resources -->
+        <div class="footer-col">
+          <div class="footer-header-label">RESOURCES</div>
+          <ul class="footer-nav-list">
+            <li><a href="blog.html">Filing Calendar</a></li>
+            <li><a href="services.html">Document Checklists</a></li>
+            <li><a href="contact.html">Engagement Terms</a></li>
+            <li><a href="services.html#pricing">Fee Structure</a></li>
+            <li><a href="about.html">Editorial Standards</a></li>
+          </ul>
+        </div>
+
+        <!-- 5. Contact -->
+        <div class="footer-col footer-col-contact">
+          <div class="footer-header-label">CONTACT</div>
+          <div class="footer-contact-list">
+            <div class="footer-contact-row">
+              <span class="footer-contact-icon">
+                <i class="fa-solid fa-phone"></i>
+              </span>
+              <a href="tel:+919876543210" class="footer-contact-text">+91 98765 43210</a>
+            </div>
+            <div class="footer-contact-row">
+              <span class="footer-contact-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </span>
+              <a href="mailto:stackly@desk.com" class="footer-contact-text">stackly@desk.com</a>
+            </div>
+            <div class="footer-contact-row">
+              <span class="footer-contact-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </span>
+              <span class="footer-contact-text">Stackly, Salem,<br>Tamil Nadu, India</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <div>
-          © 2026 Sterling & Co. Tax Advisors LLP. All rights reserved. Registered under AICPA & STEP international standards.
-        </div>
-        <div class="footer-bottom-links">
-          <a href="#">Privacy Protocol</a>
-          <a href="#">Regulatory Disclosures</a>
-          <a href="#">Terms of Engagement</a>
-          <a href="login.html">Client Portal</a>
+      <!-- Footer Bottom Copyright -->
+      <div class="footer-bottom-bar">
+        <div class="footer-copyright-text">
+          © 2026 STACKLY TAX ADVISORY
         </div>
       </div>
     </div>
