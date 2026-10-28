@@ -1657,3 +1657,157 @@
 [data-theme="light"] .service-card:hover .service-link {
   color: var(--heading-color);
 }
+
+/* ==========================================================================
+   HOMEPAGE MOBILE RESPONSIVENESS: 320PX - 480PX
+   ========================================================================== */
+@media (max-width: 480px) {
+  .hero-headline {
+    font-size: clamp(1.85rem, 8.5vw, 2.35rem) !important;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+  .hero-lead {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+  }
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+  .hero-ctas .btn {
+    width: 100%;
+  }
+  .hero-stats-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  .stat-item {
+    text-align: center;
+  }
+  .hero-media-wrapper {
+    max-width: 100%;
+  }
+  .hero-image-card img {
+    height: 320px;
+  }
+
+  /* About Preview & Partner Portrait */
+  .about-preview-grid {
+    gap: 2rem;
+  }
+  .partner-portrait-frame {
+    height: 380px !important;
+  }
+  .about-quote-box {
+    margin: -25px 0.5rem 0;
+    max-width: calc(100% - 1rem);
+    padding: 1.25rem 1rem;
+    border-radius: 14px;
+  }
+  .about-quote-box p {
+    font-size: 0.85rem;
+  }
+
+  /* 4-Stage Protocol Marquee */
+  .process-step-card {
+    width: 280px;
+    padding: 1.5rem 1.25rem;
+    border-radius: 16px;
+  }
+  .step-number {
+    font-size: 2.2rem;
+  }
+  .step-title {
+    font-size: 1.15rem;
+  }
+  .step-desc {
+    font-size: 0.82rem;
+  }
+
+  /* Industry Marquee */
+  .industry-card {
+    width: 260px;
+    padding: 1.4rem 1.2rem;
+    border-radius: 16px;
+  }
+  .industry-title {
+    font-size: 1.1rem;
+  }
+  .industry-desc {
+    font-size: 0.82rem;
+  }
+
+  /* Tax Calculator */
+  .calc-wrapper {
+    padding: 1.5rem 1rem;
+    border-radius: 18px;
+  }
+  .calc-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .calc-results-card {
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+  }
+  .result-total-val {
+    font-size: 1.85rem;
+  }
+
+  /* Testimonials */
+  .testimonial-card-single {
+    padding: 1.75rem 1.15rem;
+    border-radius: 18px;
+  }
+  .testimonial-quote-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+}
+
+/* 320px - 360px Ultra-Compact Screen Support */
+@media (max-width: 360px) {
+  .hero-headline {
+    font-size: clamp(1.6rem, 7.8vw, 1.95rem) !important;
+  }
+  .hero-image-card img {
+    height: 260px;
+  }
+  .partner-portrait-frame {
+    height: 300px !important;
+  }
+  .about-quote-box {
+    margin: -15px 0.25rem 0;
+    max-width: calc(100% - 0.5rem);
+    padding: 1rem 0.75rem;
+  }
+  .process-step-card {
+    width: 240px;
+    padding: 1.25rem 1rem;
+  }
+  .step-number {
+    font-size: 1.85rem;
+  }
+  .industry-card {
+    width: 230px;
+    padding: 1.2rem 0.95rem;
+  }
+  .calc-wrapper {
+    padding: 1.2rem 0.75rem;
+    border-radius: 14px;
+  }
+  .calc-results-card {
+    padding: 1.2rem 0.75rem;
+  }
+  .result-total-val {
+    font-size: 1.65rem;
+  }
+  .testimonial-card-single {
+    padding: 1.35rem 0.85rem;
+    border-radius: 14px;
+  }
+}

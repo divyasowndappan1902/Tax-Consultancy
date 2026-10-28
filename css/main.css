@@ -1785,3 +1785,187 @@ a.footer-contact-text:hover {
   color: #0B1426;
   box-shadow: 0 15px 35px rgba(11, 20, 38, 0.12);
 }
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS: 320PX - 480PX ULTRA COMPACT SCREENS
+   ========================================================================== */
+@media (max-width: 480px) {
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  :root {
+    --section-padding-y: 3.5rem;
+  }
+
+  /* Header & Navigation at <= 480px */
+  .navbar .nav-container {
+    padding: 0 0.25rem;
+  }
+  .brand-logo-img {
+    height: 32px !important;
+    max-width: 130px;
+  }
+  .nav-actions {
+    gap: 0.65rem;
+  }
+  .theme-toggle-btn,
+  .mobile-toggle {
+    width: 38px;
+    height: 38px;
+    font-size: 0.95rem;
+  }
+  .mobile-menu {
+    padding: 5rem 1.25rem 2rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .mobile-nav-link {
+    font-size: 1.35rem;
+    padding: 0.5rem 0;
+  }
+
+  /* Common Headings */
+  h1, .h1 {
+    font-size: clamp(1.75rem, 7.5vw, 2.35rem);
+    line-height: 1.18;
+    word-break: break-word;
+  }
+  h2, .h2 {
+    font-size: clamp(1.45rem, 6.5vw, 1.95rem);
+    line-height: 1.22;
+    word-break: break-word;
+  }
+  h3, .h3 {
+    font-size: clamp(1.2rem, 5.5vw, 1.45rem);
+    line-height: 1.28;
+  }
+
+  /* Buttons */
+  .btn {
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.88rem;
+    text-align: center;
+    justify-content: center;
+  }
+  .btn-sm {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.78rem;
+  }
+
+  /* Footer */
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding: 3rem 0 2rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    padding: 1.5rem 0;
+  }
+  .footer-legal {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  /* CTA Banner */
+  .cta-banner-card {
+    padding: 2rem 1.15rem;
+    border-radius: 18px;
+  }
+  .cta-banner-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  /* Toasts */
+  #toast-container {
+    right: 0.75rem;
+    left: 0.75rem;
+    bottom: 1rem;
+    max-width: calc(100vw - 1.5rem);
+  }
+  .toast {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.82rem;
+  }
+
+  /* Back to Home Button on mobile */
+  .btn-back-home {
+    top: 0.85rem !important;
+    left: 0.85rem !important;
+    padding: 0.4rem 0.85rem !important;
+    font-size: 0.78rem !important;
+  }
+}
+
+/* 320px - 360px Small Mobile Viewports (iPhone SE 1st gen, Galaxy Fold, small displays) */
+@media (max-width: 360px) {
+  .btn-back-home {
+    top: 0.55rem !important;
+    left: 0.55rem !important;
+    padding: 0.35rem 0.65rem !important;
+    font-size: 0.72rem !important;
+  }
+  .container {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+
+  :root {
+    --section-padding-y: 2.85rem;
+  }
+
+  .brand-logo-img {
+    height: 28px !important;
+    max-width: 110px;
+  }
+  .nav-actions {
+    gap: 0.45rem;
+  }
+  .theme-toggle-btn,
+  .mobile-toggle {
+    width: 34px;
+    height: 34px;
+    font-size: 0.85rem;
+  }
+
+  h1, .h1 {
+    font-size: clamp(1.55rem, 7vw, 1.95rem);
+    line-height: 1.15;
+  }
+  h2, .h2 {
+    font-size: clamp(1.3rem, 6vw, 1.65rem);
+    line-height: 1.2;
+  }
+
+  .badge-luxury {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+    gap: 0.35rem;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .cta-banner-card {
+    padding: 1.6rem 0.85rem;
+    border-radius: 14px;
+  }
+}

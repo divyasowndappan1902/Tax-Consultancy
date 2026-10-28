@@ -2146,15 +2146,23 @@
       }
 
       .page-title {
-        font-size: 42px;
+        font-size: clamp(1.75rem, 7vw, 2.25rem);
+        line-height: 1.2;
       }
 
       .page-description {
         font-size: 12px;
       }
 
+      .live-status,
+      .date-display {
+        display: none !important;
+      }
+
       .top-right {
-        display: none;
+        display: flex !important;
+        align-items: center;
+        gap: 8px;
       }
 
       .section-head {
@@ -2191,6 +2199,107 @@
       .donut-inner {
         width: 67px;
         height: 67px;
+      }
+    }
+
+    /* 320px - 480px Ultra-Compact Mobile Support */
+    @media (max-width: 480px) {
+      html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+      }
+
+      .main {
+        padding: 14px 10px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+      }
+
+      .page-header {
+        padding: 24px 0 16px !important;
+      }
+
+      .page-title {
+        font-size: 26px !important;
+        line-height: 1.2 !important;
+        word-break: break-word;
+      }
+
+      .metric-card,
+      .chart-card,
+      .pipeline-card {
+        padding: 14px 12px !important;
+      }
+
+      .metric-number {
+        font-size: 22px !important;
+      }
+
+      .table-wrap {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        width: 100% !important;
+      }
+
+      .topbar {
+        height: 62px !important;
+        padding: 0 12px !important;
+      }
+
+      .top-profile {
+        padding: 4px 10px !important;
+        gap: 6px !important;
+      }
+
+      .top-profile span {
+        font-size: 11px !important;
+      }
+
+      .email-modal-card {
+        width: 95% !important;
+        max-width: 95vw !important;
+        padding: 16px 12px !important;
+      }
+
+      .email-presets {
+        flex-wrap: wrap !important;
+        gap: 4px !important;
+      }
+
+      .preset-pill {
+        font-size: 9.5px !important;
+        padding: 3px 6px !important;
+      }
+    }
+
+    /* 320px - 360px Small Mobile Screens */
+    @media (max-width: 360px) {
+      .main {
+        padding: 10px 6px !important;
+      }
+
+      .page-title {
+        font-size: 22px !important;
+      }
+
+      .metric-number {
+        font-size: 20px !important;
+      }
+
+      .sidebar {
+        width: 260px !important;
+      }
+
+      .top-profile span {
+        display: none !important;
+      }
+
+      .top-profile {
+        padding: 4px 6px !important;
+      }
+
+      .brand-logo-img {
+        height: 28px !important;
       }
     }
 

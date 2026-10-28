@@ -1871,7 +1871,7 @@
             }
 
             .welcome h1 {
-                font-size: 42px;
+                font-size: 32px;
             }
 
             .chart-wrap {
@@ -1898,6 +1898,116 @@
             .info-row {
                 grid-template-columns: 1fr;
                 gap: 7px;
+            }
+        }
+
+        /* 320px - 480px Ultra-Compact Mobile Support */
+        @media (max-width: 480px) {
+            html, body {
+                overflow-x: hidden !important;
+                width: 100% !important;
+            }
+
+            .main {
+                padding: 14px 10px !important;
+                width: 100% !important;
+                max-width: 100vw !important;
+            }
+
+            .welcome {
+                grid-template-columns: 1fr !important;
+                gap: 12px;
+            }
+
+            .welcome h1 {
+                font-size: 26px !important;
+                line-height: 1.25 !important;
+                word-break: break-word;
+            }
+
+            .metric-card {
+                padding: 14px 12px !important;
+            }
+
+            .metric-value {
+                font-size: 22px !important;
+            }
+
+            .panel-header {
+                padding: 12px 14px !important;
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 8px !important;
+            }
+
+            .chart-wrap {
+                height: 200px !important;
+                padding: 6px !important;
+            }
+
+            .table-panel {
+                overflow-x: auto !important;
+                -webkit-overflow-scrolling: touch !important;
+                width: 100% !important;
+            }
+
+            .mobile-header {
+                padding: 0 12px !important;
+                height: 60px !important;
+            }
+
+            .mobile-header-inner {
+                width: 100% !important;
+                justify-content: space-between !important;
+            }
+
+            .header, .topbar {
+                flex-wrap: wrap !important;
+                gap: 8px !important;
+            }
+
+            .email-modal-card {
+                width: 95% !important;
+                max-width: 95vw !important;
+                padding: 16px 12px !important;
+            }
+
+            .email-presets {
+                flex-wrap: wrap !important;
+                gap: 4px !important;
+            }
+
+            .preset-pill {
+                font-size: 9.5px !important;
+                padding: 3px 6px !important;
+            }
+        }
+
+        /* 320px - 360px Small Mobile Screens */
+        @media (max-width: 360px) {
+            .main {
+                padding: 10px 6px !important;
+            }
+
+            .welcome h1 {
+                font-size: 22px !important;
+            }
+
+            .metric-card {
+                padding: 12px 8px !important;
+            }
+
+            .metric-value {
+                font-size: 20px !important;
+            }
+
+            .sidebar {
+                width: 260px !important;
+            }
+
+            .mobile-logo-img,
+            .brand-logo-img {
+                height: 28px !important;
             }
         }
 
