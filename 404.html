@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Jurisdiction Not Found | STACKLY Tax Advisory</title>
+  <meta name="description" content="The requested tax advisory structure, regulatory dossier, or document repository could not be located. Return to STACKLY Sovereign Tax Advisors.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Grain Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" aria-hidden="true"></div>
+
+  <!-- Preloader with Animated Monogram -->
+  <div id="preloader" role="status" aria-label="Loading STACKLY">
+    <div class="preloader-brand">
+      <img src="logo_0027.webp" alt="STACKLY Logo" class="preloader-logo-img">
+    </div>
+    <div class="preloader-bar-wrap">
+      <div class="preloader-bar"></div>
+    </div>
+    <div class="preloader-percent">0%</div>
+  </div>
+
+  <!-- Page Transition Curtain -->
+  <div id="page-transition" aria-hidden="true">
+    <div class="transition-emblem">
+      <img src="logo_0027.webp" alt="STACKLY Logo" class="brand-logo-img" style="height:48px; width:auto;">
+    </div>
+  </div>
+
+  <main>
+    <!-- ======================================================================
+         404 ERROR SECTION: JURISDICTION NOT FOUND
+         ====================================================================== -->
+    <section class="error-section" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 4rem 1.5rem; position: relative;">
+      <!-- Floating Top-Left Go Back Pill -->
+      <button type="button" onclick="if (window.history.length > 1) { window.history.back(); } else { window.location.href = 'index.html'; }" class="btn-back-home" style="position: absolute; top: 2rem; left: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.88rem; font-weight: 500; color: var(--slate-text); padding: 0.55rem 1.25rem; border-radius: 9999px; border: 1px solid var(--gold-border); background: var(--bg-card); backdrop-filter: blur(12px); cursor: pointer; z-index: 100; transition: all var(--transition-fast);" onmouseover="this.style.color='var(--gold-light)'; this.style.borderColor='var(--gold-primary)';" onmouseout="this.style.color='var(--slate-text)'; this.style.borderColor='var(--gold-border)';" aria-label="Go Back to Previous Page">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Go Back</span>
+      </button>
+      <!-- Glow background spheres -->
+      <div class="bg-mesh-glow glow-gold" style="width:500px; height:500px; top:-100px; left:-100px;" aria-hidden="true"></div>
+      <div class="bg-mesh-glow glow-emerald" style="width:450px; height:450px; bottom:-100px; right:-100px;" aria-hidden="true"></div>
+
+      <!-- Floating Sovereign Watermark -->
+      <div class="tax-hero-svg-bg" aria-hidden="true" style="opacity: 0.18;">
+        <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="errGold" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#C9A24B" stop-opacity="0.4"/>
+              <stop offset="100%" stop-color="#289E84" stop-opacity="0.1"/>
+            </linearGradient>
+          </defs>
+          <g stroke="url(#errGold)" stroke-width="1" fill="none">
+            <circle cx="720" cy="300" r="180" stroke-dasharray="4 8"/>
+            <circle cx="720" cy="300" r="260" stroke-dasharray="6 12"/>
+            <polygon points="720,100 893,400 547,400"/>
+            <polygon points="720,500 547,200 893,200"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="container error-container">
+        <!-- Brand Logo Header Link -->
+        <div style="margin-bottom: 2rem; text-align: center;">
+          <a href="index.html" aria-label="Return to Homepage">
+            <img src="logo_0027.webp" alt="STACKLY Logo" class="brand-logo-img" style="height:48px; width:auto;">
+          </a>
+        </div>
+        <!-- Error Badge -->
+        <div class="badge-luxury error-badge">
+          <i class="fa-solid fa-shield-halved" style="color:var(--gold-primary);"></i>
+          <span>Protocol 404 • Sovereign Jurisdiction Unresolved</span>
+        </div>
+
+        <!-- 404 Numerical Heading -->
+        <div class="error-code">
+          <span class="text-gold-gradient">404</span>
+        </div>
+
+        <!-- Section Title with GSAP Text Animation -->
+        <h1 class="error-title" data-split>Fiduciary Locus Not Located</h1>
+
+        <!-- Explanatory Copy -->
+        <p class="error-desc">
+          The architectural tax structure, regulatory dossier, or briefing deck you are attempting to access does not exist within our registered jurisdiction or has been archived under confidential protocol.
+        </p>
+
+        <!-- Primary Action Navigation -->
+        <div class="error-actions" style="margin-bottom: 0; display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <button type="button" onclick="if (window.history.length > 1) { window.history.back(); } else { window.location.href = 'index.html'; }" class="btn btn-glass btn-lg magnetic" style="cursor: pointer;">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Go Back</span>
+          </button>
+          <a href="index.html" class="btn btn-gold btn-lg magnetic">
+            <span>Return to Sovereign Headquarters</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/components.js"></script>
+</body>
+</html>

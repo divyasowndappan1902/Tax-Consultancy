@@ -19,8 +19,17 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet" />
   <style>
     /* =========================================================
-       RESET
+       RESET & UNIVERSAL TEXT SELECTION
     ========================================================= */
+
+    ::selection,
+    ::-moz-selection,
+    *::selection,
+    *::-moz-selection {
+      background-color: #C9A24B !important;
+      color: #070D18 !important;
+      text-shadow: none !important;
+    }
 
     * {
       margin: 0;
@@ -74,6 +83,14 @@
       --soft: #DFC07A;
       --cream: #DFC07A;
 
+      --gold-primary: #C9A24B;
+      --gold-light: #DFC07A;
+      --gold-deep: #96752C;
+      --navy-primary: #0B1426;
+      --navy-deep: #070D18;
+      --emerald-primary: #289E84;
+      --emerald-deep: #1F7A66;
+
       --background: #F4EFE6;
       --surface: #FFFFFF;
       --surface-2: #FDFBF7;
@@ -83,8 +100,8 @@
       --line: rgba(179, 137, 56, 0.13);
 
       --success: #1F7A66;
-      --warning: #c9904b;
-      --danger: #b95757;
+      --warning: #C9A24B;
+      --danger: #EF4444;
 
       --sidebar-width: 274px;
       --radius: 18px;
@@ -123,7 +140,7 @@
       );
       border-right: 1px solid rgba(201, 162, 75, 0.14);
       box-shadow: 4px 0 28px rgba(0, 0, 0, 0.4);
-      color: #fff7ef;
+      color: #FDFBF7;
 
       padding: 26px 18px 22px;
 
@@ -227,13 +244,13 @@
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background-color: #22C55E;
-      box-shadow: 0 0 8px #22C55E;
+      background-color: #289E84;
+      box-shadow: 0 0 8px #289E84;
       display: inline-block;
     }
 
     .user-chip-dark {
-      color: #000000 !important;
+      color: #0B1426 !important;
       background: rgba(179, 137, 56, 0.08) !important;
       border-color: rgba(179, 137, 56, 0.25) !important;
       box-shadow: none !important;
@@ -454,8 +471,8 @@
       width: 5px;
       height: 5px;
       border-radius: 50%;
-      background: #22C55E;
-      box-shadow: 0 0 6px #22C55E;
+      background: #289E84;
+      box-shadow: 0 0 6px #289E84;
       display: inline-block;
     }
 
@@ -754,7 +771,7 @@
     }
 
     .app-toast i {
-      color: #22C55E;
+      color: #289E84;
       font-size: 14px;
     }
 
@@ -881,6 +898,30 @@
       font-size: 9px;
       font-weight: 700;
       letter-spacing: 0.08em;
+    }
+
+    .top-profile {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 6px 14px;
+      background: #FFFFFF;
+      border: 1px solid rgba(179, 137, 56, 0.35);
+      border-radius: 24px;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(11, 20, 38, 0.05);
+      transition: all 0.25s ease;
+    }
+
+    .top-profile:hover {
+      border-color: var(--gold-primary);
+      box-shadow: 0 4px 16px rgba(201, 162, 75, 0.25);
+      transform: translateY(-1px);
+    }
+
+    .top-profile:hover i {
+      transform: scale(1.15);
+      color: var(--gold-primary);
     }
 
     /* =========================================================
@@ -1173,7 +1214,7 @@
     }
 
     .chart-area {
-      fill: rgba(189, 85, 121, 0.08);
+      fill: rgba(201, 162, 75, 0.12);
     }
 
     .chart-line {
@@ -2312,10 +2353,10 @@
             06 SEP 2026
           </div>
 
-          <div class="top-profile" onclick="openEmailModal()" title="Click to manage dynamic admin email" style="display:flex; align-items:center; gap:9px; padding:5px 12px; background:rgba(255,255,255,0.06); border:1px solid rgba(201,162,75,0.25); border-radius:24px; cursor:pointer; transition:all 0.2s ease;">
-            <div id="profileAvatar" style="width:26px; height:26px; border-radius:50%; background:linear-gradient(135deg, #DFC07A 0%, #C9A24B 100%); color:#0B1426; font-size:11px; font-weight:700; display:grid; place-items:center;">AD</div>
-            <span id="profileName" style="font-size:11.5px; font-weight:600; color:#E2E8F0;">Administrator</span>
-            <i class="fa-solid fa-pen-to-square" style="font-size:10px; color:#DFC07A;"></i>
+          <div class="top-profile" onclick="openEmailModal()" title="Click to manage dynamic admin email">
+            <div id="profileAvatar" style="width:26px; height:26px; border-radius:50%; background:linear-gradient(135deg, #DFC07A 0%, #C9A24B 100%); color:#0B1426; font-size:11px; font-weight:700; display:grid; place-items:center; box-shadow:0 1px 4px rgba(0,0,0,0.12);">AD</div>
+            <span id="profileName" style="font-size:12px; font-weight:700; color:#0B1426 !important; letter-spacing:0.01em;">Administrator</span>
+            <i class="fa-solid fa-pen-to-square" style="font-size:11px; color:#96752C; transition:all 0.2s ease;"></i>
           </div>
 
           <button
@@ -2556,7 +2597,7 @@
                 <div class="chart-value">₹24.8L Total Collections</div>
                 <div class="chart-meta">FY 2026–27 Category Distribution</div>
               </div>
-              <span class="user-chip user-chip-dark" style="font-size: 9px; padding: 3px 10px; color: #000000 !important;">Quarterly Growth: +14.2%</span>
+              <span class="user-chip user-chip-dark" style="font-size: 9px; padding: 3px 10px; color: #0B1426 !important;">Quarterly Growth: +14.2%</span>
             </div>
 
             <div style="padding: 20px 0; display: flex; flex-direction: column; gap: 16px;">
@@ -2565,7 +2606,7 @@
                   <strong style="color: #0B1426;">Corporate Tax Advisory (42%)</strong>
                   <span>₹10,41,600</span>
                 </div>
-                <div style="height: 10px; background: #eee6e2; border-radius: 5px; overflow: hidden;">
+                <div style="height: 10px; background: rgba(201, 162, 75, 0.15); border-radius: 5px; overflow: hidden;">
                   <div style="width: 42%; height: 100%; background: #0B1426; border-radius: 5px;"></div>
                 </div>
               </div>
@@ -2575,7 +2616,7 @@
                   <strong style="color: #C9A24B;">GST & Indirect Tax Compliance (31%)</strong>
                   <span>₹7,68,800</span>
                 </div>
-                <div style="height: 10px; background: #eee6e2; border-radius: 5px; overflow: hidden;">
+                <div style="height: 10px; background: rgba(201, 162, 75, 0.15); border-radius: 5px; overflow: hidden;">
                   <div style="width: 31%; height: 100%; background: #C9A24B; border-radius: 5px;"></div>
                 </div>
               </div>
@@ -2585,7 +2626,7 @@
                   <strong style="color: #DFC07A;">Individual & HNI Filings (18%)</strong>
                   <span>₹4,46,400</span>
                 </div>
-                <div style="height: 10px; background: #eee6e2; border-radius: 5px; overflow: hidden;">
+                <div style="height: 10px; background: rgba(201, 162, 75, 0.15); border-radius: 5px; overflow: hidden;">
                   <div style="width: 18%; height: 100%; background: #DFC07A; border-radius: 5px;"></div>
                 </div>
               </div>
@@ -2595,7 +2636,7 @@
                   <strong style="color: #475569;">Audit & Retainers (9%)</strong>
                   <span>₹2,23,200</span>
                 </div>
-                <div style="height: 10px; background: #eee6e2; border-radius: 5px; overflow: hidden;">
+                <div style="height: 10px; background: rgba(201, 162, 75, 0.15); border-radius: 5px; overflow: hidden;">
                   <div style="width: 9%; height: 100%; background: #475569; border-radius: 5px;"></div>
                 </div>
               </div>
@@ -2613,7 +2654,7 @@
                 </div>
                 <strong style="font-size: 18px; color: #0B1426;">96.4%</strong>
               </div>
-              <div style="padding: 14px; background: rgba(189,85,121,0.04); border-left: 3px solid #C9A24B; border-radius: 6px; display: flex; justify-content: space-between; align-items: center;">
+              <div style="padding: 14px; background: rgba(201, 162, 75, 0.06); border-left: 3px solid #C9A24B; border-radius: 6px; display: flex; justify-content: space-between; align-items: center;">
                 <div>
                   <strong style="display: block; font-size: 13px;">Turnaround Time (TAT)</strong>
                   <span style="font-size: 11px; color: #475569;">Average Filing Speed</span>
@@ -2625,7 +2666,7 @@
                   <strong style="display: block; font-size: 13px;">Active Client Retention</strong>
                   <span style="font-size: 11px; color: #475569;">Annual Recurring Clients</span>
                 </div>
-                <strong style="font-size: 18px; color: #333333;">98.1%</strong>
+                <strong style="font-size: 18px; color: #0B1426;">98.1%</strong>
               </div>
             </div>
           </article>
@@ -2642,7 +2683,7 @@
                 <div class="chart-value">184 Active Client Accounts</div>
                 <div class="chart-meta">Current Team Load & Availability</div>
               </div>
-              <span class="user-chip user-chip-dark" style="font-size: 9px; padding: 3px 10px; color: #000000 !important;">Overall Load: 78%</span>
+              <span class="user-chip user-chip-dark" style="font-size: 9px; padding: 3px 10px; color: #0B1426 !important;">Overall Load: 78%</span>
             </div>
 
             <div style="padding: 20px 0; display: flex; flex-direction: column; gap: 16px;">
@@ -2651,7 +2692,7 @@
                   <strong>Corporate Tax Team (Lead: Rajesh S.)</strong>
                   <span>64 Accounts · 84% Load</span>
                 </div>
-                <div style="height: 8px; background: #eee6e2; border-radius: 4px; overflow: hidden;">
+                <div style="height: 8px; background: rgba(201, 162, 75, 0.15); border-radius: 4px; overflow: hidden;">
                   <div style="width: 84%; height: 100%; background: #0B1426; border-radius: 4px;"></div>
                 </div>
               </div>
@@ -2661,7 +2702,7 @@
                   <strong>GST Compliance Unit (Lead: Priya M.)</strong>
                   <span>72 Accounts · 76% Load</span>
                 </div>
-                <div style="height: 8px; background: #eee6e2; border-radius: 4px; overflow: hidden;">
+                <div style="height: 8px; background: rgba(201, 162, 75, 0.15); border-radius: 4px; overflow: hidden;">
                   <div style="width: 76%; height: 100%; background: #C9A24B; border-radius: 4px;"></div>
                 </div>
               </div>
@@ -2671,7 +2712,7 @@
                   <strong>Audit & Advisory Wing (Lead: Anand V.)</strong>
                   <span>48 Accounts · 68% Load</span>
                 </div>
-                <div style="height: 8px; background: #eee6e2; border-radius: 4px; overflow: hidden;">
+                <div style="height: 8px; background: rgba(201, 162, 75, 0.15); border-radius: 4px; overflow: hidden;">
                   <div style="width: 68%; height: 100%; background: #DFC07A; border-radius: 4px;"></div>
                 </div>
               </div>
@@ -2684,11 +2725,11 @@
             <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 14px;">
               <div style="display: flex; align-items: center; justify-content: space-between; font-size: 12px;">
                 <span>First-Time Pass Rate (ITR Portal)</span>
-                <span style="color: #2e7d32; font-weight: 700;">99.4%</span>
+                <span style="color: #289E84; font-weight: 700;">99.4%</span>
               </div>
               <div style="display: flex; align-items: center; justify-content: space-between; font-size: 12px;">
                 <span>Notice Resolution Time</span>
-                <span style="color: #2e7d32; font-weight: 700;">&lt; 48 Hours</span>
+                <span style="color: #289E84; font-weight: 700;">&lt; 48 Hours</span>
               </div>
               <div style="display: flex; align-items: center; justify-content: space-between; font-size: 12px;">
                 <span>Client Satisfaction Score (CSAT)</span>

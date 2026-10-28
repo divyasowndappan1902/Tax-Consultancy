@@ -262,7 +262,7 @@
             <p>
               With over 140 countries actively implementing the 15% GloBE minimum effective tax framework, international holding groups can no longer rely on traditional low-tax shell subsidiaries. This executive briefing outlines our blueprint for substance-based carve-outs and qualified domestic minimum top-up tax (QDMTT) credit utilization.
             </p>
-            <a href="#read" class="btn btn-gold" style="align-self:flex-start;">
+            <a href="404.html" class="btn btn-gold" style="align-self:flex-start;">
               <span>Read Full Analysis</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
@@ -270,145 +270,190 @@
         </div>
 
         <!-- ======================================================================
-             3. CATEGORY FILTER TABS
+             3. CATEGORY FILTER & SEARCH TOOLBAR (REDESIGNED)
              ====================================================================== -->
-        <div class="blog-filter-tabs">
-          <button type="button" class="filter-tab-btn active" data-filter="all">All Intelligence</button>
-          <button type="button" class="filter-tab-btn" data-filter="corporate">Corporate & M&A</button>
-          <button type="button" class="filter-tab-btn" data-filter="wealth">Private Wealth & Dynasties</button>
-          <button type="button" class="filter-tab-btn" data-filter="cross-border">Cross-Border & Treaties</button>
-          <button type="button" class="filter-tab-btn" data-filter="compliance">Audit Defense & Regulatory</button>
+        <div class="blog-toolbar-wrapper">
+          <div class="blog-search-box">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="blog-search-input" placeholder="Search briefings, statutes, case studies..." autocomplete="off">
+            <button type="button" id="blog-search-clear" class="search-clear-btn" aria-label="Clear search">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <div class="blog-filter-tabs">
+            <button type="button" class="filter-tab-btn active" data-filter="all">
+              <span>All Intelligence</span>
+              <span class="filter-count">6</span>
+            </button>
+            <button type="button" class="filter-tab-btn" data-filter="corporate">
+              <span>Corporate & M&A</span>
+              <span class="filter-count">2</span>
+            </button>
+            <button type="button" class="filter-tab-btn" data-filter="wealth">
+              <span>Private Wealth & Dynasties</span>
+              <span class="filter-count">2</span>
+            </button>
+            <button type="button" class="filter-tab-btn" data-filter="cross-border">
+              <span>Cross-Border & Treaties</span>
+              <span class="filter-count">1</span>
+            </button>
+            <button type="button" class="filter-tab-btn" data-filter="compliance">
+              <span>Audit Defense & Regulatory</span>
+              <span class="filter-count">1</span>
+            </button>
+          </div>
         </div>
 
         <!-- ======================================================================
-             4. DYNAMIC FILTERABLE POST GRID
+             4. DYNAMIC FILTERABLE POST GRID (REDESIGNED)
              ====================================================================== -->
         <div class="blog-preview-grid" id="blog-grid">
           <!-- Post 1 -->
           <article class="blog-post-card blog-filterable-card" data-category="wealth">
             <div class="blog-post-thumb">
-              <img src="assets/images/blog-ip-licensing.webp" alt="Dynasty Trusts and Estate Tax Sunset">
+              <img src="assets/images/blog-ip-licensing.webp" alt="Dynasty Trusts and Estate Tax Sunset" loading="lazy">
               <div class="blog-post-category">Private Wealth</div>
             </div>
             <div class="blog-post-body">
               <div class="blog-post-meta">
-                <span>Oct 12, 2026</span>
+                <span><i class="fa-regular fa-calendar"></i> Oct 12, 2026</span>
                 <span>•</span>
-                <span>7 min read</span>
+                <span><i class="fa-regular fa-clock"></i> 7 min read</span>
               </div>
               <h3>Preparing for the Estate Tax Exemption Sunset: Dynasty Trusts & Spousal Lifetime Access (SLATs)</h3>
               <p>Critical steps to lock in lifetime gift exemptions before statutory federal exemption limits decrease significantly.</p>
-              <a href="#read" class="blog-post-link">
-                <span>Read Full Brief</span>
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="blog-post-footer">
+                <a href="404.html" class="blog-post-link">
+                  <span>Read Full Brief</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- Post 2 -->
           <article class="blog-post-card blog-filterable-card" data-category="corporate">
             <div class="blog-post-thumb">
-              <img src="assets/images/blog-trust-recap.webp" alt="Section 1202 QSBS Stock Exclusion">
+              <img src="assets/images/blog-trust-recap.webp" alt="Section 1202 QSBS Stock Exclusion" loading="lazy">
               <div class="blog-post-category">Corporate & M&A</div>
             </div>
             <div class="blog-post-body">
               <div class="blog-post-meta">
-                <span>Oct 04, 2026</span>
+                <span><i class="fa-regular fa-calendar"></i> Oct 04, 2026</span>
                 <span>•</span>
-                <span>9 min read</span>
+                <span><i class="fa-regular fa-clock"></i> 9 min read</span>
               </div>
               <h3>Maximizing the $10M+ Section 1202 QSBS Exclusion in Tech Mergers</h3>
               <p>How early-stage founders and venture backers can multiply qualified small business stock exemptions through non-grantor trusts.</p>
-              <a href="#read" class="blog-post-link">
-                <span>Read Full Brief</span>
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="blog-post-footer">
+                <a href="404.html" class="blog-post-link">
+                  <span>Read Full Brief</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- Post 3 -->
           <article class="blog-post-card blog-filterable-card" data-category="cross-border">
             <div class="blog-post-thumb">
-              <img src="assets/images/blog-family-office.webp" alt="Dubai DIFC and Swiss Family Office Frameworks">
+              <img src="assets/images/blog-family-office.webp" alt="Dubai DIFC and Swiss Family Office Frameworks" loading="lazy">
               <div class="blog-post-category">Cross-Border</div>
             </div>
             <div class="blog-post-body">
               <div class="blog-post-meta">
-                <span>Sep 28, 2026</span>
+                <span><i class="fa-regular fa-calendar"></i> Sep 28, 2026</span>
                 <span>•</span>
-                <span>6 min read</span>
+                <span><i class="fa-regular fa-clock"></i> 6 min read</span>
               </div>
               <h3>The Golden Visa & DIFC Family Office Surge: Why Sovereign Capital is Moving to Dubai</h3>
               <p>A comparative analysis of tax neutrality, privacy protection, and zero inheritance tax frameworks across Switzerland and the UAE.</p>
-              <a href="#read" class="blog-post-link">
-                <span>Read Full Brief</span>
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="blog-post-footer">
+                <a href="404.html" class="blog-post-link">
+                  <span>Read Full Brief</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- Post 4 -->
           <article class="blog-post-card blog-filterable-card" data-category="compliance">
             <div class="blog-post-thumb">
-              <img src="assets/images/blog-transfer-pricing.webp" alt="IRS AI Audit Algorithms">
+              <img src="assets/images/blog-transfer-pricing.webp" alt="IRS AI Audit Algorithms" loading="lazy">
               <div class="blog-post-category">Audit Defense</div>
             </div>
             <div class="blog-post-body">
               <div class="blog-post-meta">
-                <span>Sep 18, 2026</span>
+                <span><i class="fa-regular fa-calendar"></i> Sep 18, 2026</span>
                 <span>•</span>
-                <span>5 min read</span>
+                <span><i class="fa-regular fa-clock"></i> 5 min read</span>
               </div>
               <h3>Inside the IRS's New AI Audit Algorithms for Pass-Through Entities & Partnerships</h3>
               <p>How the IRS Large Business & International (LB&I) division is employing automated pattern matching against high-income partnerships.</p>
-              <a href="#read" class="blog-post-link">
-                <span>Read Full Brief</span>
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="blog-post-footer">
+                <a href="404.html" class="blog-post-link">
+                  <span>Read Full Brief</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- Post 5 -->
           <article class="blog-post-card blog-filterable-card" data-category="corporate">
             <div class="blog-post-thumb">
-              <img src="assets/images/blog-carried-interest.webp" alt="R&D Tax Credit Monetization">
+              <img src="assets/images/blog-carried-interest.webp" alt="R&D Tax Credit Monetization" loading="lazy">
               <div class="blog-post-category">Corporate & M&A</div>
             </div>
             <div class="blog-post-body">
               <div class="blog-post-meta">
-                <span>Sep 05, 2026</span>
+                <span><i class="fa-regular fa-calendar"></i> Sep 05, 2026</span>
                 <span>•</span>
-                <span>8 min read</span>
+                <span><i class="fa-regular fa-clock"></i> 8 min read</span>
               </div>
               <h3>Software Capitalization Under Section 174: Mitigation Strategies for SaaS Companies</h3>
               <p>Managing the mandatory amortization of software research expenses while capturing maximum state-level tax incentives.</p>
-              <a href="#read" class="blog-post-link">
-                <span>Read Full Brief</span>
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="blog-post-footer">
+                <a href="404.html" class="blog-post-link">
+                  <span>Read Full Brief</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- Post 6 -->
           <article class="blog-post-card blog-filterable-card" data-category="wealth">
             <div class="blog-post-thumb">
-              <img src="assets/images/blog-dual-residency.webp" alt="Private Aircraft and Yacht Tax Optimization">
+              <img src="assets/images/blog-dual-residency.webp" alt="Private Aircraft and Yacht Tax Optimization" loading="lazy">
               <div class="blog-post-category">Private Wealth</div>
             </div>
             <div class="blog-post-body">
               <div class="blog-post-meta">
-                <span>Aug 24, 2026</span>
+                <span><i class="fa-regular fa-calendar"></i> Aug 24, 2026</span>
                 <span>•</span>
-                <span>6 min read</span>
+                <span><i class="fa-regular fa-clock"></i> 6 min read</span>
               </div>
               <h3>Structuring Private Aviation & Superyacht Acquisitions Under 100% Bonus Depreciation Rules</h3>
               <p>FAA dry-leasing, commercial charter allocations, and sales tax exemption affidavits for luxury maritime and aviation assets.</p>
-              <a href="#read" class="blog-post-link">
-                <span>Read Full Brief</span>
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="blog-post-footer">
+                <a href="404.html" class="blog-post-link">
+                  <span>Read Full Brief</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </article>
+        </div>
+
+        <!-- No Results Fallback Notice -->
+        <div id="blog-no-results" class="blog-no-results" style="display:none;">
+          <div class="no-results-icon"><i class="fa-solid fa-file-circle-question"></i></div>
+          <h3>No Briefings Found</h3>
+          <p>No publications match your filter or keyword criteria. Try clearing search filters.</p>
+          <button type="button" class="btn btn-outline btn-sm" id="reset-filters-btn">Reset All Filters</button>
         </div>
       </div>
     </section>
@@ -416,7 +461,7 @@
     <!-- ======================================================================
          5. INTERACTIVE TAX DEADLINES CALENDAR
          ====================================================================== -->
-    <section class="section" style="background: rgba(7, 13, 24, 0.7);">
+    <section class="section">
       <div class="container">
         <div class="section-header">
           <div class="badge-luxury">Compliance Clock</div>
@@ -517,10 +562,10 @@
                 A 48-page technical dossier covering multinational minimum taxation, economic substance regulations, and treaty optimization.
               </p>
             </div>
-            <button type="button" class="btn btn-glass" onclick="showToast('Executive dossier dispatched to your registered vault.', 'success')">
+            <a href="404.html" class="btn btn-glass">
               <i class="fa-solid fa-download"></i>
               <span>Download PDF (4.2 MB)</span>
-            </button>
+            </a>
           </div>
 
           <!-- Guide 2 -->
@@ -534,10 +579,10 @@
                 A comprehensive legal guide to Delaware, Nevada, and South Dakota trust jurisdictions for intergenerational family office preservation.
               </p>
             </div>
-            <button type="button" class="btn btn-glass" onclick="showToast('Executive dossier dispatched to your registered vault.', 'success')">
+            <a href="404.html" class="btn btn-glass">
               <i class="fa-solid fa-download"></i>
               <span>Download PDF (6.8 MB)</span>
-            </button>
+            </a>
           </div>
 
           <!-- Guide 3 -->
@@ -551,10 +596,10 @@
                 Essential structural protocols for founders and private equity sponsors preparing for liquidity events within 12-24 months.
               </p>
             </div>
-            <button type="button" class="btn btn-glass" onclick="showToast('Executive dossier dispatched to your registered vault.', 'success')">
+            <a href="404.html" class="btn btn-glass">
               <i class="fa-solid fa-download"></i>
               <span>Download PDF (3.5 MB)</span>
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -563,7 +608,7 @@
     <!-- ======================================================================
          7. NEWSLETTER SUBSCRIPTION & 8. POPULAR POSTS
          ====================================================================== -->
-    <section class="section" style="background: rgba(7, 13, 24, 0.6);">
+    <section class="section">
       <div class="container">
         <div class="story-grid">
           <!-- Newsletter Box -->
@@ -587,7 +632,7 @@
             <h3 style="margin-bottom:1.5rem;">Most Read Editorial Briefings</h3>
             <ul style="list-style:none; display:flex; flex-direction:column; gap:1.25rem;">
               <li style="border-bottom:1px solid rgba(201,162,75,0.15); padding-bottom:1rem;">
-                <a href="#read" style="display:flex; justify-content:space-between; align-items:center;">
+                <a href="404.html" style="display:flex; justify-content:space-between; align-items:center;">
                   <div>
                     <h4 style="font-size:1.05rem; margin-bottom:0.2rem; color:var(--ivory);">Delaware vs. South Dakota: Which State Wins the Dynasty Trust Crown?</h4>
                     <span style="font-size:0.78rem; color:var(--gold-light);">4,820 Reads • Private Wealth</span>
@@ -596,7 +641,7 @@
                 </a>
               </li>
               <li style="border-bottom:1px solid rgba(201,162,75,0.15); padding-bottom:1rem;">
-                <a href="#read" style="display:flex; justify-content:space-between; align-items:center;">
+                <a href="404.html" style="display:flex; justify-content:space-between; align-items:center;">
                   <div>
                     <h4 style="font-size:1.05rem; margin-bottom:0.2rem; color:var(--ivory);">The 877A Exit Tax: What US Citizens Must Know Before Expatriating</h4>
                     <span style="font-size:0.78rem; color:var(--gold-light);">3,940 Reads • Cross-Border</span>
@@ -605,7 +650,7 @@
                 </a>
               </li>
               <li>
-                <a href="#read" style="display:flex; justify-content:space-between; align-items:center;">
+                <a href="404.html" style="display:flex; justify-content:space-between; align-items:center;">
                   <div>
                     <h4 style="font-size:1.05rem; margin-bottom:0.2rem; color:var(--ivory);">Cryptocurrency & Digital Asset Basis Reporting Under Form 1099-DA</h4>
                     <span style="font-size:0.78rem; color:var(--gold-light);">2,610 Reads • Compliance</span>
@@ -629,11 +674,11 @@
           <h2 data-split>Have a Specific Cross-Border or Entity Structuring Challenge?</h2>
           <p>Discuss your holdings confidentially with our senior research and practice partners.</p>
           <div class="cta-banner-actions">
-            <a href="contact.html#book" class="btn btn-gold btn-lg magnetic">
+            <a href="404.html" class="btn btn-gold btn-lg magnetic">
               <span>Schedule Diagnostic Call</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
-            <a href="services.html" class="btn btn-glass btn-lg">
+            <a href="404.html" class="btn btn-glass btn-lg">
               <span>View Engagement Tiers</span>
             </a>
           </div>
@@ -655,16 +700,16 @@
             A tax advisory and financial compliance practice working on direct tax, indirect tax, audit, structuring and regulatory filings.
           </p>
           <div class="footer-social-row">
-            <a href="#" class="footer-social-btn" aria-label="LinkedIn">
+            <a href="404.html" class="footer-social-btn" aria-label="LinkedIn">
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
-            <a href="#" class="footer-social-btn" aria-label="Twitter / X">
+            <a href="404.html" class="footer-social-btn" aria-label="Twitter / X">
               <i class="fa-brands fa-x-twitter"></i>
             </a>
-            <a href="#" class="footer-social-btn" aria-label="Facebook">
+            <a href="404.html" class="footer-social-btn" aria-label="Facebook">
               <i class="fa-brands fa-facebook-f"></i>
             </a>
-            <a href="#" class="footer-social-btn" aria-label="YouTube">
+            <a href="404.html" class="footer-social-btn" aria-label="YouTube">
               <i class="fa-brands fa-youtube"></i>
             </a>
           </div>

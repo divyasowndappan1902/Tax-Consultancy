@@ -30,6 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // 7. General Micro-interactions & Toasts
   initGlobalEvents();
 
+  // 7b. Form Validations (Red Error Boxes & Sanitization)
+  initContactForm();
+
   // 8. Hero Slideshow Carousel (Stackly Reference Style)
   initHeroCarousel();
 
@@ -606,6 +609,54 @@ function initGlobalEvents() {
     document.body.appendChild(container);
   }
 
+  // Universal click router: redirects any dummy button or placeholder link to 404.html
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    const btn = e.target.closest('button');
+
+    // 1. Intercept dummy <a> links
+    if (link) {
+      const href = link.getAttribute('href');
+      // If href is empty, '#', or 'javascript:void(0)'
+      if (href === '#' || href === 'javascript:void(0)' || href === 'javascript:;' || href === '') {
+        e.preventDefault();
+        window.location.href = '404.html';
+        return;
+      }
+      // If href is a hash anchor that does not exist on this page
+      if (href && href.startsWith('#') && href.length > 1) {
+        const targetId = href.substring(1);
+        const targetEl = document.getElementById(targetId) || document.querySelector(`[name="${targetId}"]`);
+        if (!targetEl) {
+          e.preventDefault();
+          window.location.href = '404.html';
+          return;
+        }
+      }
+    }
+
+    // 2. Intercept dummy <button> elements
+    if (btn) {
+      const isFunctional = (
+        btn.classList.contains('theme-toggle-btn') ||
+        btn.classList.contains('mobile-toggle') ||
+        btn.classList.contains('calc-type-btn') ||
+        btn.classList.contains('slider-arrow-btn') ||
+        btn.classList.contains('hero-dot') ||
+        btn.classList.contains('password-toggle-btn') ||
+        btn.classList.contains('flip-btn') ||
+        btn.classList.contains('filter-tab-btn') ||
+        btn.classList.contains('accordion-header') ||
+        btn.closest('form')
+      );
+
+      if (!isFunctional && (btn.classList.contains('btn-dummy') || btn.getAttribute('data-action') === 'dummy')) {
+        e.preventDefault();
+        window.location.href = '404.html';
+      }
+    }
+  });
+
   // Newsletter Forms
   const newsletterForms = document.querySelectorAll('.newsletter-form');
   newsletterForms.forEach((form) => {
@@ -622,21 +673,235 @@ function initGlobalEvents() {
   });
 }
 
+/* --------------------------------------------------------------------------
+   7b. STRATEGIC CONTACT INTAKE FORM VALIDATION ENGINE (RED ERROR BOXES)
+   -------------------------------------------------------------------------- */
+function initContactForm() {
+  const form = document.getElementById('strategic-contact-form');
+  if (!form) return;
+
+  const firstName = document.getElementById('cf-first-name');
+  const lastName = document.getElementById('cf-last-name');
+  const email = document.getElementById('cf-email');
+  const phone = document.getElementById('cf-phone');
+  const service = document.getElementById('cf-service');
+  const message = document.getElementById('cf-message');
+  const alertContainer = document.getElementById('contact-form-alert');
+
+  const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const PHONE_REGEX = /^[\+]?[(]?[0-9]{1,4}[)]?[-\s\.]?[0-9]{1,4}[-\s\.]?[0-9]{1,9}$/;
+
+  function setFieldError(field, errorMessage) {
+    if (!field) return;
+    field.classList.add('is-invalid');
+    const parent = field.closest('.form-group');
+    if (parent) {
+      parent.classList.add('has-error');
+      let errorBox = parent.querySelector('.field-error-box');
+      if (!errorBox) {
+        errorBox = document.createElement('div');
+        errorBox.className = 'field-error-box';
+        parent.appendChild(errorBox);
+      }
+      errorBox.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i><span>${errorMessage}</span>`;
+    }
+  }
+
+  function clearFieldError(field) {
+    if (!field) return;
+    field.classList.remove('is-invalid');
+    const parent = field.closest('.form-group');
+    if (parent) {
+      parent.classList.remove('has-error');
+      const errorBox = parent.querySelector('.field-error-box');
+      if (errorBox) {
+        errorBox.remove();
+      }
+    }
+    // If all errors are resolved, hide top-level alert banner
+    if (form.querySelectorAll('.field-error-box').length === 0 && alertContainer) {
+      alertContainer.style.display = 'none';
+      alertContainer.innerHTML = '';
+    }
+  }
+
+  function validateField(field) {
+    if (!field) return true;
+    const val = field.value.trim();
+
+    if (field === firstName) {
+      if (!val) {
+        setFieldError(field, 'First Name is required.');
+        return false;
+      }
+      if (val.length < 2) {
+        setFieldError(field, 'First Name must contain at least 2 characters.');
+        return false;
+      }
+      if (!/^[a-zA-Z\s'-]+$/.test(val)) {
+        setFieldError(field, 'First Name must contain letters only.');
+        return false;
+      }
+      clearFieldError(field);
+      return true;
+    }
+
+    if (field === lastName) {
+      if (!val) {
+        setFieldError(field, 'Last Name is required.');
+        return false;
+      }
+      if (val.length < 2) {
+        setFieldError(field, 'Last Name must contain at least 2 characters.');
+        return false;
+      }
+      if (!/^[a-zA-Z\s'-]+$/.test(val)) {
+        setFieldError(field, 'Last Name must contain letters only.');
+        return false;
+      }
+      clearFieldError(field);
+      return true;
+    }
+
+    if (field === email) {
+      if (!val) {
+        setFieldError(field, 'Corporate or Direct Email is required.');
+        return false;
+      }
+      if (!EMAIL_REGEX.test(val)) {
+        setFieldError(field, 'Please enter a valid corporate or direct email (e.g. principal@enterprise.com).');
+        return false;
+      }
+      clearFieldError(field);
+      return true;
+    }
+
+    if (field === phone) {
+      if (val && !PHONE_REGEX.test(val.replace(/\s+/g, ''))) {
+        setFieldError(field, 'Please enter a valid telephone number (at least 7 digits).');
+        return false;
+      }
+      clearFieldError(field);
+      return true;
+    }
+
+    if (field === service) {
+      if (!val || val === '') {
+        setFieldError(field, 'Please select an Advisory Practice of Interest.');
+        return false;
+      }
+      clearFieldError(field);
+      return true;
+    }
+
+    if (field === message) {
+      if (!val) {
+        setFieldError(field, 'Summary of Fiscal Context & Exposure is required.');
+        return false;
+      }
+      if (val.length < 10) {
+        setFieldError(field, 'Please provide more detail (minimum 10 characters).');
+        return false;
+      }
+      clearFieldError(field);
+      return true;
+    }
+
+    return true;
+  }
+
+  // Real-time input listeners
+  [firstName, lastName, email, phone, service, message].forEach((field) => {
+    if (!field) return;
+
+    field.addEventListener('blur', () => {
+      if (field.value.trim().length > 0 || field.classList.contains('is-invalid')) {
+        validateField(field);
+      }
+    });
+
+    field.addEventListener('input', () => {
+      if (field.classList.contains('is-invalid')) {
+        validateField(field);
+      }
+    });
+
+    if (field.tagName === 'SELECT') {
+      field.addEventListener('change', () => {
+        validateField(field);
+      });
+    }
+  });
+
+  // Submission validation
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let isValid = true;
+    let firstInvalidField = null;
+
+    [firstName, lastName, email, phone, service, message].forEach((field) => {
+      if (!validateField(field)) {
+        isValid = false;
+        if (!firstInvalidField) {
+          firstInvalidField = field;
+        }
+      }
+    });
+
+    if (!isValid) {
+      if (alertContainer) {
+        alertContainer.className = 'form-error-banner';
+        alertContainer.style.display = 'flex';
+        alertContainer.innerHTML = `
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <div>
+            <strong>Invalid Data Detected:</strong> Please correct the errors highlighted in the red box below before submitting.
+          </div>
+        `;
+      }
+      if (firstInvalidField) {
+        firstInvalidField.focus();
+        firstInvalidField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      showToast('Please correct the invalid fields highlighted in red.', 'error');
+      return;
+    }
+
+    // Success response
+    if (alertContainer) {
+      alertContainer.style.display = 'none';
+      alertContainer.innerHTML = '';
+    }
+
+    showToast('Your confidential inquiry has been routed directly to the Managing Partner desk.', 'success');
+    form.reset();
+
+    [firstName, lastName, email, phone, service, message].forEach(clearFieldError);
+  });
+}
+
 /**
  * Universal Toast Notification Function
  * @param {string} message
  * @param {'success'|'error'|'info'} type
  */
 function showToast(message, type = 'info') {
-  const container = document.getElementById('toast-container');
-  if (!container) return;
+  let container = document.getElementById('toast-container');
+  if (!container) {
+    container = document.createElement('div');
+    container.id = 'toast-container';
+    document.body.appendChild(container);
+  }
 
   const toast = document.createElement('div');
   toast.className = `toast toast-${type}`;
   
   const iconSvg = type === 'success' 
     ? `<i class="fa-solid fa-circle-check" style="color:#289E84; font-size:1.25rem;"></i>`
-    : `<i class="fa-solid fa-circle-exclamation" style="color:#C9A24B; font-size:1.25rem;"></i>`;
+    : (type === 'error'
+        ? `<i class="fa-solid fa-circle-xmark" style="color:#ef4444; font-size:1.25rem;"></i>`
+        : `<i class="fa-solid fa-circle-exclamation" style="color:#C9A24B; font-size:1.25rem;"></i>`);
 
   toast.innerHTML = `
     ${iconSvg}

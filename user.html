@@ -16,8 +16,17 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
     <style>
         /* =========================================================
-           RESET
+           RESET & UNIVERSAL TEXT SELECTION
         ========================================================= */
+
+        ::selection,
+        ::-moz-selection,
+        *::selection,
+        *::-moz-selection {
+            background-color: #C9A24B !important;
+            color: #070D18 !important;
+            text-shadow: none !important;
+        }
 
         * {
             margin: 0;
@@ -68,6 +77,14 @@
             --rose: #C9A24B;
             --rose-soft: #DFC07A;
             --cream: #DFC07A;
+
+            --gold-primary: #C9A24B;
+            --gold-light: #DFC07A;
+            --gold-deep: #96752C;
+            --navy-primary: #0B1426;
+            --navy-deep: #070D18;
+            --emerald-primary: #289E84;
+            --emerald-deep: #1F7A66;
 
             --paper: #F4EFE6;
             --paper-light: #FFFFFF;
@@ -221,13 +238,13 @@
             width: 6px;
             height: 6px;
             border-radius: 50%;
-            background-color: #22C55E;
-            box-shadow: 0 0 8px #22C55E;
+            background-color: #289E84;
+            box-shadow: 0 0 8px #289E84;
             display: inline-block;
         }
 
         .user-chip-dark {
-            color: #000000 !important;
+            color: #0B1426 !important;
             background: rgba(179, 137, 56, 0.08) !important;
             border-color: rgba(179, 137, 56, 0.25) !important;
             box-shadow: none !important;
@@ -471,8 +488,8 @@
             width: 5px;
             height: 5px;
             border-radius: 50%;
-            background: #22C55E;
-            box-shadow: 0 0 6px #22C55E;
+            background: #289E84;
+            box-shadow: 0 0 6px #289E84;
             display: inline-block;
         }
 
@@ -771,7 +788,7 @@
         }
 
         .app-toast i {
-            color: #22C55E;
+            color: #289E84;
             font-size: 14px;
         }
 
@@ -852,7 +869,7 @@
             width: 6px;
             height: 6px;
             border-radius: 50%;
-            background: #5e9b71;
+            background: #289E84;
         }
 
         .profile-chip {
@@ -879,6 +896,7 @@
         .profile-name {
             font-size: 11px;
             font-weight: 700;
+            color: #0B1426 !important;
         }
 
         /* =========================================================
@@ -969,7 +987,7 @@
             right: -45px;
             bottom: -45px;
 
-            border: 1px solid rgba(189,85,121,0.15);
+            border: 1px solid rgba(201, 162, 75, 0.22);
             border-radius: 50%;
         }
 
@@ -1006,7 +1024,7 @@
         .metric-change {
             margin-top: 9px;
 
-            color: #668b6f;
+            color: #289E84;
 
             font-size: 9px;
             font-weight: 700;
@@ -1088,7 +1106,7 @@
         }
 
         .chart-label {
-            fill: #94888f;
+            fill: #94A3B8;
             font-size: 8px;
         }
 
@@ -1324,8 +1342,8 @@
 
             border-radius: 30px;
 
-            background: rgba(102,139,111,0.1);
-            color: #54745d;
+            background: rgba(40, 158, 132, 0.12);
+            color: #1F7A66;
 
             font-size: 8px;
             font-weight: 800;
@@ -1334,8 +1352,8 @@
         }
 
         .pill.pending {
-            background: rgba(189,85,121,0.1);
-            color: var(--rose);
+            background: rgba(201, 162, 75, 0.14);
+            color: #96752C;
         }
 
         /* =========================================================
@@ -2602,7 +2620,7 @@
                                 <strong>Section 80C (PPF, ELSS, EPF)</strong>
                                 <span>₹1,20,000 / ₹1,50,000</span>
                             </div>
-                            <div style="height: 8px; background: #eee6e2; border-radius: 4px; overflow: hidden;">
+                            <div style="height: 8px; background: rgba(201, 162, 75, 0.15); border-radius: 4px; overflow: hidden;">
                                 <div style="width: 80%; height: 100%; background: #0B1426; border-radius: 4px;"></div>
                             </div>
                         </div>
@@ -2611,7 +2629,7 @@
                                 <strong>Section 80D (Health Insurance)</strong>
                                 <span>₹18,000 / ₹25,000</span>
                             </div>
-                            <div style="height: 8px; background: #eee6e2; border-radius: 4px; overflow: hidden;">
+                            <div style="height: 8px; background: rgba(201, 162, 75, 0.15); border-radius: 4px; overflow: hidden;">
                                 <div style="width: 72%; height: 100%; background: #C9A24B; border-radius: 4px;"></div>
                             </div>
                         </div>
@@ -2620,7 +2638,7 @@
                                 <strong>NPS Section 80CCD(1B)</strong>
                                 <span>₹35,000 / ₹50,000</span>
                             </div>
-                            <div style="height: 8px; background: #eee6e2; border-radius: 4px; overflow: hidden;">
+                            <div style="height: 8px; background: rgba(201, 162, 75, 0.15); border-radius: 4px; overflow: hidden;">
                                 <div style="width: 70%; height: 100%; background: #DFC07A; border-radius: 4px;"></div>
                             </div>
                         </div>
@@ -2642,7 +2660,7 @@
                             </div>
                             <span class="pill">Scheduled</span>
                         </div>
-                        <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px; background: rgba(189,85,121,0.04); border-left: 3px solid #C9A24B; border-radius: 4px;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px; background: rgba(201, 162, 75, 0.06); border-left: 3px solid #C9A24B; border-radius: 4px;">
                             <div>
                                 <strong style="display: block; font-size: 12px;">ITR Verification Final Date</strong>
                                 <span style="font-size: 11px; color: #475569;">Due by 31 October 2026</span>
@@ -2834,7 +2852,7 @@
                             <p class="panel-subtitle">Notes from your dedicated tax consultant</p>
                         </div>
                     </div>
-                    <div style="padding: 20px 22px; font-size: 13px; line-height: 1.6; color: #4a4247;">
+                    <div style="padding: 20px 22px; font-size: 13px; line-height: 1.6; color: #475569;">
                         <p style="margin-top: 0;">
                             "Based on your recent capital gains disclosures and interest income from fixed deposits, we recommend submitting Form 15G/15H to avoid excess TDS deduction. Ensure rental receipts are signed before November 15."
                         </p>
@@ -2855,15 +2873,15 @@
                     <div style="padding: 20px 22px; display: flex; flex-direction: column; gap: 12px;">
                         <div style="display: flex; align-items: center; justify-content: space-between; font-size: 12px;">
                             <span>Bank Statement Reconciliation</span>
-                            <span style="color: #2e7d32; font-weight: 600;"><i class="fa-solid fa-check"></i> Verified</span>
+                            <span style="color: #289E84; font-weight: 600;"><i class="fa-solid fa-check"></i> Verified</span>
                         </div>
                         <div style="display: flex; align-items: center; justify-content: space-between; font-size: 12px;">
                             <span>Form 16 / 16A Cross-check</span>
-                            <span style="color: #2e7d32; font-weight: 600;"><i class="fa-solid fa-check"></i> Matched</span>
+                            <span style="color: #289E84; font-weight: 600;"><i class="fa-solid fa-check"></i> Matched</span>
                         </div>
                         <div style="display: flex; align-items: center; justify-content: space-between; font-size: 12px;">
                             <span>Investment Proof Verification</span>
-                            <span style="color: #ed6c02; font-weight: 600;"><i class="fa-solid fa-hourglass-half"></i> Pending Review</span>
+                            <span style="color: #C9A24B; font-weight: 600;"><i class="fa-solid fa-hourglass-half"></i> Pending Review</span>
                         </div>
                     </div>
                 </article>
@@ -2927,7 +2945,7 @@
                     </p>
 
                     <a
-                        href="#"
+                        href="404.html"
                         class="document-link"
                     >
                         View document <i class='fa-solid fa-arrow-right'></i>
@@ -2959,7 +2977,7 @@
                     </p>
 
                     <a
-                        href="#"
+                        href="404.html"
                         class="document-link"
                     >
                         View document <i class='fa-solid fa-arrow-right'></i>
@@ -2991,7 +3009,7 @@
                     </p>
 
                     <a
-                        href="#"
+                        href="404.html"
                         class="document-link"
                     >
                         View document <i class='fa-solid fa-arrow-right'></i>
@@ -3023,7 +3041,7 @@
                     </p>
 
                     <a
-                        href="#"
+                        href="404.html"
                         class="document-link"
                     >
                         View document <i class='fa-solid fa-arrow-right'></i>
@@ -3043,7 +3061,7 @@
                         </div>
                     </div>
                     <div style="padding: 24px 22px;">
-                        <a href="#" style="display: block; text-decoration: none; color: inherit; border: 2px dashed rgba(179, 137, 56,0.25); border-radius: 8px; padding: 28px; text-align: center; background: rgba(179, 137, 56,0.02); cursor: pointer;">
+                        <a href="404.html" style="display: block; text-decoration: none; color: inherit; border: 2px dashed rgba(179, 137, 56,0.25); border-radius: 8px; padding: 28px; text-align: center; background: rgba(179, 137, 56,0.02); cursor: pointer;">
                             <div style="font-size: 28px; margin-bottom: 8px; color: #0B1426;">☁</div>
                             <strong style="display: block; font-size: 13px; margin-bottom: 4px;">Drag & Drop files here or click to browse</strong>
                             <span style="font-size: 11px; color: #475569;">Maximum file size: 25MB · Encrypted at rest</span>
@@ -3064,28 +3082,28 @@
                                 <strong style="display: block; font-size: 12px;">Form 16 / 16A</strong>
                                 <span style="font-size: 10px; color: #475569;">4 files</span>
                             </div>
-                            <span style="font-size: 14px;"><i class="fa-solid fa-folder" style="color: #FFC107;"></i></span>
+                            <span style="font-size: 14px;"><i class="fa-solid fa-folder" style="color: #C9A24B;"></i></span>
                         </div>
                         <div style="padding: 12px; border: 1px solid var(--line); border-radius: 6px; display: flex; align-items: center; justify-content: space-between;">
                             <div>
                                 <strong style="display: block; font-size: 12px;">Capital Gains</strong>
                                 <span style="font-size: 10px; color: #475569;">6 files</span>
                             </div>
-                            <span style="font-size: 14px;"><i class="fa-solid fa-chart-line" style="color: #9C27B0;"></i></span>
+                            <span style="font-size: 14px;"><i class="fa-solid fa-chart-line" style="color: #289E84;"></i></span>
                         </div>
                         <div style="padding: 12px; border: 1px solid var(--line); border-radius: 6px; display: flex; align-items: center; justify-content: space-between;">
                             <div>
                                 <strong style="display: block; font-size: 12px;">Bank Statements</strong>
                                 <span style="font-size: 10px; color: #475569;">5 files</span>
                             </div>
-                            <span style="font-size: 14px;"><i class="fa-solid fa-building-columns" style="color: #607D8B;"></i></span>
+                            <span style="font-size: 14px;"><i class="fa-solid fa-building-columns" style="color: #DFC07A;"></i></span>
                         </div>
                         <div style="padding: 12px; border: 1px solid var(--line); border-radius: 6px; display: flex; align-items: center; justify-content: space-between;">
                             <div>
                                 <strong style="display: block; font-size: 12px;">GST Returns</strong>
                                 <span style="font-size: 10px; color: #475569;">3 files</span>
                             </div>
-                            <span style="font-size: 14px;"><i class="fa-solid fa-file-invoice" style="color: #E0E0E0;"></i></span>
+                            <span style="font-size: 14px;"><i class="fa-solid fa-file-invoice" style="color: #475569;"></i></span>
                         </div>
                     </div>
                 </article>
@@ -3308,7 +3326,7 @@
 
                             <div style="
                                 height:6px;
-                                background:#eee6e2;
+                                background:rgba(201, 162, 75, 0.15);
                             ">
                                 <div
                                     class="activity-bar"
@@ -3337,7 +3355,7 @@
 
                             <div style="
                                 height:6px;
-                                background:#eee6e2;
+                                background:rgba(201, 162, 75, 0.15);
                             ">
                                 <div
                                     class="activity-bar"
@@ -3366,7 +3384,7 @@
 
                             <div style="
                                 height:6px;
-                                background:#eee6e2;
+                                background:rgba(201, 162, 75, 0.15);
                             ">
                                 <div
                                     class="activity-bar"
@@ -3463,17 +3481,17 @@
                         </div>
                         <span class="user-chip user-chip-dark" style="font-size: 9px; padding: 3px 10px;">256-bit AES</span>
                     </div>
-                    <div style="padding: 16px 22px; display: flex; flex-direction: column; gap: 12px; font-size: 12px; color: #4a4247;">
+                    <div style="padding: 16px 22px; display: flex; flex-direction: column; gap: 12px; font-size: 12px; color: #475569;">
                         <div style="display: flex; align-items: center; gap: 8px;">
-                            <span style="color: #2e7d32;"><i class="fa-solid fa-check"></i></span>
+                            <span style="color: #289E84;"><i class="fa-solid fa-check"></i></span>
                             <span>End-to-End Encryption active for all uploaded PDF tax forms.</span>
                         </div>
                         <div style="display: flex; align-items: center; gap: 8px;">
-                            <span style="color: #2e7d32;"><i class="fa-solid fa-check"></i></span>
+                            <span style="color: #289E84;"><i class="fa-solid fa-check"></i></span>
                             <span>PAN and Aadhaar data masked in dashboard view for privacy.</span>
                         </div>
                         <div style="display: flex; align-items: center; gap: 8px;">
-                            <span style="color: #2e7d32;"><i class="fa-solid fa-check"></i></span>
+                            <span style="color: #289E84;"><i class="fa-solid fa-check"></i></span>
                             <span>Strict compliance with IT Act & DPDP Act standards.</span>
                         </div>
                     </div>
@@ -3671,7 +3689,7 @@
                                 <strong style="display: block; font-size: 12px;">Password Status</strong>
                                 <span style="font-size: 10px; color: #475569;">Last changed 45 days ago</span>
                             </div>
-                            <a href="#" style="padding: 5px 12px; font-size: 11px; background: rgba(179, 137, 56,0.08); border: 1px solid rgba(179, 137, 56,0.2); color: #0B1426; border-radius: 4px; cursor: pointer; font-weight: 600; text-decoration: none; display: inline-block;">Update</a>
+                            <a href="404.html" style="padding: 5px 12px; font-size: 11px; background: rgba(179, 137, 56,0.08); border: 1px solid rgba(179, 137, 56,0.2); color: #0B1426; border-radius: 4px; cursor: pointer; font-weight: 600; text-decoration: none; display: inline-block;">Update</a>
                         </div>
                     </div>
                 </article>

@@ -111,7 +111,7 @@
         </div>
       </div>
 
-      <!-- Footer Security Seals -->
+      <!-- Footer Security Seals & Socials -->
       <div class="portal-showcase-footer">
         <div class="security-badge">
           <i class="fa-solid fa-shield-halved" style="color:var(--gold-primary); font-size:1rem;"></i>
@@ -120,6 +120,12 @@
         <div class="security-badge">
           <i class="fa-solid fa-lock" style="color:var(--emerald-primary); font-size:1rem;"></i>
           <span>End-to-End Vault Encryption</span>
+        </div>
+        <div class="portal-showcase-socials">
+          <a href="404.html" class="portal-social-link" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="404.html" class="portal-social-link" aria-label="Twitter / X" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="404.html" class="portal-social-link" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html" class="portal-social-link" aria-label="YouTube" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
     </div>
@@ -136,34 +142,40 @@
               <p>Enter your credentials to unlock your private vault</p>
             </div>
 
-            <!-- SSO Buttons -->
-            <div class="sso-buttons-group">
-              <button type="button" class="sso-btn" id="sso-google">
-                <i class="fa-brands fa-google" style="color:#EA4335;"></i>
-                <span>Google Workspace</span>
-              </button>
-
-              <button type="button" class="sso-btn" id="sso-microsoft">
-                <i class="fa-brands fa-microsoft" style="color:#00A4EF;"></i>
-                <span>Microsoft SSO</span>
-              </button>
-            </div>
-
-            <div class="divider-text">Or sign in with vault email</div>
-
-            <!-- Quick Demo Access Banner -->
-            <div style="margin-bottom:1.25rem; padding:0.85rem; background:rgba(201, 162, 75, 0.08); border:1px solid var(--gold-border); border-radius:10px; font-size:0.78rem;">
-              <div style="font-weight:600; color:var(--gold-light); margin-bottom:0.5rem; display:flex; align-items:center; gap:0.4rem;">
-                <i class="fa-solid fa-circle-info"></i>
-                <span>Direct Access (Live Portals):</span>
+            <!-- Interactive Dashboard Portal Switcher (Customer vs Admin) -->
+            <div class="portal-role-container">
+              <div class="portal-role-header">
+                <div class="portal-role-title">
+                  <i class="fa-solid fa-sliders"></i>
+                  <span>Portal Selection:</span>
+                </div>
+                <span class="portal-active-badge" id="portal-active-badge">Customer Mode</span>
               </div>
-              <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
-                <a href="user.html" class="btn btn-outline btn-sm" style="flex:1; text-align:center; padding:0.45rem 0.5rem; font-size:0.75rem; justify-content:center; text-decoration:none;">
-                  Customer Dashboard
-                </a>
-                <a href="admin.html" class="btn btn-gold btn-sm" style="flex:1; text-align:center; padding:0.45rem 0.5rem; font-size:0.75rem; justify-content:center; text-decoration:none;">
-                  Admin Dashboard
-                </a>
+
+              <!-- Segmented Capsule Control -->
+              <div class="portal-dashboard-toggle" role="tablist" aria-label="Portal Selection">
+                <button type="button" 
+                        id="btn-tab-customer" 
+                        class="portal-toggle-btn active" 
+                        role="tab" 
+                        aria-selected="true" 
+                        data-target="user.html"
+                        data-role="user"
+                        title="Click to highlight or open Customer Dashboard">
+                  <i class="fa-solid fa-user-tie"></i>
+                  <span>Customer Dashboard</span>
+                </button>
+                <button type="button" 
+                        id="btn-tab-admin" 
+                        class="portal-toggle-btn" 
+                        role="tab" 
+                        aria-selected="false" 
+                        data-target="admin.html"
+                        data-role="admin"
+                        title="Click to highlight or open Admin Dashboard">
+                  <i class="fa-solid fa-shield-halved"></i>
+                  <span>Admin Dashboard</span>
+                </button>
               </div>
             </div>
 
@@ -189,7 +201,7 @@
                   <input type="checkbox" id="remember-me" checked>
                   <span>Remember session for 30 days</span>
                 </label>
-                <a href="#" class="forgot-pass-link">Forgot password?</a>
+                <a href="404.html" class="forgot-pass-link">Forgot password?</a>
               </div>
 
               <button type="submit" class="btn btn-gold btn-lg magnetic" style="width:100%;">
@@ -201,6 +213,17 @@
             <div class="flip-toggle-text">
               Don't have an active vault? 
               <button type="button" class="flip-btn" id="flip-to-register">Register for Client Access</button>
+            </div>
+
+            <!-- Social Media Font Icons -->
+            <div class="portal-social-section">
+              <div class="portal-social-label">Connect With Us</div>
+              <div class="portal-social-icons">
+                <a href="404.html" class="portal-social-link" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="404.html" class="portal-social-link" aria-label="Twitter / X" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="404.html" class="portal-social-link" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="404.html" class="portal-social-link" aria-label="YouTube" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+              </div>
             </div>
           </div>
 
@@ -272,12 +295,26 @@
               Already have an active vault? 
               <button type="button" class="flip-btn" id="flip-to-login">Return to Sign In</button>
             </div>
+
+            <!-- Social Media Font Icons -->
+            <div class="portal-social-section">
+              <div class="portal-social-label">Connect With Us</div>
+              <div class="portal-social-icons">
+                <a href="404.html" class="portal-social-link" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="404.html" class="portal-social-link" aria-label="Twitter / X" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="404.html" class="portal-social-link" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="404.html" class="portal-social-link" aria-label="YouTube" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+              </div>
+            </div>
           </div>
 
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>

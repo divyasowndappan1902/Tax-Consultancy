@@ -486,21 +486,30 @@
 }
 .about-img-box {
   position: relative;
+  max-width: 480px;
+  margin: 0 auto;
 }
 .about-img-box .image-reveal-wrapper {
-  height: 520px;
+  height: 600px;
+  border-radius: 20px;
+}
+.about-img-box .image-reveal-wrapper img {
+  object-fit: cover;
+  object-position: top center;
 }
 .about-quote-box {
   position: absolute;
-  bottom: -25px;
+  bottom: -20px;
   right: -20px;
-  background: rgba(11, 20, 38, 0.92);
+  background: rgba(11, 20, 38, 0.94);
   backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--gold-border);
-  padding: 1.5rem 1.8rem;
+  padding: 1.4rem 1.6rem;
   border-radius: 16px;
-  max-width: 320px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  max-width: 300px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  z-index: 2;
 }
 .about-quote-box p {
   font-family: var(--font-serif);
@@ -839,86 +848,103 @@
   margin: 0;
 }
 
-/* --- 6. OUR PROCESS (HORIZONTAL / PINNED SEQUENCE) --- */
+/* --- 6. OUR PROCESS (CONTINUOUS MOVING ANIMATION) --- */
 .section-process {
   position: relative;
   overflow: hidden;
+  padding-bottom: calc(var(--section-pad) * 0.75);
 }
 .process-track-container {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  padding: 1.5rem 0 2.5rem;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
 }
-@media (min-width: 1025px) {
-  .section-process.pinned {
-    overflow: hidden;
-  }
-  .process-track-container {
-    overflow: hidden;
-    width: 100%;
-  }
-  .process-horizontal-track {
-    display: flex;
-    gap: 2rem;
-    width: max-content;
-    padding-bottom: 1.5rem;
-  }
-  .process-horizontal-track .process-step-card {
-    width: 360px;
-    flex-shrink: 0;
-  }
+.process-marquee-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  user-select: none;
 }
-@media (max-width: 1024px) {
-  .process-horizontal-track {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.75rem;
-  }
+.process-marquee-group {
+  display: flex;
+  gap: 2rem;
+  flex-shrink: 0;
+  animation: processMovingAnimation 28s linear infinite;
+  will-change: transform;
 }
-@media (max-width: 640px) {
-  .process-horizontal-track {
-    grid-template-columns: 1fr;
+.process-track-container:hover .process-marquee-group {
+  animation-play-state: paused;
+}
+@keyframes processMovingAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 2rem));
   }
 }
 .process-step-card {
-  padding: 2.5rem 2rem;
+  width: 380px;
+  flex-shrink: 0;
+  padding: 2.75rem 2.25rem;
   position: relative;
   background: var(--bg-card);
   border: 1px solid var(--gold-border);
-  border-radius: 16px;
-  transition: transform var(--transition-smooth), border-color var(--transition-smooth);
+  border-radius: 18px;
+  cursor: default;
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 .process-step-card:hover {
   border-color: var(--gold-primary);
-  transform: translateY(-6px);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4), var(--gold-glow);
 }
 .step-number {
   font-family: var(--font-serif);
-  font-size: 3rem;
+  font-size: 3.25rem;
   font-weight: 700;
-  color: rgba(201, 162, 75, 0.22);
+  color: rgba(201, 162, 75, 0.28);
   line-height: 1;
   margin-bottom: 1.25rem;
   transition: color 0.3s;
 }
 .process-step-card:hover .step-number {
-  color: var(--gold-light);
+  color: var(--gold-primary);
 }
 .process-step-card h3 {
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   margin-bottom: 0.85rem;
+  color: var(--heading-color);
 }
 .process-step-card p {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   line-height: 1.7;
+  color: var(--slate-text);
 }
 .process-step-card .step-badge {
   display: inline-block;
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--emerald-light);
+}
+@media (max-width: 768px) {
+  .process-step-card {
+    width: 310px;
+    padding: 2rem 1.6rem;
+  }
+  .step-number {
+    font-size: 2.6rem;
+  }
 }
 
 /* --- 7. TAX CALCULATOR WIDGET --- */
@@ -1093,22 +1119,66 @@
   width: 58%;
 }
 
-/* --- 8. INDUSTRIES WE SERVE --- */
-.industries-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+/* --- 8. INDUSTRIES WE SERVE (CONTINUOUS SLIDE LEFT ANIMATION) --- */
+.section-industries {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: calc(var(--section-pad) * 0.75);
+}
+.industries-track-container {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  padding: 1.5rem 0 2.5rem;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
+}
+.industries-marquee-track {
+  display: flex;
   gap: 1.75rem;
+  width: max-content;
+  user-select: none;
+}
+.industries-marquee-group {
+  display: flex;
+  gap: 1.75rem;
+  flex-shrink: 0;
+  animation: industriesSlideLeft 32s linear infinite;
+  will-change: transform;
+}
+.industries-track-container:hover .industries-marquee-group {
+  animation-play-state: paused;
+}
+@keyframes industriesSlideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 1.75rem));
+  }
 }
 .industry-card {
-  padding: 2.25rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  width: 360px;
+  flex-shrink: 0;
+  padding: 2.25rem 1.85rem;
   background: var(--bg-card);
   border: 1px solid var(--gold-border);
-  border-radius: 16px;
-  transition: transform var(--transition-smooth), border-color var(--transition-smooth);
+  border-radius: 18px;
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 .industry-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
   border-color: var(--gold-primary);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4), var(--gold-glow);
 }
 .industry-card-icon {
   width: 48px;
@@ -1120,6 +1190,11 @@
   justify-content: center;
   color: var(--gold-light);
   margin-bottom: 1.25rem;
+  transition: background 0.3s, color 0.3s;
+}
+.industry-card:hover .industry-card-icon {
+  background: var(--gold-primary);
+  color: #070D18;
 }
 .industry-card-icon i {
   font-size: 1.35rem;
@@ -1128,11 +1203,14 @@
 .industry-card h3 {
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
+  color: var(--heading-color);
 }
 .industry-card p {
   font-size: 0.88rem;
   line-height: 1.6;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  color: var(--slate-text);
+  flex-grow: 1;
 }
 .industry-card-tag {
   font-size: 0.75rem;
@@ -1140,6 +1218,12 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+}
+@media (max-width: 768px) {
+  .industry-card {
+    width: 290px;
+    padding: 1.85rem 1.4rem;
+  }
 }
 
 /* --- 9. TESTIMONIALS SLIDER --- */
@@ -1376,6 +1460,16 @@
     flex-direction: column;
     gap: 1.25rem;
   }
+  .about-img-box .image-reveal-wrapper {
+    height: 440px;
+  }
+  .about-quote-box {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin: -30px 1rem 0;
+    max-width: calc(100% - 2rem);
+  }
   .counters-grid {
     grid-template-columns: 1fr;
   }
@@ -1486,8 +1580,17 @@
   background: rgba(11, 20, 38, 0.08);
 }
 [data-theme="light"] .industry-card {
-  background: rgba(255, 255, 255, 0.92);
-  border-color: rgba(179, 137, 56, 0.25);
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(179, 137, 56, 0.28);
+  box-shadow: 0 10px 30px rgba(11, 20, 38, 0.05);
+}
+[data-theme="light"] .industry-card:hover {
+  border-color: var(--gold-primary);
+  box-shadow: 0 20px 45px rgba(11, 20, 38, 0.12), var(--gold-glow);
+}
+[data-theme="light"] .industry-card:hover .industry-card-icon {
+  background: var(--gold-primary);
+  color: #FFFFFF;
 }
 [data-theme="light"] .testimonial-card-single {
   background: rgba(255, 255, 255, 0.95);

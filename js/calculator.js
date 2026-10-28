@@ -199,9 +199,9 @@ function initTaxCalculator() {
       barOptimized.style.width = `${optimizedPercentage}%`;
     }
 
-    // Update consultation booking link with preloaded savings
+    // Update consultation booking link
     if (bookWithSavingsBtn) {
-      bookWithSavingsBtn.href = `contact.html?type=${clientType}&savings=${netSavings}&income=${grossIncome}#book`;
+      bookWithSavingsBtn.href = '404.html';
     }
   }
 

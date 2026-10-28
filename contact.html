@@ -299,7 +299,8 @@
             <h2 data-split>Tell Us About Your Tax Architecture Needs</h2>
             <p style="margin-bottom: 2rem;">Please submit your details below to connect with a senior practice director.</p>
 
-            <form id="strategic-contact-form" onsubmit="event.preventDefault(); showToast('Your confidential inquiry has been routed directly to the Managing Partner desk.', 'success'); this.reset();">
+            <form id="strategic-contact-form" novalidate>
+              <div id="contact-form-alert" style="display:none;"></div>
               <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem;">
                 <div class="form-group">
                   <label class="form-label" for="cf-first-name">First Name *</label>
@@ -367,7 +368,7 @@
               <p style="font-size:0.92rem; line-height:1.7;">
                 If your entity or family office has received a formal 30-Day Letter, Statutory Notice of Deficiency (90-Day Letter), or HMRC COP9 investigation, time is of the essence. Call our emergency controversy dispatch desk directly.
               </p>
-              <div style="margin-top:1.5rem; padding:1.25rem; background:rgba(7,13,24,0.7); border-radius:12px; border:1px solid rgba(201,162,75,0.25);">
+              <div style="margin-top:1.5rem; padding:1.25rem; background:var(--bg-glass); border-radius:12px; border:1px solid var(--gold-border);">
                 <div style="font-size:0.75rem; letter-spacing:0.1em; color:var(--gold-light); text-transform:uppercase;">Immediate Partner Hotline</div>
                 <a href="tel:+12128479200" style="font-family:var(--font-serif); font-size:1.5rem; font-weight:700; color:var(--ivory); display:block; margin-top:0.25rem;">
                   +1 (212) 847-9200
@@ -596,11 +597,11 @@
         <p style="max-width:520px; margin:0 auto 2rem;">Follow our institutional publications and legislative analysis across global private wealth channels.</p>
         
         <div style="display:flex; justify-content:center; gap:1.25rem;">
-          <a href="#" class="btn btn-glass" aria-label="LinkedIn Firm Page">
+          <a href="404.html" class="btn btn-glass" aria-label="LinkedIn Firm Page">
             <i class="fa-brands fa-linkedin-in"></i>
             <span>LinkedIn Institutional</span>
           </a>
-          <a href="#" class="btn btn-glass" aria-label="Bloomberg Terminal">
+          <a href="404.html" class="btn btn-glass" aria-label="Bloomberg Terminal">
             <i class="fa-solid fa-globe"></i>
             <span>Bloomberg Terminal / STRL &lt;GO&gt;</span>
           </a>
@@ -618,7 +619,7 @@
           <h2 data-split>Your Wealth Deserves Sovereign Protection</h2>
           <p>Contact our concierge desk today to initiate partner-led fiscal defense.</p>
           <div class="cta-banner-actions">
-            <a href="#book" class="btn btn-gold btn-lg magnetic">
+            <a href="404.html" class="btn btn-gold btn-lg magnetic">
               <span>Book Priority Consultation</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
@@ -641,16 +642,16 @@
             A tax advisory and financial compliance practice working on direct tax, indirect tax, audit, structuring and regulatory filings.
           </p>
           <div class="footer-social-row">
-            <a href="#" class="footer-social-btn" aria-label="LinkedIn">
+            <a href="404.html" class="footer-social-btn" aria-label="LinkedIn">
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
-            <a href="#" class="footer-social-btn" aria-label="Twitter / X">
+            <a href="404.html" class="footer-social-btn" aria-label="Twitter / X">
               <i class="fa-brands fa-x-twitter"></i>
             </a>
-            <a href="#" class="footer-social-btn" aria-label="Facebook">
+            <a href="404.html" class="footer-social-btn" aria-label="Facebook">
               <i class="fa-brands fa-facebook-f"></i>
             </a>
-            <a href="#" class="footer-social-btn" aria-label="YouTube">
+            <a href="404.html" class="footer-social-btn" aria-label="YouTube">
               <i class="fa-brands fa-youtube"></i>
             </a>
           </div>

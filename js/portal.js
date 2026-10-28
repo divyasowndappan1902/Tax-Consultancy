@@ -219,7 +219,8 @@ function initPortal() {
       submitBtn.disabled = true;
 
       setTimeout(() => {
-        const isAdmin = /admin|partner|sterling/i.test(email);
+        const selectedPortal = localStorage.getItem('stackly_selected_portal') || 'user';
+        const isAdmin = selectedPortal === 'admin' || /admin|partner|sterling/i.test(email);
         localStorage.setItem("stacklyUserEmail", email);
         localStorage.setItem("stacklyUserRole", isAdmin ? "admin" : "user");
         const targetUrl = isAdmin ? 'admin.html' : 'user.html';
@@ -293,7 +294,7 @@ function initPortal() {
       const fullName = `${firstName} ${lastName}`.trim();
       const submitBtn = registerForm.querySelector('button[type="submit"]');
 
-      submitBtn.innerHTML = `<span>Provisioning Vault...</span>`;
+      submitBtn.innerHTML = `<span>Provisioning Vault Credentials...</span>`;
       submitBtn.disabled = true;
 
       setTimeout(() => {
@@ -304,15 +305,124 @@ function initPortal() {
         }
         localStorage.setItem("stacklyUserRole", "user");
 
-        if (typeof showToast === 'function') {
-          showToast(`Vault provisioned for ${email}. Redirecting...`, 'success');
+        // Pre-fill the login form email field
+        const loginEmail = document.getElementById('login-email');
+        if (loginEmail) {
+          loginEmail.value = email;
+          loginEmail.style.borderColor = 'rgba(16, 185, 129, 0.7)';
         }
-        submitBtn.innerHTML = `<span>Vault Activated. Redirecting...</span>`;
+
+        if (typeof showToast === 'function') {
+          showToast(`Vault credentials registered for ${email}! Please sign in.`, 'success');
+        }
+
+        submitBtn.innerHTML = `<span>Credentials Created! Redirecting to Login...</span>`;
+
         setTimeout(() => {
-          window.location.href = 'user.html';
+          // Smoothly flip 3D card back to the Client Login page
+          if (flipWrapper) {
+            flipWrapper.classList.remove('flipped');
+            if (typeof syncCardHeight === 'function') {
+              setTimeout(syncCardHeight, 50);
+            }
+          }
+
+          // Reset registration form
+          registerForm.reset();
+          submitBtn.innerHTML = `<span>Request Vault Credentials</span> <i class="fa-solid fa-arrow-right"></i>`;
+          submitBtn.disabled = false;
+
+          // Focus password on the Client Login form
+          const loginPass = document.getElementById('login-password');
+          if (loginPass) {
+            loginPass.focus();
+          }
         }, 800);
-      }, 1200);
+      }, 1000);
     });
+  }
+
+  // 5. Interactive Dashboard Portal Mode Switcher (Customer vs Admin)
+  const btnTabCustomer = document.getElementById('btn-tab-customer');
+  const btnTabAdmin = document.getElementById('btn-tab-admin');
+  const activeBadge = document.getElementById('portal-active-badge');
+  const loginEmailInput = document.getElementById('login-email');
+
+  function setActivePortal(portal, shouldNavigate) {
+    const isCustomer = portal === 'user' || portal === 'customer';
+
+    if (btnTabCustomer && btnTabAdmin) {
+      if (isCustomer) {
+        btnTabCustomer.classList.add('active');
+        btnTabCustomer.setAttribute('aria-selected', 'true');
+        btnTabAdmin.classList.remove('active');
+        btnTabAdmin.setAttribute('aria-selected', 'false');
+      } else {
+        btnTabAdmin.classList.add('active');
+        btnTabAdmin.setAttribute('aria-selected', 'true');
+        btnTabCustomer.classList.remove('active');
+        btnTabCustomer.setAttribute('aria-selected', 'false');
+      }
+    }
+
+    if (activeBadge) {
+      activeBadge.textContent = isCustomer ? 'Customer Mode' : 'Admin Mode';
+    }
+
+    const targetUrl = isCustomer ? 'user.html' : 'admin.html';
+    const roleName = isCustomer ? 'user' : 'admin';
+
+    if (loginEmailInput) {
+      const currentVal = loginEmailInput.value.trim();
+      if (!currentVal || currentVal === 'principal@familyoffice.com' || currentVal === 'admin@stackly.com') {
+        loginEmailInput.placeholder = isCustomer ? 'principal@familyoffice.com' : 'admin@stackly.com';
+      }
+    }
+
+    localStorage.setItem('stackly_selected_portal', roleName);
+    localStorage.setItem('stacklyUserRole', roleName);
+
+    if (typeof syncCardHeight === 'function') {
+      setTimeout(syncCardHeight, 50);
+    }
+
+    if (shouldNavigate) {
+      window.location.href = targetUrl;
+    }
+  }
+
+  if (btnTabCustomer) {
+    btnTabCustomer.addEventListener('click', (e) => {
+      e.preventDefault();
+      // If already active, second click opens dashboard directly
+      if (btnTabCustomer.classList.contains('active')) {
+        window.location.href = 'user.html';
+      } else {
+        setActivePortal('user');
+      }
+    });
+  }
+
+  if (btnTabAdmin) {
+    btnTabAdmin.addEventListener('click', (e) => {
+      e.preventDefault();
+      // If already active, second click opens dashboard directly
+      if (btnTabAdmin.classList.contains('active')) {
+        window.location.href = 'admin.html';
+      } else {
+        setActivePortal('admin');
+      }
+    });
+  }
+
+  // Restore saved selection or default to 'user'
+  const initialPortal = localStorage.getItem('stackly_selected_portal') || 'user';
+  setActivePortal(initialPortal);
+
+  // Pre-fill remembered user email if available
+  const savedUserEmail = localStorage.getItem("stacklyUserEmail");
+  if (savedUserEmail && loginEmailInput && !loginEmailInput.value) {
+    loginEmailInput.value = savedUserEmail;
   }
 
   // 6. SSO Mock Trigger

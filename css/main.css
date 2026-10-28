@@ -150,10 +150,23 @@ body {
   background: radial-gradient(circle, var(--emerald), transparent 70%);
 }
 
-/* Selection */
-::selection {
-  background-color: var(--gold-primary);
-  color: var(--bg-deep);
+/* --- UNIVERSAL LUXURY TEXT SELECTION HIGHLIGHT --- */
+::selection,
+::-moz-selection,
+*::selection,
+*::-moz-selection {
+  background-color: #C9A24B !important;
+  color: #070D18 !important;
+  text-shadow: none !important;
+}
+
+[data-theme="light"] ::selection,
+[data-theme="light"] ::-moz-selection,
+[data-theme="light"] *::selection,
+[data-theme="light"] *::-moz-selection {
+  background-color: #C9A24B !important;
+  color: #070D18 !important;
+  text-shadow: none !important;
 }
 
 /* Split-text typography helpers for GSAP word mask reveal */
@@ -1149,11 +1162,65 @@ textarea.form-control {
   margin-top: 0.35rem;
   display: none;
 }
+.form-control.is-invalid,
 .has-error .form-control {
-  border-color: #ef4444;
+  border-color: #ef4444 !important;
+  background-color: rgba(239, 68, 68, 0.05) !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.22) !important;
 }
 .has-error .form-error {
   display: block;
+}
+
+/* Red Color Error Box for Invalid Data */
+.field-error-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid #ef4444;
+  color: #ef4444;
+  padding: 0.45rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  margin-top: 0.45rem;
+  line-height: 1.4;
+  animation: errorBoxShake 0.3s ease-in-out;
+}
+
+.field-error-box i {
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  color: #ef4444;
+}
+
+.form-error-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1.5px solid #ef4444;
+  color: #ef4444;
+  padding: 0.85rem 1.15rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.15);
+  animation: fadeIn 0.3s ease;
+}
+
+.form-error-banner i {
+  font-size: 1.25rem;
+  color: #ef4444;
+  flex-shrink: 0;
+}
+
+@keyframes errorBoxShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-4px); }
+  40%, 80% { transform: translateX(4px); }
 }
 
 /* --- TOAST NOTIFICATIONS --- */

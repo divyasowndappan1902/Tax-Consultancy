@@ -18,31 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* --------------------------------------------------------------------------
-   0. PROCESS HORIZONTAL PINNED SCROLL
+   0. PROCESS HORIZONTAL CONTINUOUS MOVING SEQUENCE
    -------------------------------------------------------------------------- */
 function initProcessHorizontalScroll() {
-  const sectionProcess = document.querySelector('.section-process');
-  const track = document.querySelector('.process-horizontal-track');
-  if (!sectionProcess || !track || typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
-
-  if (window.innerWidth > 1024) {
-    sectionProcess.classList.add('pinned');
-    const scrollAmount = track.scrollWidth - track.parentElement.clientWidth;
-    if (scrollAmount > 0) {
-      gsap.to(track, {
-        x: -scrollAmount,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: sectionProcess,
-          start: 'top 15%',
-          end: () => `+=${scrollAmount * 1.2}`,
-          pin: true,
-          scrub: 1,
-          invalidateOnRefresh: true,
-        }
-      });
-    }
-  }
+  // Pinned scroll removed in favor of GPU-accelerated continuous moving marquee animation
 }
 
 /* --------------------------------------------------------------------------
@@ -173,6 +152,9 @@ function initBlogFilters() {
   const filterBtns = document.querySelectorAll('.filter-tab-btn');
   const blogPosts = document.querySelectorAll('.blog-filterable-card');
   const blogSearch = document.getElementById('blog-search-input');
+  const clearBtn = document.getElementById('blog-search-clear');
+  const noResults = document.getElementById('blog-no-results');
+  const resetBtn = document.getElementById('reset-filters-btn');
 
   if (filterBtns.length === 0 && !blogSearch) return;
 
@@ -180,6 +162,12 @@ function initBlogFilters() {
 
   function applyFilters() {
     const searchQuery = blogSearch ? blogSearch.value.toLowerCase().trim() : '';
+
+    if (clearBtn) {
+      clearBtn.style.display = searchQuery ? 'block' : 'none';
+    }
+
+    let visibleCount = 0;
 
     blogPosts.forEach((post) => {
       const postCat = post.getAttribute('data-category') || 'all';
@@ -190,10 +178,15 @@ function initBlogFilters() {
 
       if (matchesCat && matchesSearch) {
         post.style.display = 'flex';
+        visibleCount++;
       } else {
         post.style.display = 'none';
       }
     });
+
+    if (noResults) {
+      noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
   }
 
   filterBtns.forEach((btn) => {
@@ -207,6 +200,25 @@ function initBlogFilters() {
 
   if (blogSearch) {
     blogSearch.addEventListener('input', applyFilters);
+  }
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      blogSearch.value = '';
+      applyFilters();
+      blogSearch.focus();
+    });
+  }
+
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      if (blogSearch) blogSearch.value = '';
+      currentCategory = 'all';
+      filterBtns.forEach((b) => {
+        b.classList.toggle('active', b.getAttribute('data-filter') === 'all');
+      });
+      applyFilters();
+    });
   }
 }
 
