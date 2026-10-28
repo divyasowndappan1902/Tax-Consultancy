@@ -237,6 +237,15 @@ function initNavbar() {
         document.body.style.overflow = '';
       });
     });
+
+    // Automatically close mobile menu if resized to desktop (> 1024px)
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1024 && mobileMenu.classList.contains('open')) {
+        toggleBtn.classList.remove('is-active');
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
   }
 }
 

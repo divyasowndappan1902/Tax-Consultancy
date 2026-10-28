@@ -5,8 +5,8 @@
 
 /* --- COMMON PAGE HERO --- */
 .page-hero {
-  padding-top: calc(var(--nav-height) + 4rem);
-  padding-bottom: clamp(3rem, 6vw, 5.5rem);
+  padding-top: calc(var(--nav-height) + 1.75rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -32,10 +32,22 @@
   opacity: 0.88;
 }
 
-.tax-hero-svg-bg svg {
+.tax-hero-svg-bg svg,
+.tax-hero-svg-bg img.hero-bg-webp {
   width: 100%;
   height: 100%;
   display: block;
+}
+
+.tax-hero-svg-bg img.hero-bg-webp {
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.22;
+  filter: contrast(1.05) saturate(0.85);
+}
+
+[data-theme="light"] .tax-hero-svg-bg img.hero-bg-webp {
+  opacity: 0.14;
 }
 
 /* Dynamic SVG Path Flow Animations */
@@ -1077,9 +1089,69 @@
   position: relative;
   background: #070d18;
 }
-.map-svg-canvas {
+.map-svg-canvas,
+.map-bg-webp {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.map-bg-webp {
+  opacity: 0.32;
+  filter: contrast(1.1) brightness(0.65);
+}
+.map-pins-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.map-pin-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  color: #F7F3EA;
+  font-family: var(--font-sans);
+  transition: transform 0.25s ease;
+}
+.map-pin-node:hover {
+  transform: translate(-50%, -50%) scale(1.12);
+}
+.map-pin-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #DFC07A;
+  box-shadow: 0 0 0 6px rgba(201, 162, 75, 0.22), 0 0 14px rgba(223, 192, 122, 0.8);
+  display: block;
+}
+.map-pin-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #F7F3EA;
+  background: rgba(7, 13, 24, 0.85);
+  border: 1px solid rgba(201, 162, 75, 0.38);
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+  backdrop-filter: blur(6px);
+}
+@media (max-width: 480px) {
+  .map-container {
+    height: 300px;
+  }
+  .map-pin-label {
+    font-size: 0.62rem;
+    padding: 2px 6px;
+  }
 }
 
 /* Consultation Scheduler */
@@ -1476,7 +1548,7 @@
 @media (max-width: 480px) {
   /* Page Heroes */
   .page-hero {
-    padding: 6.5rem 0 3rem;
+    padding: 4.65rem 0 2.25rem;
   }
   .page-hero-title {
     font-size: clamp(1.85rem, 8vw, 2.45rem);
@@ -1652,7 +1724,7 @@
 /* 320px - 360px Ultra-Compact Screen Support */
 @media (max-width: 360px) {
   .page-hero {
-    padding: 5.5rem 0 2.25rem;
+    padding: 4.15rem 0 1.85rem;
   }
   .page-hero-title {
     font-size: clamp(1.6rem, 7.5vw, 2.05rem);
