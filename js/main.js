@@ -6,6 +6,9 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // 0a. Track current page & wire 404 Go Back destination
+  initPageHistoryTracker();
+
   // 0. Initialize Theme (White Mode default)
   initTheme();
 
@@ -44,6 +47,56 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, 1200);
 });
+
+/* --------------------------------------------------------------------------
+   0a. PAGE HISTORY TRACKER (Respected Page Redirection for 404 Go Back)
+   -------------------------------------------------------------------------- */
+function getCurrentPageFile() {
+  const raw = decodeURIComponent(window.location.pathname.split('/').pop() || 'index.html');
+  return raw || 'index.html';
+}
+
+function saveCurrentAsLastPage() {
+  const currentFile = getCurrentPageFile();
+  if (currentFile.toLowerCase() !== '404.html') {
+    const fullRef = currentFile + (window.location.search || '') + (window.location.hash || '');
+    sessionStorage.setItem('stackly_last_page', fullRef);
+    localStorage.setItem('stackly_last_page', fullRef);
+  }
+}
+
+function getPreviousPageTarget() {
+  if (document.referrer) {
+    try {
+      const refUrl = new URL(document.referrer);
+      const refFile = decodeURIComponent(refUrl.pathname.split('/').pop() || 'index.html');
+      if (refFile && refFile.toLowerCase() !== '404.html' && refFile.toLowerCase().includes('.html')) {
+        return refFile + (refUrl.search || '') + (refUrl.hash || '');
+      }
+    } catch (e) {}
+  }
+  const savedSession = sessionStorage.getItem('stackly_last_page');
+  if (savedSession && savedSession.toLowerCase() !== '404.html') {
+    return savedSession;
+  }
+  const savedLocal = localStorage.getItem('stackly_last_page');
+  if (savedLocal && savedLocal.toLowerCase() !== '404.html') {
+    return savedLocal;
+  }
+  return 'index.html';
+}
+
+function initPageHistoryTracker() {
+  const currentFile = getCurrentPageFile();
+  if (currentFile.toLowerCase() !== '404.html') {
+    saveCurrentAsLastPage();
+  } else {
+    const goBackBtn = document.getElementById('btn-go-back');
+    if (goBackBtn) {
+      goBackBtn.setAttribute('href', getPreviousPageTarget());
+    }
+  }
+}
 
 /* --------------------------------------------------------------------------
    0. THEME TOGGLE ENGINE (White Mode / Dark Mode)
@@ -286,6 +339,7 @@ function initPageTransitions() {
         }
 
         e.preventDefault();
+        saveCurrentAsLastPage();
         if (typeof gsap !== 'undefined') {
           gsap.timeline()
             .set(transitionOverlay, { display: 'flex', y: '100%' })
@@ -302,6 +356,21 @@ function initPageTransitions() {
         }
       }
     });
+  });
+
+  // Ensure transition overlay is cleared if restored from bfcache (Back/Forward button)
+  window.addEventListener('pageshow', () => {
+    if (typeof gsap !== 'undefined') {
+      gsap.killTweensOf(transitionOverlay);
+      gsap.set(transitionOverlay, { display: 'none', y: '-100%' });
+    } else {
+      transitionOverlay.style.display = 'none';
+    }
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      preloader.classList.add('loaded');
+    }
+    initPageHistoryTracker();
   });
 
   // Page Entry Wipe
@@ -629,6 +698,7 @@ function initGlobalEvents() {
       // If href is empty, '#', or 'javascript:void(0)'
       if (href === '#' || href === 'javascript:void(0)' || href === 'javascript:;' || href === '') {
         e.preventDefault();
+        saveCurrentAsLastPage();
         window.location.href = '404.html';
         return;
       }
@@ -638,6 +708,7 @@ function initGlobalEvents() {
         const targetEl = document.getElementById(targetId) || document.querySelector(`[name="${targetId}"]`);
         if (!targetEl) {
           e.preventDefault();
+          saveCurrentAsLastPage();
           window.location.href = '404.html';
           return;
         }
@@ -661,6 +732,7 @@ function initGlobalEvents() {
 
       if (!isFunctional && (btn.classList.contains('btn-dummy') || btn.getAttribute('data-action') === 'dummy')) {
         e.preventDefault();
+        saveCurrentAsLastPage();
         window.location.href = '404.html';
       }
     }

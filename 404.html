@@ -88,15 +88,44 @@
 
         <!-- Primary Action Navigation -->
         <div class="error-actions" style="margin-bottom: 0; display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-          <button type="button" onclick="if (window.history.length > 1) { window.history.back(); } else { window.location.href = 'index.html'; }" class="btn btn-glass btn-lg magnetic" style="cursor: pointer;">
+          <a href="index.html" id="btn-go-back" class="btn btn-glass btn-lg magnetic" style="cursor: pointer;">
             <i class="fa-solid fa-arrow-left"></i>
             <span>Go Back</span>
-          </button>
+          </a>
           <a href="index.html" class="btn btn-gold btn-lg magnetic">
             <span>Return to Sovereign Headquarters</span>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
+        <script>
+          (function() {
+            var goBackBtn = document.getElementById('btn-go-back');
+            if (!goBackBtn) return;
+            var targetPage = '';
+            if (document.referrer) {
+              try {
+                var refUrl = new URL(document.referrer);
+                var refFile = decodeURIComponent(refUrl.pathname.split('/').pop() || 'index.html');
+                if (refFile && refFile.toLowerCase() !== '404.html' && refFile.toLowerCase().indexOf('.html') !== -1) {
+                  targetPage = refFile + (refUrl.search || '') + (refUrl.hash || '');
+                }
+              } catch (e) {}
+            }
+            if (!targetPage) {
+              var savedSession = sessionStorage.getItem('stackly_last_page');
+              if (savedSession && savedSession.toLowerCase() !== '404.html') {
+                targetPage = savedSession;
+              }
+            }
+            if (!targetPage) {
+              var savedLocal = localStorage.getItem('stackly_last_page');
+              if (savedLocal && savedLocal.toLowerCase() !== '404.html') {
+                targetPage = savedLocal;
+              }
+            }
+            goBackBtn.setAttribute('href', targetPage || 'index.html');
+          })();
+        </script>
       </div>
     </section>
   </main>

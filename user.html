@@ -3846,6 +3846,9 @@
 
 
     function activateSection(sectionId) {
+        sessionStorage.setItem("stackly_user_section", sectionId);
+        sessionStorage.setItem("stackly_last_page", "user.html");
+        localStorage.setItem("stackly_last_page", "user.html");
 
         // Scroll to top of page when changing section
         window.scrollTo({ top: 0, left: 0, behavior: "instant" });
@@ -3949,6 +3952,9 @@
         );
 
     });
+
+    sessionStorage.setItem("stackly_last_page", "user.html");
+    localStorage.setItem("stackly_last_page", "user.html");
 
 
     /* =========================================================
@@ -4370,6 +4376,11 @@
             }
         );
 
+    }
+
+    const savedUserSection = sessionStorage.getItem("stackly_user_section");
+    if (savedUserSection && sectionNames[savedUserSection] && savedUserSection !== "overview") {
+        activateSection(savedUserSection);
     }
 
 

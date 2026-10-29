@@ -4784,11 +4784,22 @@
           }
 
           activateSection(target);
+          sessionStorage.setItem("stackly_admin_section", target);
+          sessionStorage.setItem("stackly_last_page", "admin.html");
+          localStorage.setItem("stackly_last_page", "admin.html");
 
         }
       );
 
     });
+
+    sessionStorage.setItem("stackly_last_page", "admin.html");
+    localStorage.setItem("stackly_last_page", "admin.html");
+    const savedAdminSection = sessionStorage.getItem("stackly_admin_section");
+    if (savedAdminSection && savedAdminSection !== "overview") {
+      const savedNav = document.querySelector(`.side-item[data-target="${savedAdminSection}"]`);
+      if (savedNav) savedNav.click();
+    }
 
 
     /* =========================================================
