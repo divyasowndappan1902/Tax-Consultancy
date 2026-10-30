@@ -1959,15 +1959,16 @@
         transform: translateX(-100%);
         transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         box-shadow: none;
-        padding: 28px 24px 22px;
+        padding: 24px 20px 24px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         text-align: center;
-        overflow: hidden !important;
-        touch-action: none !important;
-        overscroll-behavior: none !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        touch-action: pan-y !important;
+        overscroll-behavior: contain !important;
       }
 
       .sidebar.open,
@@ -2040,7 +2041,98 @@
         width: 100%;
         max-width: 320px;
         margin: 20px auto 0;
-        text-align: center;
+        padding-top: 16px;
+        border-top: 1px solid rgba(201, 162, 75, 0.16);
+        text-align: left;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 2;
+      }
+
+      .account-mini {
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 14px;
+        margin-bottom: 10px;
+        border: 1px solid rgba(201, 162, 75, 0.25);
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        text-align: left;
+        cursor: pointer;
+        transition: all 0.25s ease;
+      }
+
+      .account-details {
+        flex: 1;
+        min-width: 0;
+        text-align: left;
+      }
+
+      .account-mini-label {
+        color: #94A3B8;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        text-align: left;
+      }
+
+      .account-mini-email {
+        margin-top: 3px;
+        color: #F8FAFC;
+        font-size: 12px;
+        font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: left;
+        display: block;
+      }
+
+      .logout-btn {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 11px 14px;
+        border-radius: 10px;
+      }
+
+      @media (max-height: 740px) {
+        .sidebar {
+          padding: 18px 16px 20px;
+        }
+        .sidebar-brand {
+          margin-bottom: 8px;
+        }
+        .user-chip-container {
+          margin-top: 10px;
+        }
+        .nav-label {
+          margin: 6px auto 10px;
+          font-size: 9px;
+        }
+        .side-nav {
+          gap: 5px;
+        }
+        .side-item {
+          padding: 9px 12px;
+        }
+        .sidebar-bottom {
+          margin: 12px auto 0;
+          padding-top: 10px;
+        }
+        .account-mini {
+          padding: 9px 12px;
+          margin-bottom: 8px;
+        }
+        .logout-btn {
+          padding: 9px 12px;
+        }
       }
 
       .sidebar-overlay {
@@ -4314,7 +4406,6 @@
         <div class="email-presets">
           <span>Quick Select:</span>
           <button type="button" class="preset-pill" onclick="selectPresetEmail('admin@stackly.com')">admin@stackly.com</button>
-          <button type="button" class="preset-pill" onclick="selectPresetEmail('samyuktha.admin@stackly.com')">samyuktha.admin@stackly.com</button>
           <button type="button" class="preset-pill" onclick="selectPresetEmail('partner@sterling.com')">partner@sterling.com</button>
           <button type="button" class="preset-pill" onclick="selectPresetEmail('director@stackly.com')">director@stackly.com</button>
         </div>

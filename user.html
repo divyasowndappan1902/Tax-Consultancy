@@ -1651,15 +1651,16 @@
                 transform: translateX(-100%);
                 transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
                 box-shadow: none;
-                padding: 28px 24px 22px;
+                padding: 24px 20px 24px;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
+                justify-content: flex-start;
                 align-items: center;
                 text-align: center;
-                overflow: hidden !important;
-                touch-action: none !important;
-                overscroll-behavior: none !important;
+                overflow-y: auto !important;
+                -webkit-overflow-scrolling: touch !important;
+                touch-action: pan-y !important;
+                overscroll-behavior: contain !important;
             }
 
             .sidebar.mobile-open {
@@ -1724,6 +1725,117 @@
 
             .nav-item .nav-copy {
                 text-align: left;
+            }
+
+            .sidebar-bottom {
+                width: 100%;
+                max-width: 320px;
+                margin: 20px auto 0;
+                padding-top: 16px;
+                border-top: 1px solid rgba(201, 162, 75, 0.16);
+                text-align: left;
+                flex-shrink: 0;
+                position: relative;
+                z-index: 2;
+            }
+
+            .account-mini {
+                width: 100%;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding: 12px 14px;
+                margin-bottom: 10px;
+                border: 1px solid rgba(201, 162, 75, 0.25);
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 12px;
+                text-align: left;
+                cursor: pointer;
+                transition: all 0.25s ease;
+            }
+
+            .account-mini:hover,
+            .account-mini:active {
+                border-color: rgba(201, 162, 75, 0.45);
+                background: rgba(255, 255, 255, 0.08);
+            }
+
+            .account-avatar {
+                flex-shrink: 0;
+            }
+
+            .account-details {
+                flex: 1;
+                min-width: 0;
+                text-align: left;
+            }
+
+            .account-mini-label {
+                color: #94A3B8;
+                font-size: 9px;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                text-align: left;
+            }
+
+            .account-mini-email {
+                margin-top: 3px;
+                color: #F8FAFC;
+                font-size: 12px;
+                font-weight: 600;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-align: left;
+                display: block;
+            }
+
+            .logout-btn {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 11px 14px;
+                border-radius: 10px;
+            }
+
+            @media (max-height: 740px) {
+                .sidebar {
+                    padding: 18px 16px 20px;
+                }
+                .brand {
+                    margin-bottom: 8px;
+                }
+                .brand-logo-img {
+                    height: 30px;
+                }
+                .user-chip-container {
+                    margin-bottom: 10px;
+                }
+                .side-label {
+                    margin: 6px auto 10px;
+                    font-size: 9px;
+                }
+                .side-nav {
+                    gap: 5px;
+                }
+                .nav-item {
+                    padding: 9px 12px;
+                }
+                .sidebar-bottom {
+                    margin: 12px auto 0;
+                    padding-top: 10px;
+                }
+                .account-mini {
+                    padding: 9px 12px;
+                    margin-bottom: 8px;
+                }
+                .logout-btn {
+                    padding: 9px 12px;
+                }
             }
 
             .sidebar-backdrop {
@@ -1828,6 +1940,101 @@
 
             .menu-toggle:active {
                 transform: scale(0.94);
+            }
+
+            .mobile-topbar-actions {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .mobile-account-badge {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 4px 10px 4px 5px;
+                background: rgba(11, 20, 38, 0.06);
+                border: 1px solid rgba(201, 162, 75, 0.35);
+                border-radius: 24px;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                max-width: 175px;
+            }
+
+            .mobile-account-badge:hover,
+            .mobile-account-badge:active {
+                background: rgba(201, 162, 75, 0.14);
+                border-color: rgba(201, 162, 75, 0.55);
+            }
+
+            .mobile-account-avatar {
+                width: 28px;
+                height: 28px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #16243C 0%, #0C1728 100%);
+                border: 1.2px solid rgba(201, 162, 75, 0.55);
+                color: #DFC07A;
+                display: grid;
+                place-items: center;
+                font-size: 10px;
+                font-weight: 700;
+                font-family: var(--font-mono);
+                flex-shrink: 0;
+            }
+
+            .mobile-account-text {
+                display: flex;
+                flex-direction: column;
+                min-width: 0;
+                line-height: 1.15;
+                text-align: left;
+            }
+
+            .mobile-account-label {
+                font-size: 8px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                color: #64748B;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+            }
+
+            .mobile-account-label .badge-dot {
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background: #22C55E;
+                box-shadow: 0 0 5px #22C55E;
+                display: inline-block;
+            }
+
+            .mobile-account-email {
+                font-size: 10.5px;
+                font-weight: 600;
+                color: #0B1426;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 90px;
+            }
+
+            .mobile-account-edit {
+                font-size: 9px;
+                color: #B38938;
+                flex-shrink: 0;
+            }
+
+            @media (max-width: 420px) {
+                .mobile-account-text,
+                .mobile-account-edit {
+                    display: none;
+                }
+                .mobile-account-badge {
+                    padding: 3px;
+                    border-radius: 50%;
+                }
             }
 
             .topbar {
@@ -2058,15 +2265,27 @@
 
         <a href="index.html" class="mobile-brand">
             <img src="logo_0027.webp" alt="STACKLY Logo" class="mobile-logo-img">
-            <span class="user-chip user-chip-sm">USER</span>
+            <span class="user-chip user-chip-sm">CLIENT</span>
         </a>
-        <button
-            class="menu-toggle"
-            id="menuToggle"
-            aria-label="Open dashboard menu"
-        >
-            <i class="fa-solid fa-bars" style="font-size:1.35rem;"></i>
-        </button>
+
+        <div class="mobile-topbar-actions">
+            <div class="mobile-account-badge" onclick="openEmailModal()" title="Manage Email & Active Vault">
+                <div class="mobile-account-avatar" id="mobileSidebarAvatar">US</div>
+                <div class="mobile-account-text">
+                    <span class="mobile-account-label"><span class="badge-dot"></span> Active</span>
+                    <span class="mobile-account-email" id="mobileSidebarEmail">client@stackly.com</span>
+                </div>
+                <i class="fa-solid fa-pen-to-square mobile-account-edit"></i>
+            </div>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open dashboard menu"
+            >
+                <i class="fa-solid fa-bars" style="font-size:1.35rem;"></i>
+            </button>
+        </div>
 
     </header>
 
@@ -3647,7 +3866,6 @@
 
             <div class="email-presets">
                 <span>Quick Select:</span>
-                <button type="button" class="preset-pill" onclick="selectPresetEmail('samyuktha@stackly.com')">samyuktha@stackly.com</button>
                 <button type="button" class="preset-pill" onclick="selectPresetEmail('client@stackly.com')">client@stackly.com</button>
                 <button type="button" class="preset-pill" onclick="selectPresetEmail('director@familyoffice.com')">director@familyoffice.com</button>
                 <button type="button" class="preset-pill" onclick="selectPresetEmail('alex.vance@sterling.com')">alex.vance@sterling.com</button>
@@ -3733,7 +3951,8 @@
         [
             document.getElementById("sidebarEmail"),
             document.getElementById("profileEmail"),
-            document.getElementById("infoEmail")
+            document.getElementById("infoEmail"),
+            document.getElementById("mobileSidebarEmail")
         ].forEach(el => {
             if (el) el.textContent = email;
         });
@@ -3752,7 +3971,8 @@
         [
             document.getElementById("profileAvatar"),
             document.getElementById("largeAvatar"),
-            document.getElementById("sidebarAvatar")
+            document.getElementById("sidebarAvatar"),
+            document.getElementById("mobileSidebarAvatar")
         ].forEach(el => {
             if (el) el.textContent = initials;
         });
